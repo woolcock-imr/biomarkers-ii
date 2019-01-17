@@ -1,0 +1,120 @@
+<div id=D__ID>
+    <div>
+        VmInclude:__COMPONENT__/g/grid.01.html
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js       
+            //-------------------------------------
+            
+            //-------------------------------------
+            var fields="Participant ID|UID,Subject_ID,Screening_Number,Subject_Initials,Gender,DOB,_Data_Entry,_Setup,_Quest,_Login_ID,_Password";
+            m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
+            //-------------------------------------
+            var login_setup_module="online-questionnaire-setup";
+            var login_setup_tid=$vm.module_list[login_setup_module].Table;
+            var data_entry_module="panel-child";
+            var online_questionnaire=$vm.public_url_$B;
+            if($vm.localhost==true) online_questionnaire=$vm.local_url_$B;
+            //-------------------------------------
+            m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+    				case "V1"://'Low_CO2_Randomisation_Number':
+                        if(records[I].UID==undefined) return;
+                        if(records[I]["V2"]!="0"){ td.html("-"); return;}
+
+                        td.html(records[I][field]);
+                        if(records[I][field]=="0") td.html("");
+    					if(records[I][field]==undefined || records[I][field]=='' || records[I][field]=='0'){
+                            td.on('click', function(){
+                                if(records[I]["V2"]==undefined || records[I]["V2"]=='' || records[I]["V2"]=='0'){
+                                    var sql="select top 1 RN=max(V1) from [TABLE-"+m.db_pid+"]";
+                                    $VmAPI.request({data:{cmd:'read',qid:m.qid,sql:sql},callback:function(res){
+                                        if(res.records.length==1){
+                                            var RN=parseInt(res.records[0].RN)+1;
+                                            RN=RN.toString()
+                                            td.html(RN);
+                                            records[I].Randomised_by=$vm.user;
+                                            set_value(RN,records,I,field);
+                                            td.parent().find("td[data-id='Randomised_by']").html($vm.user);
+                                        }
+                                    }})
+                                }
+                            })
+    					}
+				        break;
+                    case "V2"://'High_CO2_Randomisation_Number':
+                        if(records[I].UID==undefined) return;
+                        if(records[I]["V1"]!="0"){ td.html("-"); return;}
+
+                        td.html(records[I][field]);
+                        if(records[I][field]=="0") td.html("");
+                        if(records[I][field]==undefined || records[I][field]=='' || records[I][field]=='0'){
+    						td.on('click', function(){
+                                if(records[I]["V1"]==undefined || records[I]["V1"]=='' || records[I]["V1"]=='0'){
+                                    var sql="select top 1 RN=max(V2) from [TABLE-"+m.db_pid+"]";
+                                    $VmAPI.request({data:{cmd:'read',qid:m.qid,sql:sql},callback:function(res){
+                                        if(res.records.length==1){
+                                            var RN=parseInt(res.records[0].RN)+1;
+                                            RN=RN.toString()
+                                            td.html(RN);
+                                            records[I].Randomised_by=$vm.user;
+                                            set_value(RN,records,I,field);
+                                            td.parent().find("td[data-id='Randomised_by']").html($vm.user);
+                                        }
+                                    }})
+                                }
+    						})
+    					}
+    				    break;
+                    case 'DOB':
+                        break;
+                    case '_Data_Entry':
+                        td.html("<u style='cursor:pointer'>Data Entry</u>");
+                        td.find('u').on('click',function(){
+    						$vm.load_module(data_entry_module,'',{record:records[I]});
+                        });
+                        break;
+                    case '_Setup':
+                        td.html("<u style='cursor:pointer'>Login Setup</u>");
+                        td.find('u').on('click',function(){
+    						$vm.load_module(login_setup_module,'',{record:records[I]});
+                        });
+                        break;
+                    case '_Quest':
+                        td.html("<u style='cursor:pointer'>Online Questionnaire</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('db=dev')!=-1) db="&db=dev";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) db="&_d=1";
+                            var p="?username="+records[I].UID+"-"+m.Table+"&password="+records[I]._Password;
+    						var q_url=online_questionnaire+p+db+d;
+    						window.open(q_url);
+                        });
+                        break;
+                    case '_Login_ID':
+                        td.html(records[I].UID+"-"+m.Table);
+                        break;
+                }
+            }
+            //-------------------------------------
+            m.before_submit=function(record,dbv){
+				dbv.V1=record.V1;
+                dbv.V2=record.V2;
+                return true;
+            }
+            //-------------------------------------
+            m.set_req=function(){
+                var sql="with tb as (select Information,ID,UID,PUID,V1,V2,DateTime,Modified=Convert(varchar,Modified,127),Author,RowNum=row_number() over (order by ID DESC) from [TABLE-"+m.db_pid+"-@S1] ) ";
+                sql+=",tb2 as (select PUID,S2,S3 from [TABLE-"+login_setup_tid+"] ) ";
+                sql+="select Information,ID,UID,tb.PUID,Submit_date=DateTime,Modified,Submitted_by=Author,RowNum,V1,V2,S2,S3 from tb left join tb2 on tb.UID=tb2.PUID where RowNum between @I6 and @I7";
+                var sql_n="select count(ID) from [TABLE-"+m.db_pid+"-@S1]";
+            	m.req={cmd:'read',qid:m.qid,sql:sql,sql_n:sql_n,s1:'"'+$('#keyword__ID').val()+'"',I:$('#I__ID').text(),page_size:$('#page_size__ID').val()}
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>

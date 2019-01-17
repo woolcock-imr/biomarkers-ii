@@ -1,0 +1,46 @@
+.container {
+  display:inline;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.row {
+  width:100%;
+}
+
+.dials {
+  display:inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.face {
+  display:inline-block;
+  margin: 0;
+  padding: 0px 10px;
+  background-color:#FFF;
+  border:#CCCCCC solid 2px;
+  border-radius: 8px;
+  line-height:2em;
+  color: #EEE;
+}
+
+.fa {
+  display:inline-block;
+  margin: 0; 
+  cursor: pointer;
+  line-height:1em;
+}
+
+.labels {
+  color:#666;
+  display:inline-block;
+  margin: 0px 10px 0px 3px;
+  text-align: left;
+  vertical-align: middle;
+}

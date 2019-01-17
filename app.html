@@ -1,0 +1,362 @@
+<div id=D__ID module=app>
+    <!-- special font, css etc for this app -->
+    <!-------->
+    <div id=components style='display:none'>
+        <!-- header and manu -->
+        <div id=c_header>
+            <div class=vm-mobile>
+                <span id=vm-mobile_title class=vm-mobile-title>Woolcock</span>
+                <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class=vm-desk-logo>
+                <div id=vm-logo-image></div>
+            </div>
+            <div menu id="vm-menu">
+                <a href="?/home"><i class="fa fa-home"></i> Home</a>
+                <a href="?/panel-main"><i class="fa fa-th"></i> Biomarkers-II</a>
+                <a href="?/panel-permission"><i class="fa fa-lock"></i> Permissions</a>
+                <a id=vm_signin onclick="$vm.signin();"><i class="fa fa-user"></i> Sign In</a>
+                <a class=vm-hide id=vm_signout onclick=$vm.signout()><i class="fa fa-user"></i> Sign Out</a>
+            </div>
+        </div>
+        <div id=c_footer>
+            <span id=text_0></span>
+        </div>
+</div>
+    <script main-code>
+        //------------------------------------
+        //mongo database service address
+        //$vm.api_address="https://api.wappsystem.com";
+        //if(window.location.toString().indexOf('_p=1')!=-1) $vm.api_address="https://api.wappsystem.com:3000";
+        //------------------------------------
+        //sql server database service address
+        $vm.api_type="sqlserver"; 
+        $vm.qid='91000567'; //permission control table
+        $VmAPI.api_base="https://rt.woolcock.org.au/pro/";
+        if(window.location.toString().indexOf('db=dev')!=-1) $VmAPI.api_base="https://cbs.wappsystem.com/dev/";
+        //------------------------------------
+        //list all your modules used in your application
+        //Setup each module's Table (you can create your own tables in backoffice)
+        $vm.module_list={
+            "home":                             {url:"$A/modules/h/home.html",router:1},
+            "panel-main":  		  			    {url:"$A/modules/p/panel-main.html",router:1},
+            "panel-child": 		  			    {url:"$A/modules/p/panel-child.html"},
+            "panel-permission":   			    {url:"$A/modules/p/panel-permission.html",router:1},
+            
+            "permission-check":                 {url:"$A/modules/p/permission-check.html"},
+            "permission-role-login-data":       {url:"$A/modules/p/permission-role-login-data.html",Table:"91000570",form_module:"permission-role-login-form"},
+            "permission-role-login-form":       {url:"$A/modules/p/permission-role-login-form.html",Table:"91000570"},
+            "permission-role-table-group-data": {url:"$A/modules/p/permission-role-table-group-data.html",Table:"91000570",form_module:"permission-role-table-group-form"},
+            "permission-role-table-group-form": {url:"$A/modules/p/permission-role-table-group-form.html",Table:"91000570"},
+            "permission-query-data":            {url:"$A/modules/p/permission-query-data.html",Table:"91000569",form_module:"permission-query-form"},
+            "permission-query-form":            {url:"$A/modules/p/permission-query-form.html",Table:"91000569"},
+
+            "edc-notes-data":	  		        {url:"$A/modules/e/edc-notes-data.html",Table:"91000571",form_module:"edc-notes-form"},
+		    "edc-notes-form":	  		        {url:"$A/modules/e/edc-notes-form.html",Table:"91000571",},
+            "participant-data":     	        {url:"$A/modules/p/participant-data.html", Table:"91000570",form_module:"participant-form"},
+		    "participant-form":     	        {url:"$A/modules/p/participant-form.html", Table:"91000570",},
+            
+            "online-questionnaire-setup": 	    {url:"$A/modules/o/online-questionnaire-setup.html",Table:"91000570"},
+            "online-questionnaire-panel":       {url:"$A/modules/o/online-questionnaire-panel.html"},
+            "online-questionnaire-login":       {url:"$A/modules/o/online-questionnaire-login.html"},
+            
+            "bl-anthropometry":	 	            {url:"$A/modules/a/anthro-data.html",Table:"91000572",form_module:"bl-anthropometry-form"},
+		    "bl-anthropometry-form":	 	    {url:"$A/modules/a/anthro-form.html",Table:"91000572"},
+            
+            "bl-insomnia-severity-index-data":  {url:"$A/modules/i/insomnia-severity-index-data.html",Table:"91000573",form_module:"bl-insomnia-severity-index-form"},
+		    "bl-insomnia-severity-index-form":  {url:"$A/modules/i/insomnia-severity-index-form.html",Table:"91000573"},
+
+
+            "bl-dass":                          {url:"$A/modules/x/xxx-data.html",Table:"91000574",form_module:"bl-dass-form"},
+		    "bl-dass-form":                     {url:"$A/modules/x/xxx-form.html",Table:"91000574"},
+            "bl-dhmva":                         {url:"$A/modules/x/xxx-data.html",Table:"91000575",form_module:"bl-dhmva-form"},
+		    "bl-dhmva-form":                    {url:"$A/modules/x/xxx-form.html",Table:"91000575"},
+            "bl-ess":                           {url:"$A/modules/x/xxx-data.html",Table:"91000576",form_module:"bl-ess-form"},
+		    "bl-ess-form":                      {url:"$A/modules/x/xxx-form.html",Table:"91000576"},
+            "bl-mec":                           {url:"$A/modules/x/xxx-data.html",Table:"91000577",form_module:"bl-mec-form"},
+		    "bl-mec-form":                      {url:"$A/modules/x/xxx-form.html",Table:"91000577"},
+            "bl-psqi":                          {url:"$A/modules/x/xxx-data.html",Table:"91000578",form_module:"bl-psqi-form"},
+		    "bl-psqi-form":                     {url:"$A/modules/x/xxx-form.html",Table:"91000578"},
+            "bl-sstai":                         {url:"$A/modules/x/xxx-data.html",Table:"91000579",form_module:"bl-sstai-form"},
+		    "bl-sstai-form":                    {url:"$A/modules/x/xxx-form.html",Table:"91000579"},
+            "bl-ti":                            {url:"$A/modules/x/xxx-data.html",Table:"91000580",form_module:"bl-ti-form"},
+		    "bl-ti-form":                       {url:"$A/modules/x/xxx-form.html",Table:"91000580"},
+
+
+
+
+        }
+        //------------------------------------
+        for(p in $vm.module_list) $vm.module_list[p].url=$vm.replace_url($vm.module_list[p].url);
+        //------------------------------------
+        //Set your default web page title and footer text
+        $vm.default_title="Woolcock";
+        $('#text_0').html("Copyright &copy; "+(new Date()).getFullYear()+", Woolcock Institute of Medical Research");
+        //------------------------------------
+        $('#c_header').contents().appendTo('#header');
+        $('#c_footer').contents().appendTo('#footer');
+        //------------------------------------
+        $('#vm-mobile_title').on('click',function(){ $vm.load_module('home',$vm.root_layout_content_slot,{}) })
+        $('.vm-desk-logo').on('click',function(){ $vm.load_module('home',$vm.root_layout_content_slot,{}) })
+        //------------------------------------
+        $vm.root_layout_content_slot='content'
+        $vm.root_layout_footer='footer';
+        //---------------------------------------------
+        var set_layout=function(){
+            var header_height=$('#header').outerHeight(); $vm.header_height=header_height;
+            var footer_height=$('#footer').outerHeight(); $vm.footer_height=footer_height;
+            $vm.min_height=($(window).height()-header_height-footer_height);
+            if($vm.active_id!=undefined){
+                $('#D'+$vm.active_id).css('height',($('body').height()-$('#header').outerHeight()-$('#footer').outerHeight())+"px");
+            }
+        }
+        //------------------------------------
+        set_layout();
+        //-----------------------------------------
+        $vm.show=function(m_name){
+            document.title=$vm.default_title;
+            $("meta[name='description']").attr("content", "A single page application with shared reusable modules distributed on different static web servers around the world and maintained by different people with different skills!");
+            $("body").removeClass();
+            $("body").addClass('body_background_default');
+            
+            $vm.active_id=undefined;
+            if(m_name!=undefined) $vm.active_id=$vm.module_list[m_name].id;
+            if(m_name!=undefined && $vm.module_list[m_name].show!=undefined) $vm.module_list[m_name].show();
+            if($vm.active_id!=undefined){
+                $('#D'+$vm.active_id).css('overflow','auto');
+                $('#D'+$vm.active_id).css('min-height','unset');
+                $('#D'+$vm.active_id).css('height',($('body').height()-$('#header').outerHeight()-$('#footer').outerHeight())+"px");
+            }
+        }
+        //------------------------------------
+        $vm.show();
+        window.onresize=function(){set_layout();}
+        //------------------------------------
+        $vm.start=function(){
+            $vm.init(function(){
+               $vm.init_status=1;
+               $vm.show_user();
+           })
+        }
+        //------------------------------------
+    </script>
+    <style main-style>
+        :root {
+            --menu-color: #000;
+            --menu-hover-color: #29eca6;
+            --menu-hover-background-color: #555;
+
+            --dropdown-menu-color:#666;
+            --dropdown-menu-background-color:#f9f9f9;
+            --dropdown-menu-hover-color:#555;
+            --dropdown-menu-hover-background-color:#ddd;
+            --dropdown-menu-border-color:#ddd;
+
+            --mobile-title-color:#fff;
+            --mobile-hamburger-color:#fff;
+            --mobile-menu-background-color:#1c3144;
+        }
+        html,body{ margin:0; padding:0; height:100%; font-family:Arial;}
+        body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
+        .body_background_default{ background-image: url(https://image.vmiis.com/bk014.jpg);}
+        #vm-logo-image{
+            margin-top: -22px;
+            width:360px;
+            height:69px;
+            background: url('https://image.vmiis.com/logo.woolcock.gif') no-repeat top center;
+            background-size: cover;
+            float:left;
+        }
+        #content{
+        }
+        #footer{
+            height:24px;
+            color: #fff;
+            padding: 3px;
+            background-color: #333;
+            font:80%/18px arial;
+            text-align: center;
+        }
+        /*----------------------*/
+        #header{height:100px;background:rgba(100,100,100,0.2);}
+        .vm-desk-logo{ display:inline-block;float:left;padding:36px 30px 0 30px;cursor:pointer;}
+        #vm-menu{ float:left;padding:50px 30px 0 30px;}
+        @media screen and (max-width: 1200px){
+            #header{height:50px;}
+            .vm-desk-logo{display:none;}
+            #vm-menu{padding:0;}
+        }
+        /*----------------------*/
+    </style>
+    <script menu-code>
+        //------------------------------------
+        $('.vm-dropdown').on('click',function(e){
+            var d=$(this).find('.vm-dropdown-content');
+            if(d.css('display')=='block') d.css('display','none');
+            else d.css('display','block');
+        })
+        $(".vm-dropdown").mouseleave(function (){  $(".vm-dropdown-content").hide();  })
+        $(".vm-dropdown-content").mouseleave(function (){  $(this).hide();  })
+        $vm.toggle=function() {
+            var x = document.getElementById("vm-menu");
+            if(x.className==='') x.className="responsive";
+            else x.className="";
+        }
+        //------------------------------------
+        $('#vm-menu a').on('click',function(e){
+            e.preventDefault();
+            var href=$(this).attr('href');
+            if(href!=undefined && href!='' && href.substring(0,8)=="https://"){ window.open(href); return;}
+            if(href!=undefined && href!=''){
+                if($vm.menu_click!=undefined) $vm.menu_click(href);
+            }
+            $vm.toggle();
+        })
+        //------------------------------------
+        $vm.menu_click=function(href){
+            href=href.replace('?\/','');
+            href=href.replace(/\//g,'_');
+            $vm.load_module(href,$vm.root_layout_content_slot,{});
+        }
+        //------------------------------------
+    </script>
+    <style menu-style>
+        /*menu*/
+        #vm-menu {
+            overflow: hidden;
+            display:inline-block;
+            float:left;
+        }
+        #vm-menu > a {
+            color:var(--menu-color);
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor:pointer;
+        }
+        .vm-dropbtn {
+            color:var(--menu-color);
+            display: block;
+            font-size: 14px;
+            padding: 10px 8px;
+            background-color: inherit;
+            font-family: inherit;
+            cursor:pointer;
+        }
+        .vm-dropdown {
+            color:var(--menu-color);
+            float: left;
+            overflow: hidden;
+            border: none;
+            outline: none;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .vm-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--dropdown-menu-background-color);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 100;
+            max-height: 1000px;
+            overflow-y: hidden;
+            border-radius: 0px 3px 3px 3px;
+            animation: vm-menu-show 1.8s;
+        }
+        .vm-dropdown-content a {
+            float: none;
+            font-size: 14px;
+            color: var(--dropdown-menu-color)!important;
+            padding: 3px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            cursor:pointer;
+            border-bottom:1px solid var(--dropdown-menu-border-color);
+        }
+        #vm-menu > a:hover, .vm-dropdown:hover .vm-dropbtn {
+          background-color:var(--menu-hover-background-color);
+          color:var(--menu-hover-color);
+          border-radius:4px;
+        }
+        .vm-dropdown-content a:hover {
+            background-color: var(--dropdown-menu-hover-background-color);
+            color: var(--dropdown-menu-hover-color);
+            text-decoration: none;
+        }
+        .vm-hide{
+            display:none!Important;
+        }
+        .vm-mobile{
+            display:none;
+        }
+        /*----------------------*/
+        @media screen and (max-width: 1200px) {
+            .vm-mobile{
+                display:block;
+            }
+            .vm-mobile-title{
+                color:var(--mobile-title-color);
+                font-size: 28px;
+                display:inline-block;
+                padding: 3px 0 3px 12px;
+                cursor: pointer;
+            }
+            #vm-hamburger_button{
+                float: right;
+                display: block;
+                font-size:28px;
+                padding:5px 16px 3px 16px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                cursor:pointer;
+                color:var(--mobile-hamburger-color);
+            }
+            #vm-menu {
+                width:100%;
+                margin-top:0px;
+                margin-right:0px;
+                margin-left:0px;
+                padding-left:15px;
+                padding-right:15px;
+                overflow: hidden;
+                background: var(--mobile-menu-background-color);
+                display:block;
+                float:unset;
+            }
+            #vm-menu a, .vm-dropdown .vm-dropbtn {
+                display: none;
+            }
+            #vm-menu.responsive {
+                position: relative;
+                animation: vm-menu-show 1.8s;
+                z-index: 100;
+            }
+            #vm-menu.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            #vm-menu.responsive .vm-dropdown {float: none;}
+            #vm-menu.responsive .vm-dropdown-content {position: relative;}
+            #vm-menu.responsive .vm-dropdown .vm-dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+            .vm-mobile{
+                display:block;
+            }
+        }
+        @keyframes vm-menu-show {
+            from {max-height: 0px;}
+            to {max-height: 1000px;}
+        }
+    </style>
+</div>

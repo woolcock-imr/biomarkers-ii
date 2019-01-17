@@ -1,0 +1,75 @@
+<div id=D__ID>
+    <section>
+        VmInclude:__COMPONENT__/g/grid.01.html
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js
+            //-------------------------------------
+            var fields="Participant ID|Participant_uid,Participant,Task,Short_Title,Contents,Color";
+            m.fields="_Form,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
+            //-------------------------------------
+            m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+    				case 'Color':
+                        var html='<div style="height:18px;width:18px;background-color:'+records[I][field]+'"></div>';
+                        td.html(html);
+    				break;
+                }
+            }
+            //-------------------------------------
+            $('#new__ID').off('click').on('click',function(){
+                var task=$vm.module_list[m.input.task_module_name].task_name;
+                if(task==undefined) task=m.input.task_module_name.split('_').pop();
+                $vm.load_module_v2(m.form_module,'',{
+                    record:{
+                        Participant_uid:m.input.record.Participant_uid,
+                        Participant:m.input.record.Participant,
+                        Task:task,
+                        Color:"#008800",
+                    },
+                    dbv:{
+        	            GUID:m.input.record.Participant_uid,
+                        PPID:m.input.record.PID,
+                        PUID:m.input.record.UID
+                    },
+                    goback:1
+                })
+            })
+            //-------------------------------------
+    		m.set_req=function(){
+                //-------------------
+                $('#new__ID').show();
+                var task_module_name=m.input.task_module_name;
+    			var task_record=m.input.record;
+    			if(task_record===undefined){
+    				$('#new__ID').hide();
+    			}
+                //-------------------
+                var sql="with tb as (select Information,ID,UID,PPID,PUID,DateTime,Author,RowNum=row_number() over (order by ID DESC) from [TABLE-"+m.db_pid+"-@S1] )";
+                sql+="select Information,ID,UID,PPID,PUID,DateTime,Author,RowNum from tb where RowNum between @I6 and @I7";
+                var sql_n="select count(ID) from [TABLE-"+m.db_pid+"-@S1]";
+                //-------------------
+                if(task_record!==undefined){
+    				var sql_where=" PPID="+task_record.PID+ " and PUID="+task_record.UID;
+                    sql=sql.replace('RowNum between @I6 and @I7',sql_where);
+                    sql_n+=" where "+sql_where;
+                }
+                //-------------------
+                m.req={cmd:'read',qid:m.qid,sql:sql,sql_n:sql_n,s1:'"'+$('#keyword__ID').val()+'"',I:$('#I__ID').text(),page_size:$('#page_size__ID').val()}
+            }
+            //-------------------------------------
+            m.data_process=function(){
+                if($vm.refresh2==1){
+                    $vm.refresh2=0;
+                    $vm.refresh=1;
+                }
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>

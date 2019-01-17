@@ -1,0 +1,44 @@
+<div id=D__ID>
+	<div id=form_container__ID>
+		<div id=header__ID>
+			Access Query
+		</div>
+		<form id=F__ID>
+			<div class="container">
+				<div class="row row__ID">
+					<div class="col">
+						<span>Command</span>
+						<input type=text class="form-control" name="Command" required ></input>
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Query</span>
+						<textarea class="form-control" name="Query" required style='min-height:260px'></textarea>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class=col>
+						<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script>
+		function F__ID(){
+			//-------------------------------------
+			VmInclude:__COMPONENT__/f/form.01.js
+			//-------------------------------------
+			m.before_submit=function(record,dbv){
+				dbv.S1=record.Command;
+				return true;
+			}
+			//-------------------------------------
+		}
+	</script>
+	<style>
+		VmInclude:__COMPONENT__/f/form.01.css
+	</style>
+</div>

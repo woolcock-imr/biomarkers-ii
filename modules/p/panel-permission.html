@@ -1,0 +1,99 @@
+<div id=D__ID>
+	<div id=page__ID>
+		<div id=panel__ID>
+			<div class='nav__ID'>
+	            <span>Administrator</span>
+	            <ul>
+					<li><a href=?/permission-role-login-data>Roles - grant a role to a user</a></li>
+	            </ul>
+	            <br>
+	            <span>Data Owner</span>
+	            <ul>
+					<li><a href=?/permission-role-table-group-data>Roles - assign tasks to a role</a></li>
+	            </ul>
+	            <br>
+	            <span>Developer</span>
+	            <ul>
+	                <li><a href=?/permission-query-data>Permission queries - database access control logic</a></li>
+					<li><a href=?/permission-check>Permission Check - check a permission for a login name</a></li>
+	            </ul>
+			</div>
+		</div>
+	</div>
+    <script>
+		function F__ID(){
+			//--------------------------------------------------------
+			$vm.module_list["__MODULE__"].show=function(){
+				document.title="Control Panel | "+$vm.default_title;
+				$("meta[name='description']").attr("content","Control Panel");
+			}
+			//--------------------------------------------------------
+			$('#panel__ID a').on('click',function(e){
+				e.preventDefault();
+				var href=$(this).attr('href');
+				var app=$(this).attr('app');
+				if(href!=undefined){
+					href=href.replace('?\/','');
+					href=href.replace(/\//g,'_');
+					if(app==undefined) $vm.load_module(href,'',{});
+					else if($vm.module_list[href]!=undefined) window.open($vm.module_list[href].url);
+					else alert("The '"+ href +"' is not defined in the module list");
+				}
+			})
+			//--------------------------------------------------------
+			$('#panel__ID a').each(function(){
+				var href=$(this).attr('href');
+				if(href!=undefined){
+					href=href.replace('?\/','');
+					href=href.replace(/\//g,'_');
+					if($vm.module_list[href]!=undefined){
+						var url=$vm.module_list[href].url;
+						$(this).attr('title',url);
+					}
+				}
+			})
+			//--------------------------------------------------------
+		}
+	</script>
+	<style>
+		#D__ID{
+			background-color:#fff;
+			height:100%;
+			overflow: auto;
+			animation: vm_module_fadein 1.0s;
+		}
+		#panel__ID{
+			padding:10px 0 0 20px;
+			font-size:14px;
+		}
+		#panel__ID a {
+			text-decoration: none;
+		}
+		#panel__ID a:link {
+			color:#555;
+		}
+		#panel__ID a:visited {
+			color:#555;
+		}
+		#panel__ID a:hover {
+			color:red;
+		}
+		#panel__ID a:active {
+			color:#555;
+		}
+		.nav__ID{
+			padding:6px 26px 6px 6px;
+			float:left;
+		}
+		.nav__ID span{
+			color:#283f55;
+			font-weight: bold;
+			margin:3px 10px;
+		}
+		@media screen and (max-width:768px){
+			#panel__ID{
+				padding:10px 0 0 10px;
+			}
+		}
+	</style>
+</div>

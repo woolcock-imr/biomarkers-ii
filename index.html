@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- The meta data are changed by the active module-->
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="icon" href="data:,">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
+    </head>
+    <body>
+        <!-- Typical website layout, the contents are dynamiclly updated by modules-->
+        <div id=header></div>
+        <div id=content></div>
+        <div id=footer></div>
+    </body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+    <script boot-up>
+        //------------------------------------
+        //change version if your modules have been modified
+        $vm={};$VmAPI={};$vm.ver=[0.32,0.27];
+        //------------------------------------
+        //app urls
+        $vm.public_url_$A='https://biomarkers-ii.rt.org.au';
+        $vm.local_url_$A='http://127.0.0.1:8000/woolcock-imr/biomarkers-ii';
+        $vm.public_url_$B='http://biomarkers-ii-online-questionnaire.rt.org.au';
+        $vm.local_url_$B='http://127.0.0.1:8000/woolcock-imr/biomarkers-ii-online-questionnaire';
+        //------------------------------------
+        //where are your frame and app modules
+        $vm.module_list={
+            "app":     {"url":"$A/app.html"},
+            "frame":   {"url":"$A/modules/f/frame.html"},
+        }
+        //------------------------------------
+        
+        
+        
+        
+        //------------------------------------
+        //Do not need to chang the following code in most cases
+        //The following code will load a framework module and your application module
+        //------------------------------------
+        $vm.start_time=new Date().getTime();
+        //------------------------------------
+        //replace the url
+        $vm.replace_url=function(url){
+            var urlR=url.replace("$A",$vm.public_url_$A);
+            if($vm.localhost==true) urlR=urlR.replace($vm.public_url_$A,$vm.local_url_$A);
+            return urlR;
+        }
+        //------------------------------------
+        if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
+        for(p in $vm.module_list) $vm.module_list[p].url=$vm.replace_url($vm.module_list[p].url);
+        //------------------------------------
+        $vm._I=0; $vm._boot=function(){
+            $vm._I++;
+            if($vm._I==2){
+                $vm._start();
+            }
+        }
+        //------------------------------------------
+        var url1=$vm.module_list["app"].url;
+        var url2=$vm.module_list["frame"].url;
+        var urls=[url1,url2]; $vm._id=2;
+        //---------------------------------------------
+        var apppath=window.location.href.substring(0, window.location.href.lastIndexOf('/')).split('\/?')[0];
+        $(urls).each(function(index,url){
+            var ver=localStorage.getItem(apppath+url+"ver");
+            var txt=localStorage.getItem(apppath+url+"txt");
+            if(ver!=$vm.ver[0] || txt==null || $vm.localhost==true){
+                $.get(url+'?_='+new Date().getTime(),function(new_txt){
+                    localStorage.setItem(apppath+url+"txt",new_txt);
+                    localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
+                    console.log('loading from url. '+url);
+                    $('#content').append(new_txt.replace(/__ID/g,'_'+(index+1)));
+                    $vm._boot();
+                },'text');
+            }
+            else{
+                console.log('loading from storage. '+url);
+                $('#content').append(txt.replace(/__ID/g,'_'+(index+1)));
+                $vm._boot();
+            }
+        })
+        //---------------------------------------------
+    </script>
+</html>

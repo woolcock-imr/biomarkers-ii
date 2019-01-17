@@ -1,0 +1,145 @@
+<div id=panel__ID>
+    Please answer the following questionnaires. Follow the instruction on each of them.<br><br>
+	<div id=items__ID></div>
+</div>
+</div>
+
+<script>
+	function F__ID(){
+		//--------------------------------------------------------
+		/*
+        var q_list={
+            "Screening":[
+                {"module_id":"consent-form","task_name":"Consent"},
+                {"module_id":"ess-form",    "task_name":"Epworth Sleepiness Scale"},
+                {"module_id":"psqi-form",    "task_name":"Pittsburgh sleep quality index"},
+                {"module_id":"dass-form",    "task_name":"Depression anxiety stress scales"},
+                {"module_id":"ffs-form",    "task_name":"Flinders fatigue scale"},
+                {"module_id":"fss-form",    "task_name":"Fatigue severity scale"},
+                {"module_id":"isi-form",    "task_name":"Insomnia severity index"},
+            ],
+            "Visit 1":[
+                {"module_id":"visit-date-form","task_name":"Data of visit"},
+                {"module_id":"anthropometry-form","task_name":"Anthropometry"},
+                {"module_id":"medical-history-form","task_name":"Medical history"},
+                {"module_id":"social-history-form","task_name":"Social history"},
+            ],
+		}
+		*/
+        var id_list;
+		//--------------------------------------------------------
+		$('#D__ID').on('load',function(){
+		})
+		//--------------------------------------------------------
+		$('#D__ID').on('show',function(){
+            var record=$vm.vm['__ID'].input.record;
+			id_list=record.Data.List;
+            if(id_list==undefined){
+                alert("No questionnaire was found");
+                return;
+            }
+			setup_panel();
+		})
+		//--------------------------------------------------------
+		var status=[]
+		//---------------------------------
+		var setup_panel=function(){
+			//----------------------------------
+		    var ids=id_list.split(',');
+		    var txt="<ul>";
+		    //----------------------------------
+		    for(var i=0;i<ids.length;i++){
+				var m=ids[i];
+		        if(status[m]==undefined){
+		            status[m]={rid:0}
+				}
+				var task_name="not found";
+				var mm=$vm.module_list[m];
+				if(mm!=undefined){
+					task_name=mm.task_name;
+					status[m].Table=mm.Table;
+				}
+				txt+="<li m="+m+">"+task_name+"</li>";
+		    }
+            txt+"</ul>";
+		    $('#items__ID').html(txt);
+		    //----------------------------------
+			$('#items__ID li').each(function(){
+		        var $li=$(this);
+				$li.removeClass('li_allowed__ID')
+				$li.addClass('li_not_allowed__ID')
+			})
+			//----------------------------------
+			$('#items__ID li').each(function(){
+		        var $li=$(this);
+		        var m=$li.attr('m');
+		        if(status[m].rid==0){
+					if($vm.api_type=="sqlserver"){
+						//-----------------
+						var req={cmd:'read-s2',qid:$vm.qid,db_pid:status[m].Table};
+						//-----------------
+						jQuery.ajaxSetup({async:false});
+						$VmAPI.request({data:req,callback:function(res){
+							if(res.records.length==0){
+							}
+							else{
+								status[m].rid=1;
+							}
+						}})
+						jQuery.ajaxSetup({async:true});
+					}
+					else{
+						var query={table:$vm.module_list[m].Table}
+						jQuery.ajaxSetup({async:false});
+						$vm.request({cmd:"find-s",query:query,options:{}},function(res){
+							if(res.permission==false){
+								alert("No permission");
+								return;
+							}
+							if(res.result.length==0){
+							}
+							else{
+								status[m].rid=1;
+							}
+						})
+						jQuery.ajaxSetup({async:true});
+					}
+		        }
+		        if(status[m].rid==0){
+					$li.removeClass('li_not_allowed__ID')
+					$li.addClass('li_allowed__ID')
+		            var task_name=$li.html();
+		            var module=$li.attr('m');
+		            $li.html("<u style='cursor:pointer' m="+module+">"+task_name+"</u>");
+		            $li.find('u').on('click',function(){
+		                var m=$(this).attr('m');
+                        var record=$vm.vm['__ID'].input.record;
+						$vm.load_module(m,'',{participant_record:record,goback:1});
+		            });
+		            return false; // break out the loop
+		        }
+		    })
+		    //----------------------------------
+		}
+		//--------------------------------------------------------
+	}
+</script>
+<style>
+	#D__ID{
+        height:100%;
+		overflow: auto;
+		animation: vm_module_fadein 1.0s;
+		background: rgba(255,255,255,1);
+	}
+	#panel__ID{
+		padding:30px;
+	}
+	.li_not_allowed__ID{
+		color:#999!Important;
+		cursor:not-allowed!Important;
+	}
+	.li_allowed__ID{
+		color:#000!Important;
+		cursor:pointer!Important;
+	}
+</style>
