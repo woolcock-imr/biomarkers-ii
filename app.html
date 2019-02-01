@@ -13,7 +13,7 @@
             </div>
             <div menu id="vm-menu">
                 <a href="?/home"><i class="fa fa-home"></i> Home</a>
-                <a href="?/panel-main"><i class="fa fa-th"></i> Biomarkers-II</a>
+                <a href="?/panel-main-b-ii"><i class="fa fa-th"></i> Biomarkers-II</a>
                 <a href="?/panel-permission"><i class="fa fa-lock"></i> Permissions</a>
                 <a id=vm_signin onclick="$vm.signin();"><i class="fa fa-user"></i> Sign In</a>
                 <a class=vm-hide id=vm_signout onclick=$vm.signout()><i class="fa fa-user"></i> Sign Out</a>
@@ -34,60 +34,6 @@
         $vm.qid='91000567'; //permission control table
         $VmAPI.api_base="https://rt.woolcock.org.au/pro/";
         if(window.location.toString().indexOf('db=dev')!=-1) $VmAPI.api_base="https://cbs.wappsystem.com/dev/";
-        //------------------------------------
-        //list all your modules used in your application
-        //Setup each module's Table (you can create your own tables in backoffice)
-        $vm.module_list={
-            "home":                             {url:"$A/modules/h/home.html",router:1},
-            "panel-main":  		  			    {url:"$A/modules/p/panel-main.html",router:1},
-            "panel-child": 		  			    {url:"$A/modules/p/panel-child.html"},
-            "panel-permission":   			    {url:"$A/modules/p/panel-permission.html",router:1},
-            
-            "permission-check":                 {url:"$A/modules/p/permission-check.html"},
-            "permission-role-login-data":       {url:"$A/modules/p/permission-role-login-data.html",Table:"91000570",form_module:"permission-role-login-form"},
-            "permission-role-login-form":       {url:"$A/modules/p/permission-role-login-form.html",Table:"91000570"},
-            "permission-role-table-group-data": {url:"$A/modules/p/permission-role-table-group-data.html",Table:"91000570",form_module:"permission-role-table-group-form"},
-            "permission-role-table-group-form": {url:"$A/modules/p/permission-role-table-group-form.html",Table:"91000570"},
-            "permission-query-data":            {url:"$A/modules/p/permission-query-data.html",Table:"91000569",form_module:"permission-query-form"},
-            "permission-query-form":            {url:"$A/modules/p/permission-query-form.html",Table:"91000569"},
-
-            "edc-notes-data":	  		        {url:"$A/modules/e/edc-notes-data.html",Table:"91000571",form_module:"edc-notes-form"},
-		    "edc-notes-form":	  		        {url:"$A/modules/e/edc-notes-form.html",Table:"91000571"},
-            "participant-data":     	        {url:"$A/modules/p/participant-data.html", Table:"91000570",form_module:"participant-form"},
-		    "participant-form":     	        {url:"$A/modules/p/participant-form.html", Table:"91000570"},
-            
-            "online-questionnaire-setup": 	    {url:"$A/modules/o/online-questionnaire-setup.html",Table:"91000570"},
-            "online-questionnaire-panel":       {url:"$A/modules/o/online-questionnaire-panel.html"},
-            "online-questionnaire-login":       {url:"$A/modules/o/online-questionnaire-login.html"},
-            
-            "bl-anthropometry":	 	            {url:"$A/modules/a/anthro-data.html",Table:"91000572",form_module:"bl-anthropometry-form"},
-		    "bl-anthropometry-form":	 	    {url:"$A/modules/a/anthro-form.html",Table:"91000572"},
-            
-            "bl-insomnia-severity-index-data":  {url:"$A/modules/i/insomnia-severity-index-data.html",Table:"91000573",form_module:"bl-insomnia-severity-index-form"},
-		    "bl-insomnia-severity-index-form":  {url:"$A/modules/i/insomnia-severity-index-form.html",Table:"91000573"},
-
-
-            "bl-dass":                          {url:"$A/modules/x/xxx-data.html",Table:"91000574",form_module:"bl-dass-form"},
-		    "bl-dass-form":                     {url:"$A/modules/x/xxx-form.html",Table:"91000574"},
-            "bl-dhmva":                         {url:"$A/modules/x/xxx-data.html",Table:"91000575",form_module:"bl-dhmva-form"},
-		    "bl-dhmva-form":                    {url:"$A/modules/x/xxx-form.html",Table:"91000575"},
-            "bl-ess":                           {url:"$A/modules/x/xxx-data.html",Table:"91000576",form_module:"bl-ess-form"},
-		    "bl-ess-form":                      {url:"$A/modules/x/xxx-form.html",Table:"91000576"},
-            "bl-mec":                           {url:"$A/modules/x/xxx-data.html",Table:"91000577",form_module:"bl-mec-form"},
-		    "bl-mec-form":                      {url:"$A/modules/x/xxx-form.html",Table:"91000577"},
-            "bl-psqi":                          {url:"$A/modules/x/xxx-data.html",Table:"91000578",form_module:"bl-psqi-form"},
-		    "bl-psqi-form":                     {url:"$A/modules/x/xxx-form.html",Table:"91000578"},
-            "bl-sstai":                         {url:"$A/modules/x/xxx-data.html",Table:"91000579",form_module:"bl-sstai-form"},
-		    "bl-sstai-form":                    {url:"$A/modules/x/xxx-form.html",Table:"91000579"},
-            "bl-ti":                            {url:"$A/modules/x/xxx-data.html",Table:"91000580",form_module:"bl-ti-form"},
-		    "bl-ti-form":                       {url:"$A/modules/x/xxx-form.html",Table:"91000580"},
-
-
-
-
-        }
-        //------------------------------------
-        for(p in $vm.module_list) $vm.module_list[p].url=$vm.replace_url($vm.module_list[p].url);
         //------------------------------------
         //Set your default web page title and footer text
         $vm.default_title="Woolcock";
