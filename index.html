@@ -15,7 +15,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.01,0.01]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.02,0.01]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         //------------------------------------
         //app urls
         $vm.public_url_$A='https://biomarkers-ii.rt.org.au';
@@ -82,7 +82,7 @@
                 $.get(url+'?_='+new Date().getTime(),function(new_txt){
                     localStorage.setItem(apppath+url+"txt",new_txt);
                     localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
-                    console.log('loading from url. '+url);
+                    console.log('loading from url. '+url+" "+ver+"/"+$vm.ver[0]);
                     $('#content').append(new_txt.replace(/__ID/g,'_'+(index+1)));
                     $vm._boot();
                 },'text');
@@ -101,7 +101,7 @@
                 $.get(url+'?_='+new Date().getTime(),function(new_txt){
                     localStorage.setItem(apppath+url+"txt",new_txt);
                     localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
-                    console.log('loading from url. '+url);
+                    console.log('loading from url. '+url+" "+ver+"/"+$vm.ver[0]);
                     eval(new_txt);
                     $vm._boot();
                 },'text');
