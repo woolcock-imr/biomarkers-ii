@@ -82,13 +82,13 @@
                 $.get(url+'?_='+new Date().getTime(),function(new_txt){
                     localStorage.setItem(apppath+url+"txt",new_txt);
                     localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
-                    console.log('loading from url. '+url+" "+ver+"/"+$vm.ver[0]);
+                    console.log('loading from url. '+url+' '+ver+'/'+$vm.ver[0]);
                     $('#content').append(new_txt.replace(/__ID/g,'_'+(index+1)));
                     $vm._boot();
                 },'text');
             }
             else{
-                console.log('loading from storage. '+url);
+                console.log('loading from storage. '+url+' '+ver+'/'+$vm.ver[0]);
                 $('#content').append(txt.replace(/__ID/g,'_'+(index+1)));
                 $vm._boot();
             }
@@ -101,13 +101,13 @@
                 $.get(url+'?_='+new Date().getTime(),function(new_txt){
                     localStorage.setItem(apppath+url+"txt",new_txt);
                     localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
-                    console.log('loading from url. '+url+" "+ver+"/"+$vm.ver[0]);
+                    console.log('loading from url. '+url+' '+ver+'/'+$vm.ver[0]);
                     eval(new_txt);
                     $vm._boot();
                 },'text');
             }
             else{
-                console.log('loading from storage. '+url);
+                console.log('loading from storage. '+url+' '+ver+'/'+$vm.ver[0]);
                 eval(txt);
                 $vm._boot();
             }
