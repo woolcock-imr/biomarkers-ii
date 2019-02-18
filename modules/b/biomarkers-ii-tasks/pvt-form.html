@@ -1,0 +1,345 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            Psychomotor Vigilance Task - data upload
+        </div>
+        <form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class='label__ID'>Participant</span><br>
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class='label__ID'>Participant ID</span><br>
+                        <input type='text' name='Participant_uid' class='form-control' readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
+
+                
+                <!-- Form Inputs-------------------------------------->
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>What session is this?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='PVT_session' id='PVT_session_practice' value='practice' required>  <label class='survey-answer' for='PVT_session_practice'>Practice</label><br />
+                        <input type='radio' name='PVT_session' id='PVT_session_1' value='1'>  <label class='survey-answer' for='PVT_session_1'>Session 1 - 9:00 am</label><br />
+                        <input type='radio' name='PVT_session' id='PVT_session_2' value='2'> <label class='survey-answer' for='PVT_session_2'>Session 2 - 11:00 am</label><br />
+                        <input type='radio' name='PVT_session' id='PVT_session_3' value='3'> <label class='survey-answer' for='PVT_session_3'>Session 3 - 13:00 pm</label><br />
+                        <input type='radio' name='PVT_session' id='PVT_session_4' value='4'> <label class='survey-answer' for='PVT_session_4'>Session 4 - 15:00 pm</label><br />
+                        <input type='radio' name='PVT_session' id='PVT_session_5' value='5'> <label class='survey-answer' for='PVT_session_5'>Session 5 - 17:00 pm</label><br />
+                    </div>
+                </div>
+                </div></div>
+                
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span>FILE UPLOAD </span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_File_Name__ID></u>
+                            <br>
+                            <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
+                            <br />
+                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
+                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                        </div>
+                    </div>
+                </div>            
+                <!---------------------------------------------------->
+
+                <!-- Variable Inputs---------------------------------->
+                <div class='row row__ID'><div class='col'>
+                    <span>Subject ID</span>
+                    <input type=text class=form-control name=Subject_ID>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Trial No</span>
+                    <input type=text class=form-control name=Trial_No>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Trial Date Time</span>
+                    <input type=text class=form-control name=Trial_Date_Time>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Study</span>
+                    <input type=text class=form-control name=Study>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Subj Initials</span>
+                    <input type=text class=form-control name=Subj_Initials>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Exp Initials</span>
+                    <input type=text class=form-control name=Exp_Initials>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>ISI Minimum</span>
+                    <input type=text class=form-control name=ISI_Minimum>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>ISI Maximum</span>
+                    <input type=text class=form-control name=ISI_Maximum>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Task</span>
+                    <input type=text class=form-control name=Task>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Hand</span>
+                    <input type=text class=form-control name=Hand>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Trial Length</span>
+                    <input type=text class=form-control name=Trial_Length>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Sleepy Pre</span>
+                    <input type=text class=form-control name=Sleepy_Pre>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Sleepy Post</span>
+                    <input type=text class=form-control name=Sleepy_Post>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>PVT192 SN</span>
+                    <input type=text class=form-control name=PVT192_SN>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Good Rs</span>
+                    <input type=text class=form-control name=Good_Rs>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Mean RT</span>
+                    <input type=text class=form-control name=Mean_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>SD RT</span>
+                    <input type=text class=form-control name=SD_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Median RT</span>
+                    <input type=text class=form-control name=Median_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Minimum RT</span>
+                    <input type=text class=form-control name=Minimum_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Maximum RT</span>
+                    <input type=text class=form-control name=Maximum_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Mean RRT</span>
+                    <input type=text class=form-control name=Mean_RRT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>SD RRT</span>
+                    <input type=text class=form-control name=SD_RRT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Lapses RT  500ms</span>
+                    <input type=text class=form-control name=Lapses_RT__500ms>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Lap SQR XFRM</span>
+                    <input type=text class=form-control name=Lap_SQR_XFRM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Total Errors</span>
+                    <input type=text class=form-control name=Total_Errors>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>RT  100 ms</span>
+                    <input type=text class=form-control name=RT__100_ms>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong key Rs</span>
+                    <input type=text class=form-control name=Wrong_key_Rs>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>False Starts c</span>
+                    <input type=text class=form-control name=False_Starts_c>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>False Starts e</span>
+                    <input type=text class=form-control name=False_Starts_e>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Key Held  3 s</span>
+                    <input type=text class=form-control name=Key_Held__3_s>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>No R for 30s</span>
+                    <input type=text class=form-control name=No_R_for_30s>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Distrib Asym</span>
+                    <input type=text class=form-control name=Distrib_Asym>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Mean F RT</span>
+                    <input type=text class=form-control name=Mean_F_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>SD F RT</span>
+                    <input type=text class=form-control name=SD_F_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Mean F RRT</span>
+                    <input type=text class=form-control name=Mean_F_RRT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>SD F RRT</span>
+                    <input type=text class=form-control name=SD_F_RRT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Mean S RT</span>
+                    <input type=text class=form-control name=Mean_S_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>SD S RT</span>
+                    <input type=text class=form-control name=SD_S_RT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Mean S RRT</span>
+                    <input type=text class=form-control name=Mean_S_RRT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>SD S RRT</span>
+                    <input type=text class=form-control name=SD_S_RRT>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>RRT Slope</span>
+                    <input type=text class=form-control name=RRT_Slope>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>RRT Intcpt</span>
+                    <input type=text class=form-control name=RRT_Intcpt>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>RRT R2</span>
+                    <input type=text class=form-control name=RRT_R2>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Ci of Slope</span>
+                    <input type=text class=form-control name=Ci_of_Slope>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Std Err of Line</span>
+                    <input type=text class=form-control name=Std_Err_of_Line>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>t vs Zero Slope</span>
+                    <input type=text class=form-control name=t_vs_Zero_Slope>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Change</span>
+                    <input type=text class=form-control name=Change>
+                </div></div>                
+                <!---------------------------------------------------->
+            
+            </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+
+            $('#F__ID input[name=File_Name]').on('change',function(evt){
+                if(this.files.length==1){
+                    file_process(this.files[0])
+                }
+            });
+
+            function parseVariableName(str) {
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim();                   // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, '');   // String cannot start with numbers
+                str = str.split(' ').join('_');     // Join any remaining bits of string with underscores
+                return str;
+            }
+
+            //-------------------------------------
+            // File reader function
+            var file_process = function (file) {
+                // Create a new file reader and on loading a file -> run
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+                    
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = true;
+                    var delimiter  = '\t';
+                    
+                    // Get contents
+                    var contents = e.target.result;
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = 0; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if ( r == 0 ) {
+                                var varNames = rows[r].split(delimiter);
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // The subsequent rows contains the values
+                                var varValues = rows[r].split(delimiter);
+                            }
+                        }
+                        // Store the value of each variable in the form-input field
+                        for (var v = 0; v < varNames.length; v++) {
+                            $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[v]);
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        var varNames  = Array();
+                        var varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            varNames[r]  = parseVariableName(varNames[r]);
+                            varValues[r] = row[1];
+                            // Store the value of each variable in the form-input field
+                            $('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
+                        }
+                    }
+                    console.log(varNames.join());
+                });
+                reader.readAsText(file);
+            }
+
+            var old_load=m.load;
+            m.load=function(){
+                old_load();
+                m.set_file_link("File_Name");
+            }
+
+
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+    </style>
+</div>

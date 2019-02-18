@@ -9,10 +9,6 @@
                                   supported by Chrome and Opera */
 }
 
-.row {
-  width:100%;
-}
-
 .dials {
   display:inline-block;
   text-align: center;
@@ -22,11 +18,12 @@
 .face {
   display:inline-block;
   margin: 0;
-  padding: 0px 10px;
+  padding: 2px 10px 0px 10px;
   background-color:#FFF;
   border:#CCCCCC solid 2px;
   border-radius: 8px;
   line-height:2em;
+  font-size:1em;
   color: #EEE;
 }
 
@@ -40,7 +37,7 @@
 .labels {
   color:#666;
   display:inline-block;
-  margin: 0px 10px 0px 3px;
+  margin: 0px 10px 0px 0px;
   text-align: left;
   vertical-align: middle;
 }

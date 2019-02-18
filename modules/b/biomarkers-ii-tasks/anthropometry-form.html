@@ -1,0 +1,94 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+    		Anthropometry
+    	</div>
+    	<form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class='label__ID'>Participant</span><br>
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class='label__ID'>Participant ID</span><br>
+                        <input type='text' name='Participant_uid' class='form-control' readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
+
+                <!-- Form Inputs-------------------------------------->
+                <div class='row row__ID'>
+    				<div class='col-sm-4'>
+                        <span class='survey-question required'>Height (cm)</span>
+    					<input type='number' class='form-control' name='ANTHRO_height' step='1' required>
+    				</div>
+    				<div class='col-sm-4'>
+                        <span class='survey-question required'>Weight (kg)</span>
+    					<input type='number' class='form-control' name='ANTHRO_weight' step='1' required>
+    				</div>
+    				<div class='col-sm-4'>
+                        <span class='survey-question'>BMI</span>
+    					<input type='number' class='form-control' readonly name='ANTHRO_bmi'>
+    				</div>
+                </div>
+
+                <br />
+                <h1>Circumference</h1>
+                <div class='row row__ID'>
+                    <div class='col-sm-3'>
+                        <span class='survey-question required'>Waist (cm)</span>
+                        <input type='number' class='form-control' name='ANTHRO_waist' required>
+                    </div>
+                    <div class='col-sm-3'>
+                        <span class='survey-question required'>Hip (cm)</span>
+                        <input type='number' class='form-control' name='ANTHRO_hip' required>
+                    </div>
+                    <div class='col-sm-3'>
+                        <span class='survey-question required'>Neck (cm)</span>
+                        <input type='number' class='form-control' name='ANTHRO_neck' required>
+                    </div>
+                    <div class='col-sm-3'>
+                        <span class='survey-question required'>Head (cm)</span>
+                        <input type='number' class='form-control' name='ANTHRO_head' required>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+    			<div class='row'>
+    				<div class=col>
+    					<button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+    				</div>
+    			</div>
+                <!---------------------------------------------------->
+        	</div>
+        </form>
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+			VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            $('#D__ID input[name=ANTHRO_height]').on('change',function(){   cal();  })
+            $('#D__ID input[name=ANTHRO_weight]').on('change',function(){   cal();  })
+            //-------------------------------------
+            var cal=function(){
+                var h=$('#D__ID input[name=ANTHRO_height]').val()/100;
+                var w=$('#D__ID input[name=ANTHRO_weight]').val();
+                var b=(w/(h*h)).toFixed(2);
+                $('#D__ID input[name=ANTHRO_bmi]').val(b);
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+		VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+    </style>
+</div>

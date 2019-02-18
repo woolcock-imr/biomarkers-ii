@@ -1,0 +1,130 @@
+<div id=D__ID>
+        <section id=form_container__ID>
+            <div id=header__ID>
+                Title
+            </div>
+            <form id=F__ID>
+                <div class='container'>
+                    <!-- participant part for all tsak forms -------------------->
+                    <div class='row row__ID' id=row_participant__ID>
+                        <div class='col-sm-12 col-lg-9 input__ID'>
+                            <span class='label__ID'>Participant</span><br>
+                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                        </div>
+                        <div class='col-sm-12 col-lg-3 input__ID'>
+                            <span class='label__ID'>Participant ID</span><br>
+                            <input type='text' name='Participant_uid' class='form-control' readonly />
+                        </div>
+                        <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                    </div>
+                    <!---------------------------------------------------->
+    
+                    <!-- FORM INPUTS -->
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <span class='survey-question required'>How many years of education have you received?</span>
+                    </div>
+                    <div class='row'>
+                        <div class='col-sm-2'>
+                            <input type='number' class='form-control' name='EDU_years' required min=0 />
+                        </div>
+                        <div class='col-sm-10'>
+                            <span class='survey-answer'>years</span>
+                        </div>
+                    </div>
+                    </div></div>
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <span class='survey-question required'>What is the highest educational qualification you have attained (HSC, University, TAFE etc.)?</span>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='text' class='form-control' name='EDU_qual' required />
+                        </div>
+                    </div>
+                    </div></div>
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <span class='survey-question required'>What is your current primary occupation?</span>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='text' class='form-control' name='EDU_occupation' required />
+                        </div>
+                    </div>
+                    </div></div>
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <span class='survey-question required '>How would you rate your computer skills?</span>
+                    </div>
+                    <div class='row center__ID'>
+                        <div class='col-sm'>
+                            <span class='survey-answer'>poor</span><br />
+                            <input type='radio' name='EDU_computer' value='0' required >
+                        </div>
+                        <div class='col-sm'>
+                            <span class='survey-answer'>below average</span><br />
+                            <input type='radio' name='EDU_computer' value='1'>
+                        </div>
+                        <div class='col-sm'>
+                            <span class='survey-answer'>average</span><br />
+                            <input type='radio' name='EDU_computer' value='2'>
+                        </div>
+                        <div class='col-sm'>
+                            <span class='survey-answer'>good</span><br />
+                            <input type='radio' name='EDU_computer' value='3'>
+                        </div>
+                        <div class='col-sm'>
+                            <span class='survey-answer'>excellent</span><br />
+                            <input type='radio' name='EDU_computer' value='4'>
+                        </div>
+                    </div>
+                    </div></div>
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <span class='survey-question required'>How many hours per week do you use the computer?</span>
+                    </div>
+                    <div class='row'>
+                        <div class='col-sm-2'>
+                            <input type='number' class='form-control' name='EDU_compUse' required min=0 />
+                        </div>
+                        <div class='col-sm-10'>
+                            <span class='survey-answer'>hours/week</span>
+                        </div>
+                    </div>
+                    </div></div>
+
+                    <!-- submit button part for all tsak forms------------>
+                    <br>
+                    <div class='row'>
+                        <div class='col'>
+                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------->
+                </div>
+            </form>
+        </section>
+        <script>
+            function F__ID(){
+                //-------------------------------------
+                VmInclude:'__COMPONENT__/f/form.01.js'
+                VmInclude:'__CURRENT_PATH__/task-form.js'
+                //-------------------------------------
+            }
+        </script>
+        <style>
+            VmInclude:__COMPONENT__/f/form.01.css
+            VmInclude:__CURRENT_PATH__/task-form.css
+        </style>
+    </div>

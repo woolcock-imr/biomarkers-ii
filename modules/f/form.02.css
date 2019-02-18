@@ -1,0 +1,104 @@
+#form_container__ID{
+    max-width: 900px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#F__ID h1 {
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: bold;
+    border-top: rgba(60,60,60,1) solid 1px;
+    padding: 5px;
+    margin-left:-15px;
+}
+#F__ID input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: button;
+    background-color:rgba(255,255,255,1);
+    border: 1px solid #adb8c0;
+    width:15px;
+    height:15px;
+    padding: 0px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+#F__ID input[type=radio]:hover {
+    border: 3px solid #adb8c0;
+}
+#F__ID input[type=radio]:checked {
+    background-color:rgba(60,60,60,1);
+}
+#F__ID .col-sm:hover input[type=radio] {
+    border: 3px solid #adb8c0;
+}
+
+#F__ID input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: button;
+    background-color:rgba(255,255,255,1);
+    border: 1px solid #adb8c0;
+    width:16px;
+    height:16px;
+    padding: 0px;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+#F__ID input[type=checkbox]:hover {
+    border: 3px solid #adb8c0;
+}
+#F__ID input[type=checkbox]:checked {
+    background-color:rgba(60,60,60,1);
+}
+#F__ID .col-sm:hover input[type=checkbox] {
+    border: 3px solid #adb8c0;
+}
+
+#F__ID .survey-question.required::after {
+    content: " *";
+    color: black;
+}
+
+/* #F__ID input:invalid::before {
+    content: "*";
+    position: relative;
+    color: red;
+    left:-15px;
+    top:-2em;
+} */
+
+h1 {
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: bold;
+    border-top: rgba(60,60,60,1) solid 1px;
+    padding: 5px;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 5px;
+}
+.row__ID {
+    border-top:#ced4da solid 1px;
+    padding-bottom:12px !important;
+}
+.center__ID {
+    text-align: center;
+    vertical-align: bottom;
+    height: 100%;
+}
+.center__ID div {
+    text-align: center;
+    vertical-align: bottom;
+    height: 100%;
+}
+.survey-question {
+    font-weight: bold;
+}     
+.survey-subquestion {
+    font-style: italic;
+}  

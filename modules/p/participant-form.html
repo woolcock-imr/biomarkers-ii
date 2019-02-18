@@ -33,12 +33,12 @@
 						<select class=form-control name=Gender>
 							<option value=''>---</option>
 							<option>Male</option>
-							<option>Femaile</option>
+							<option>Female</option>
 						</select>
 					</div>
 					<div class="col-sm col-lg-6">
-						<span>DOB</span>
-						<input type=date class=form-control name=DOB>
+						<span>DOB</span><br>
+						<input type='text' placeholder='dd/mm/yyyy' class='form-control input_box_medium__ID' data-custom='1' data-provide='DOB' data-id='DOB' name='DOB' id='DOB' />
 					</div>
 				</div>
 				<div class='row row__ID'>
@@ -75,6 +75,13 @@
 				}
 			}
 			//-------------------------------------
+			// Call bootstrap function for datepicker
+            $('#DOB').datepicker({
+				dateFormat: 'dd/mm/yy',
+				changeMonth: true,
+				changeYear: true,
+				defaultDate: '01/01/1975'
+			});
 		}
 	</script>
 	<style>

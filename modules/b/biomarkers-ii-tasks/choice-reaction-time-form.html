@@ -1,0 +1,234 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            4 Choice Reaction Time Task - data upload
+        </div>
+        <form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class='label__ID'>Participant</span><br>
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class='label__ID'>Participant ID</span><br>
+                        <input type='text' name='Participant_uid' class='form-control' readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
+
+                
+                <!-- Form Inputs-------------------------------------->
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>What session is this?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='CRTT_session' id='CRTT_session_practice' value='practice' required>  <label class='survey-answer' for='CRTT_session_practice'>Practice</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_1' value='1'>  <label class='survey-answer' for='CRTT_session_1'>Session 1 - 9:00 am</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_2' value='2'> <label class='survey-answer' for='CRTT_session_2'>Session 2 - 11:00 am</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_3' value='3'> <label class='survey-answer' for='CRTT_session_3'>Session 3 - 13:00 pm</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_4' value='4'> <label class='survey-answer' for='CRTT_session_4'>Session 4 - 15:00 pm</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_5' value='5'> <label class='survey-answer' for='CRTT_session_5'>Session 5 - 17:00 pm</label><br />
+                    </div>
+                </div>
+                </div></div>
+                
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span>FILE UPLOAD </span><br />
+                        <span>Upload the header-file</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_File_Name__ID></u>
+                            <br>
+                            <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
+                            <br />
+                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
+                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                        </div>
+                    </div>
+                </div>            
+                <!---------------------------------------------------->
+
+                <!-- Variable Inputs---------------------------------->
+                <div class='row row__ID'><div class='col'>
+                    <span>PID</span>
+                    <input type=text class=form-control name=PID>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Premature Responses</span>
+                    <input type=text class=form-control name=Premature_Responses>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Anticipated Responses</span>
+                    <input type=text class=form-control name=Anticipated_Responses>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Count</span>
+                    <input type=text class=form-control name=Correct_Count>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Mean</span>
+                    <input type=text class=form-control name=Correct_Mean>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Median</span>
+                    <input type=text class=form-control name=Correct_Median>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Variance</span>
+                    <input type=text class=form-control name=Correct_Variance>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct StdDev</span>
+                    <input type=text class=form-control name=Correct_StdDev>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Skewness</span>
+                    <input type=text class=form-control name=Correct_Skewness>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Kurtosis</span>
+                    <input type=text class=form-control name=Correct_Kurtosis>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Count</span>
+                    <input type=text class=form-control name=Wrong_Count>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Mean</span>
+                    <input type=text class=form-control name=Wrong_Mean>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Median</span>
+                    <input type=text class=form-control name=Wrong_Median>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Variance</span>
+                    <input type=text class=form-control name=Wrong_Variance>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong StdDev</span>
+                    <input type=text class=form-control name=Wrong_StdDev>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Skewness</span>
+                    <input type=text class=form-control name=Wrong_Skewness>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Kurtosis</span>
+                    <input type=text class=form-control name=Wrong_Kurtosis>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>mac address</span>
+                    <input type=text class=form-control name=mac_address>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>start time</span>
+                    <input type=text class=form-control name=start_time>
+                </div></div>            
+                <!---------------------------------------------------->
+            
+            </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+
+            $('#F__ID input[name=File_Name]').on('change',function(evt){
+                if(this.files.length==1){
+                    file_process(this.files[0])
+                }
+            });
+
+            function parseVariableName(str) {
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim();                   // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, '');   // String cannot start with numbers
+                str = str.split(' ').join('_');     // Join any remaining bits of string with underscores
+                return str;
+            }
+
+            //-------------------------------------
+            // File reader function
+            var file_process = function (file) {
+                // Create a new file reader and on loading a file -> run
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+                    
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = true;
+                    var delimiter  = ',';
+                    
+                    // Get contents
+                    var contents = e.target.result;
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = 0; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if ( r == 0 ) {
+                                var varNames = rows[r].split(delimiter);
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // Break if the row is empty
+                                if (rows[r].length == 0) { break; };
+                                // The subsequent rows contains the values
+                                var varValues = rows[r].split(delimiter);
+                            }
+                        }
+                        // Store the value of each variable in the form-input field
+                        for (var v = 0; v < varNames.length; v++) {
+                            $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[v]);
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        var varNames  = Array();
+                        var varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            varNames[r]  = parseVariableName(varNames[r]);
+                            varValues[r] = row[1];
+                            // Store the value of each variable in the form-input field
+                            $('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
+                        }
+                    }
+                    console.log(varNames.join());
+                    console.log(varValues.join());
+                });
+                reader.readAsText(file);
+            }
+            var old_load=m.load;
+            m.load=function(){
+                old_load();
+                m.set_file_link("File_Name");
+            }
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+    </style>
+</div>

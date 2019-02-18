@@ -1,0 +1,796 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            Screening in- and exlcusion criteria
+    	</div>
+    	<form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name='Participant' class=form-control id=Participant__ID data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name='Participant_uid' class=form-control readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
+
+                <!-- FORM INPUTS -->
+                <h1>Inclusion criteria</h1>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Age is between 25 and 65 years</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='age' value='0' required > <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <label>
+                            <input type='radio' name='age' value='1' /> <span class='survey-answer'>yes</span> 
+                        </label>
+
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Current driver's license</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='driversLicence' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='driversLicence' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Are you able to speak and write in English?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='englishLanguage' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='englishLanguage' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Is it likely that the participant can perform neurobehavioral tests?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='performNeurobehTests' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='performNeurobehTests' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <br />
+                <h1>Exclusion criteria</h1>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Are you a night-shift worker (i.e. between 1 am and 6 am)?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='nighShiftWorker' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='nighShiftWorker' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row sh__ID'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, provide details, exclude if participant did shift-work in past 6 months.</span>
+                        <input type='text' placeholder='Provide details...' class='form-control' name='nighShiftWorker_specify' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Are you an <u>in</u>experienced driver? (&lt;2 hrs/week and &lt;2 years).</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='inexperiencedDriver' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='inexperiencedDriver' value='1'> <span class='survey-answer'>yes (exclude)</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Are you currently pregnant or breastfeeding (female), or do you care for a new-born?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='newBornCaretaker' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='newBornCaretaker' value='1'> <span class='survey-answer'>yes (exclude)</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have you participated in another clinical research study trial in the last 12 months?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='prevClinicalTrial' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='prevClinicalTrial' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row sh__ID'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, exclude if the study included treatment component, but consider inclusion if the study was observational in nature. Please record details of the trial.</span>
+                        <input type='text' placeholder='Where...' class='form-control' name='prevClinicalTrial_where' />
+                        <input type='text' placeholder='When...' class='form-control' name='prevClinicalTrial_when' />
+                        <input type='text' placeholder='Diagnosis...' class='form-control' name='prevClinicalTrial_diagnosis' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have you travelled overseas into a time zone &gt;2 hours different to our local clock time (i.e. transmeridian travel), in the past 2 months?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='travel' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='travel' value='1'> <span class='survey-answer'>yes (exclude)</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Do you smoke?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='smoker' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='smoker' value='1'> <span class='survey-answer'>yes (exclude)</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Do you drink alcohol?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='alcUse' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='alcUse' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-subquestion'>If yes, how many days a week do you drink at least one drink?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-2'>
+                        <input type='number' class='form-control' name='alcUse_days' />
+                    </div>
+                    <div class='col-sm-10'>
+                        <span class='survey-answer'>days</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-subquestion'>On those days that you drink, how many standard drinks do you consume?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-2'>
+                        <input type='number' class='form-control' name='alcUse_amount' />
+                    </div>
+                    <div class='col-sm-10'>
+                        <span class='survey-answer'>standard drinks</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-answer'>Exclude if regularly drinks alcohol equivalent to > 4 standard drinks/day. A standard drink is approximately 1 glass (285 ml) of full strength beer, 1 glass (100 ml) of wine, 60 ml of fortified wine (20% alcohol), 30 ml of spirits (40% alcohol).</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have been taking any recreational drugs in the last 60 days?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='drugUse' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-3'>
+                        <input type='radio' name='drugUse' value='1'> <span class='survey-answer'>yes (exclude)</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <span class='survey-question required'>Do you have any allergies?</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies' value='0' required> <span class='survey-answer'>no</span>
+                        </div>
+                        <div class='col-sm col-sm-3'>
+                            <input type='radio' name='allergies' value='1'> <span class='survey-answer'>yes</span>
+                        </div>
+                    </div>
+                    <div class='row sh__ID'>
+                        <div class='col-sm col-sm-4'>
+                            <span class='survey-question'>allergy</span>
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <span class='survey-question'>reaction</span>
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <span class='survey-question'>severity</span>
+                        </div>
+                        <br>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_type_1' />
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_reaction_1' />
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_1' value='0'> <span class='survey-answer'>mild</span>
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_1' value='1'> <span class='survey-answer'>severe</span>
+                        </div>
+                        <br>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_type_2' />
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_reaction_2' />
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_2' value='0'> <span class='survey-answer'>mild</span>
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_2' value='1'> <span class='survey-answer'>severe</span>
+                        </div>
+                        <br>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_type_3' />
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_reaction_3' />
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_3' value='0'> <span class='survey-answer'>mild</span>
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_3' value='1'> <span class='survey-answer'>severe</span>
+                        </div>
+                        <br>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_type_4' />
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_reaction_4' />
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_4' value='0'> <span class='survey-answer'>mild</span>
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_4' value='1'> <span class='survey-answer'>severe</span>
+                        </div>
+                        <br>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_type_5' />
+                        </div>
+                        <div class='col-sm col-sm-4'>
+                            <input type='text' class='form-control' name='allergies_reaction_5' />
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_5' value='0'> <span class='survey-answer'>mild</span>
+                        </div>
+                        <div class='col-sm col-sm-2'>
+                            <input type='radio' name='allergies_severity_5' value='1'> <span class='survey-answer'>severe</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have you ever been diagnosed with a sleep condition in the past?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diagSleepDis' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diagSleepDis' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, specify the diagnosis.</span>
+                        <input type='text' placeholder='Provide details...' class='form-control' name='diagSleepDis_specify' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have you used a CPAP or mandibular advancement device, or did you undergo CBT-I or take sleep medication?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='treatSleepDis' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-10'>
+                        <input type='radio' name='treatSleepDis' value='1'> <span class='survey-answer'>yes (exclude if sleep disorder has been treated)</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question'>Have you ever been diagnosed with:</span><br />
+                        <span class='survey-subquestion'>Please tick each box that applies, and exclude if severe.</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-6'>
+                        <input type='checkbox' name='diag_cardiacFailure' value='cardiac failure' /> <span class='survey-answer'>cardiac failure</span>
+                    </div>
+                    <div class='col-sm col-sm-6'>
+                        <input type='checkbox' name='diag_respiratoryFailure' value='respiratory failure' /> <span class='survey-answer'>respiratory failure</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-6'>
+                        <input type='checkbox' name='diag_COPD' value='COPD' /> <span class='survey-answer'>severe or very severe COPD (Gold 3/4)</span>
+                    </div>
+                    <div class='col-sm col-sm-6'>
+                        <input type='checkbox' name='diag_emphysema' value='emphysema' /> <span class='survey-answer'>emphysema</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-6'>
+                        <input type='checkbox' name='diag_bronchitis' value='bronchitis' /> <span class='survey-answer'>chronic bronchitis</span>
+                    </div>
+                    <div class='col-sm col-sm-6'>
+                        <input type='checkbox' name='diag_asthma' value='asthma' /> <span class='survey-answer'>chronic asthma</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have you previously had a stroke or head injury?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diag_brainInjury' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diag_brainInjury' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, please record details, and exclude if moderate/severe long-term effects.</span>
+                        <input type='text' placeholder='Provide details...' class='form-control' name='diag_brainInjury_specify' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Do you have any other physical health conditions for which you have recently received medical treatment?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diag_otherPhys' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diag_otherPhys' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, specify.</span>
+                        <input type='text' placeholder='Provide details...' class='form-control' name='diag_otherPhys_specify' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Have you been diagnosed with any psychiatric disorder such as anxiety, depression, psychosis, bipolar disorder, schizophrenia, eating disorders, obsessive-compulsive disorder, addiction, or personality disorders?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diag_psychiatric' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='diag_psychiatric' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, please record details, and exclude if uncontrolled.</span>
+                        <input type='text' placeholder='Provide details...' class='form-control' name='diag_psychiatric_specify' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Do you have any other medical conditions or have you been in hospital recently?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='medical_other' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='medical_other' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, please list and give details.</span>
+                        <input type='text' placeholder='Provide details...' class='form-control' name='medical_other_specify' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Are you taking any medications? This includes antidepressants and any medication to assist your sleep as well as over the counter medications and supplements such as vitamins and minerals.</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='medicationUse' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='medicationUse' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, list medication type, frequency, and dose if known. Exclude if taking CNS active medications (i.e. antidepressants, antipsychotics, hypnotics, opiates, antihistamines, etc.).</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'><span class='survey-question'>Prescription drugs</span></div>
+                    <div class='col-sm-4'><span class='survey-question'>Frequency</span></div>
+                    <div class='col-sm-3'><span class='survey-question'>Dose</span></div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_1' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_1' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_1' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_2' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_2' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_2' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_3' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_3' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_3' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_4' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_4' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_4' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'><span class='survey-question'>Over the counter medication</span></div>
+                    <div class='col-sm-4'><span class='survey-question'>Frequency</span></div>
+                    <div class='col-sm-3'><span class='survey-question'>Dose</span></div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_5' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_5' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_5' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_6' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_6' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_6' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_7' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_7' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_7' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'><span class='survey-question'>Vitamins, mineral, supplements</span></div>
+                    <div class='col-sm-4'><span class='survey-question'>Frequency</span></div>
+                    <div class='col-sm-3'><span class='survey-question'>Dose</span></div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_8' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_8' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_8' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_9' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_9' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_9' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='medicationName_10' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationFreq_10' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>time(s)/day</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='medicationDose_10' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                </div>
+                </div></div>
+
+                <br />
+                <h1>DECISION</h1>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Is the participant eligible for the study?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='eligible' value='0' required> <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-10'>
+                        <input type='radio' name='eligible' value='1'> <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        If yes, send Participant Information Sheet, and contact within 3 days to schedule screening visit.
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+    			<div class='row'>
+    				<div class=col>
+    					<button id=submit__ID type='submit' class='btn btn-secondary'>Submit</button>
+    				</div>
+    			</div>
+                <!---------------------------------------------------->
+        	</div>
+        </form>
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+			VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+        }
+    </script>
+    <style>
+		VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+
+    </style>
+</div>

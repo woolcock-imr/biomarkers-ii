@@ -7,8 +7,9 @@
             //-------------------------------------
             VmInclude:__COMPONENT__/g/grid.01.js
             //-------------------------------------
-            var fields="ISI_001a,ISI_001b,ISI_001c,ISI_002,ISI_003,ISI_004,ISI_005";
-            VmInclude:__CURRENT_PATH__/../../s/shared-task-data.js
+            var fields="CRTT_session";
+            fields+=",PID,Premature_Responses,Anticipated_Responses,Correct_Count,Correct_Mean,Correct_Median,Correct_Variance,Correct_StdDev,Correct_Skewness,Correct_Kurtosis,Wrong_Count,Wrong_Mean,Wrong_Median,Wrong_Variance,Wrong_StdDev,Wrong_Skewness,Wrong_Kurtosis,mac_address,start_time";
+            VmInclude:__CURRENT_PATH__/task-data.js
             //-------------------------------------
         }
     </script>
@@ -16,3 +17,4 @@
         VmInclude:__COMPONENT__/g/grid.01.css
     </style>
 </div>
+    
