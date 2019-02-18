@@ -15,13 +15,11 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.03,0.03]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.05,0.03]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         //------------------------------------
         //app urls
         $vm.public_url_$A='https://biomarkers-ii.rt.org.au';
         $vm.local_url_$A='http://127.0.0.1:8000/woolcock-imr/biomarkers-ii';
-        $vm.public_url_$B='http://biomarkers-ii-online-questionnaire.rt.org.au';
-        $vm.local_url_$B='http://127.0.0.1:8000/woolcock-imr/biomarkers-ii-online-questionnaire';
         //------------------------------------
         //where are your start modules
         $vm.start_modules=[
@@ -32,9 +30,29 @@
         //modules used in this app
         $vm.module_list={
             //you can add modules here directly
-            "home":             {url:"$A/modules/h/home.html",router:1},
-            "panel-main-b-ii":  {url:"$A/modules/p/panel-main.html",router:1},
-            "panel-child": 		{url:"$A/modules/p/panel-child.html"},
+            "home":                             {url:"$A/modules/h/home.html",router:1},
+            "panel-main-b-ii":                  {url:"$A/modules/p/panel-main.html",router:1},
+            "panel-child-b-ii": 		        {url:"$A/modules/p/panel-child.html"},
+            "panel-permission":   			    {url:"$A/modules/p/panel-permission.html",router:1},
+            "permission-check":                 {url:"$A/modules/p/permission-check.html"},
+            "permission-role-login-data":       {url:"$A/modules/p/permission-role-login-data.html",Table:"91000570",form_module:"permission-role-login-form"},
+            "permission-role-login-form":       {url:"$A/modules/p/permission-role-login-form.html",Table:"91000570"},
+            "permission-role-table-group-data": {url:"$A/modules/p/permission-role-table-group-data.html",Table:"91000570",form_module:"permission-role-table-group-form"},
+            "permission-role-table-group-form": {url:"$A/modules/p/permission-role-table-group-form.html",Table:"91000570"},
+            "permission-query-data":            {url:"$A/modules/p/permission-query-data.html",Table:"91000569",form_module:"permission-query-form"},
+            "permission-query-form":            {url:"$A/modules/p/permission-query-form.html",Table:"91000569"},
+
+            "participant-data":     	        {url:"$A/modules/p/participant-data.html", Table:"91000570",
+                                                    form_module:"participant-form",
+                                                    panel_child:"panel-child-b-ii",
+                                                    online_questionnaire_setup:"online-questionnaire-setup"
+                                                },
+            "participant-form":     	        {url:"$A/modules/p/participant-form.html", Table:"91000570"},
+            "edc-notes-data":	  		        {url:"$A/modules/e/edc-notes-data.html",Table:"91000571",form_module:"edc-notes-form"},
+            "edc-notes-form":	  		        {url:"$A/modules/e/edc-notes-form.html",Table:"91000571"},
+            "online-questionnaire-setup": 	    {url:"$A/modules/o/online-questionnaire-setup.html",Table:"91000570"},
+            "online-questionnaire-panel":       {url:"$A/modules/o/online-questionnaire-panel.html"},
+            "online-questionnaire-login":       {url:"$A/modules/o/online-questionnaire-login.html"},
         };
         //------------------------------------
         //where are your all other modules

@@ -1,0 +1,138 @@
+<div id=D__ID>
+        <section id=form_container__ID>
+            <div id=header__ID>
+                Karolinska Sleepiness Scale
+            </div>
+            <form id=F__ID>
+                <div class='container'>
+                    <!-- participant part for all tsak forms -------------------->
+                    <div class='row row__ID' id=row_participant__ID>
+                        <div class='col-sm-12 col-lg-9 input__ID'>
+                            <span class='label__ID'>Participant</span><br>
+                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                        </div>
+                        <div class='col-sm-12 col-lg-3 input__ID'>
+                            <span class='label__ID'>Participant ID</span><br>
+                            <input type='text' name='Participant_uid' class='form-control' readonly />
+                        </div>
+                        <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                    </div>
+                    <!---------------------------------------------------->
+    
+                    <!-- FORM INPUTS -->
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='text' maxlength='5' class='form-control' name='KSS_time' id='KSS_time' readonly />
+                        </div>
+                    </div>
+                    </div></div>
+
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <span class='survey-question required'>What session is this?</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='radio' name='KSS_session' id='KSS_session_practice' value='practice' required>  <label class='survey-answer' for='KSS_session_practice'>Practice</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_1' value='1'>  <label class='survey-answer' for='KSS_session_1'>Session 1 - 9:00 am</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_2' value='2'> <label class='survey-answer' for='KSS_session_2'>Session 2 - 11:00 am</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_3' value='3'> <label class='survey-answer' for='KSS_session_3'>Session 3 - 13:00 pm</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_4' value='4'> <label class='survey-answer' for='KSS_session_4'>Session 4 - 15:00 pm</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_5' value='5'> <label class='survey-answer' for='KSS_session_5'>Session 5 - 17:00 pm</label><br />
+                        </div>
+                    </div>
+                    </div></div>
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <span class='survey-question required'>Indicate which level best reflects the state experienced in the last 30 minutes.</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='radio' name='KSS' id='KSS_1' value='1' required> <label class='survey-answer' for='KSS_1'>Extremely alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_2' value='2'> <label class='survey-answer' for='KSS_2'>Very alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_3' value='3'> <label class='survey-answer' for='KSS_3'>Alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_4' value='4'> <label class='survey-answer' for='KSS_4'>Rather alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_5' value='5'> <label class='survey-answer' for='KSS_5'>Neither alert nor sleepy</label><br />
+                            <input type='radio' name='KSS' id='KSS_6' value='6'> <label class='survey-answer' for='KSS_6'>Some signs of sleepiness</label><br />
+                            <input type='radio' name='KSS' id='KSS_7' value='7'> <label class='survey-answer' for='KSS_7'>Sleepy, but no effort to keep awake</label><br />
+                            <input type='radio' name='KSS' id='KSS_8' value='8'> <label class='survey-answer' for='KSS_8'>Sleepy, but some effort to keep awake</label><br />
+                            <input type='radio' name='KSS' id='KSS_9' value='9'> <label class='survey-answer' for='KSS_9'>Very sleepy, great effort to keep awake, fighting sleep</label><br />
+                            <input type='radio' name='KSS' id='KSS_10' value='10'> <label class='survey-answer' for='KSS_10'>Extremely sleepy, can't keep awake</label><br />
+                        </div>
+                    </div>
+                    </div></div>
+
+                    <!-- submit button part for all tsak forms------------>
+                    <br>
+                    <div class='row'>
+                        <div class='col'>
+                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------->
+                </div>
+            </form>
+        </section>
+        <script>
+            var nowObj;
+            var str;
+            function F__ID(){
+                //-------------------------------------
+                VmInclude:'__COMPONENT__/f/form.01.js'
+                VmInclude:'__CURRENT_PATH__/task-form.js'
+                //-------------------------------------
+    
+                //---------------------------------------------------------
+                // When clicking on a DIV that contains a radio button
+                // automatically select the radio button or the 
+                // multiple-select button.
+                $('.col-sm').each(function() {
+                    $(this).on('click',function() {
+                        console.log(this.children);
+                        for (i=0;i<this.children.length;i++) {
+                            if (this.children[i].type == 'checkbox') {
+                                //this.children[i].checked = !this.children[i].checked;
+                            } else if (this.children[i].type == 'radio') {
+                                this.children[i].checked = true;
+                            }
+                        }
+                    });
+                });
+
+                $('input[type=checkbox]').each(function() {
+                    $(this).on('click',function() {
+                        this.checked = !this.checked;
+                        console.log('pressed checkbox');
+                    });
+                });
+    
+                // Add a leading zero to intergers 
+                function addLeadingZero(val,n) {
+                    var s = String(val);
+                    while (s.length < n) {s = "0" + s;}
+                    return s;
+                }
+
+                nowObj = new Date();
+                str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth()+1,2) + '-' + addLeadingZero(nowObj.getDate(),2) + 'T' + addLeadingZero(nowObj.getHours(),2) + ':' + addLeadingZero(nowObj.getMinutes(),2);
+                $(document).ready(function() {
+                    $('#KSS_time').val(str);
+                });
+            }
+        </script>
+        
+        <style>
+            VmInclude:__COMPONENT__/f/form.01.css
+            VmInclude:__CURRENT_PATH__/task-form.css
+        </style>
+    </div>

@@ -1,0 +1,880 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            Pittsburgh Sleep Quality Index
+        </div>
+        <form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class='label__ID'>Participant</span><br>
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class='label__ID'>Participant ID</span><br>
+                        <input type='text' name='Participant_uid' class='form-control' readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
+
+                <!-- FORM INPUTS -->
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>1. During the past month, when have you usually gone to bed at night?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='PSQI_001_prelabel'>USUAL BED TIME</label>
+                        <input type='text' maxlength='5' class='form-control' name='PSQI_001' id='PSQI_001' />
+                        <label class='survey-label' id='PSQI_001_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>2. During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='PSQI_002_prelabel'>NUMBER OF MINUTES</label>
+                        <input type='text' maxlength='3' class='form-control' name='PSQI_002' id='PSQI_002' />
+                        <label class='survey-label' id='PSQI_002_postlabel'></label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>3. During the past month, when have you usually gotten up in the morning?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='PSQI_003_prelabel'>USUAL GETTING UP TIME</label>
+                        <input type='text' maxlength='5' class='form-control' name='PSQI_003' id='PSQI_003' />
+                        <label class='survey-label' id='PSQI_003_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>4. During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spend in bed.)</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='PSQI_004_prelabel'>HOURS OF SLEEP PER NIGHT</label>
+                        <input type='text' maxlength='5' class='form-control' name='PSQI_004' id='PSQI_004' />
+                        <label class='survey-label' id='PSQI_004_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-subquestion'>For each of the remaining questions, check the one best response. Please answer all questions.</span><br />
+                        <span class='survey-question'>5. During the past month, how often have you had trouble sleeping because you...</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col'>
+                                <span class='survey-answer'>not during the past month</span>
+                            </div>
+                            <div class='col'>
+                                <span class='survey-answer'>less than once a week</span>
+                            </div>
+                            <div class='col'>
+                                <span class='survey-answer'>once or twice a week</span>
+                            </div>
+                            <div class='col'>
+                                <span class='survey-answer'>three or more times a week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(a) ... cannot get to sleep within 30 minutes</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005a' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005a' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005a' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005a' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(b) ... wake up in the middle of the night or early morning</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005b' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005b' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005b' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005b' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(c) ... have to get up to use the bathroom</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005c' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005c' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005c' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005c' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(d) ... cannot breathe comfortably</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005d' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005d' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005d' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005d' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(e) ... cough or snore loudly</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005e' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005e' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005e' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005e' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(f) ... feel too cold</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005f' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005f' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005f' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005f' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(g) ... feel too hot</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005g' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005g' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005g' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005g' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(h) ... had bad dreams</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005h' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005h' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005h' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005h' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(i) ... have pain</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005i' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005i' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005i' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005i' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(j) other reason(s) please describe</span><br />
+                        <input type='text' name='PSQI_005j_specify' class='form-control' id='PSQI_005j_specify' /><br />
+                        <span class='survey-subquestion'>Leave empty if you don't have other reasons for having trouble sleeping.</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005j' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005j' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005j' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_005j' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>6. During the past month, how would you rate your sleep quality overall?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='PSQI_006' id='PSQI_006-0' value='0'> <label for='PSQI_006-0' class='survey-answer'>very good</label><br />
+                        <input type='radio' name='PSQI_006' id='PSQI_006-1' value='1'> <label for='PSQI_006-1' class='survey-answer'>fairly good</label><br />
+                        <input type='radio' name='PSQI_006' id='PSQI_006-2' value='2'> <label for='PSQI_006-2' class='survey-answer'>fairly bad</label><br />
+                        <input type='radio' name='PSQI_006' id='PSQI_006-3' value='3'> <label for='PSQI_006-3' class='survey-answer'>very bad</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>7. During the past month, how often have you taken medicine (prescribed or "over the counter") to help you sleep?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='PSQI_007' id='PSQI_007-0' value='0'> <label for='PSQI_007-0' class='survey-answer'>not during the past month</label><br />
+                        <input type='radio' name='PSQI_007' id='PSQI_007-1' value='1'> <label for='PSQI_007-1' class='survey-answer'>less than once a week</label><br />
+                        <input type='radio' name='PSQI_007' id='PSQI_007-2' value='2'> <label for='PSQI_007-2' class='survey-answer'>once or twice a week</label><br />
+                        <input type='radio' name='PSQI_007' id='PSQI_007-3' value='3'> <label for='PSQI_007-3' class='survey-answer'>three or more times a week</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='PSQI_008' id='PSQI_008-0' value='0'> <label for='PSQI_008-0' class='survey-answer'>not during the past month</label><br />
+                        <input type='radio' name='PSQI_008' id='PSQI_008-1' value='1'> <label for='PSQI_008-1' class='survey-answer'>less than once a week</label><br />
+                        <input type='radio' name='PSQI_008' id='PSQI_008-2' value='2'> <label for='PSQI_008-2' class='survey-answer'>once or twice a week</label><br />
+                        <input type='radio' name='PSQI_008' id='PSQI_008-3' value='3'> <label for='PSQI_008-3' class='survey-answer'>three or more times a week</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='PSQI_009' id='PSQI_009-0' value='0'> <label for='PSQI_009-0' class='survey-answer'>no problem at all</label><br />
+                        <input type='radio' name='PSQI_009' id='PSQI_009-1' value='1'> <label for='PSQI_009-1' class='survey-answer'>only a very slight problem</label><br />
+                        <input type='radio' name='PSQI_009' id='PSQI_009-2' value='2'> <label for='PSQI_009-2' class='survey-answer'>somewhat of a problem</label><br />
+                        <input type='radio' name='PSQI_009' id='PSQI_009-3' value='3'> <label for='PSQI_009-3' class='survey-answer'>a very big problem</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <span class='survey-question'>10. Do you have a roommate or bed partner?</span>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='PSQI_010' id='PSQI_010-0' value='0'> <label for='PSQI_010-0' class='survey-answer'>no bed partner or roommate</label><br />
+                        <input type='radio' name='PSQI_010' id='PSQI_010-1' value='1'> <label for='PSQI_010-1' class='survey-answer'>partner/roommate in other room</label><br />
+                        <input type='radio' name='PSQI_010' id='PSQI_010-2' value='2'> <label for='PSQI_010-2' class='survey-answer'>partner in same room, but not same bed</label><br />
+                        <input type='radio' name='PSQI_010' id='PSQI_010-3' value='3'> <label for='PSQI_010-3' class='survey-answer'>partner in same bed</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-subquestion'>If you have a roommate or bed partner, ask him/her how often the past month you have had...</span><br />
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col'>
+                                <span class='survey-answer'>not during the past month</span>
+                            </div>
+                            <div class='col'>
+                                <span class='survey-answer'>less than once a week</span>
+                            </div>
+                            <div class='col'>
+                                <span class='survey-answer'>once or twice a week</span>
+                            </div>
+                            <div class='col'>
+                                <span class='survey-answer'>three or more times a week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(a) ... loud snoring</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010a' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010a' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010a' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010a' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(b) ... long pauses between breaths while asleep</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010b' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010b' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010b' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010b' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(c) ... legs twitching or jerking while you sleep</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010c' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010c' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010c' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010c' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(d) ... episodes of disorientation or confusion during sleep</span>
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010d' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010d' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010d' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010d' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col-sm-5'>
+                        <span class='survey-question'>(e) ... other restlessness while you sleep;</span><br />
+                        <input type='text' placeholder='please describe' name='PSQI_010e_specify' class='form-control' id='PSQI_010e_specify' />
+                    </div>
+                    <div class='col-sm-7'>
+                        <div class='row center__ID'>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010e' value='0'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010e' value='1'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010e' value='2'>
+                            </div>
+                            <div class='col-sm'>
+                                <input type='radio' name='PSQI_010e' value='3'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div></div>
+    
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+                <div class='row'>
+                    <div class='col'>
+                        <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+            </div>
+        </form>
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+
+            //---------------------------------------------------------
+            // When clicking on a DIV that contains a radio button
+            // automatically select the radio button or the 
+            // multiple-select button.
+            $('.col-sm').each(function() {
+                $(this).on('click',function() {
+                    console.log(this.children);
+                    for (i=0;i<this.children.length;i++) {
+                        if (this.children[i].type == 'checkbox') {
+                            //this.children[i].checked = !this.children[i].checked;
+                        } else if (this.children[i].type == 'radio') {
+                            this.children[i].checked = true;
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+    <script>
+        // Variables
+        var intervalObj;
+        var elBox;
+        var elRow;
+        var childRow;
+        var wTotal;
+        var wBox
+        var newW;
+        var wInit
+        var W;
+
+        //Assign events
+        document.addEventListener("mouseup", mouseup);
+        document.addEventListener("mouseout", mouseup);
+
+        // Support Functions
+
+        function mouseup(e) {
+            if(intervalObj) {  //Only stop if exists
+                clearInterval(intervalObj);
+            }
+        }
+
+        // Add a leading zero to intergers 
+        function addLeadingZero(val,n) {
+            var s = String(val);
+            while (s.length < n) {s = "0" + s;}
+            return s;
+        }
+
+        function readValue(name,pObj) {
+            
+            var spans = document.getElementsByName(name);
+            var val = $("#" + name).val();
+            
+            if (val != "") {
+                var delimiters = [];cnt=0;
+                for (i = 0; i < pObj.length; i++) {
+                    if (pObj[i].delimiter != "") {
+                        delimiters[cnt] = pObj[i].delimiter;
+                        cnt++;
+                    }
+                }
+                
+                if (delimiters != "") {
+                    var valArr = val.split(new RegExp(delimiters.join('|'), 'g'));
+                } else {
+                    var valArr = [val];
+                }
+                
+                for (i = 0; i < pObj.length; i++) {
+                    pObj[i].set = 1;
+                    pObj[i].value = parseInt(valArr[i]);
+                    $("#" + pObj[i].spanId).html(addLeadingZero(valArr[i],pObj[i].nChar));
+                    $("#" + pObj[i].spanId).css("color","#000");
+                }
+            }
+        }
+
+        function resizePickers(sgid,wInit) {
+            
+                elBox    = $("#picker_" + sgid).parent();
+                elRow    = $("#picker_" + sgid + "_row");
+                childRow = elRow.children();
+                
+                wTotal = wInit;
+                wBox   = elBox.width();
+                var W = [];
+                W[0] = wInit;
+                for (i = 1; i < childRow.length; i++) {
+                    W[i] = childRow[i].offsetWidth;
+                    wTotal= wTotal + childRow[i].offsetWidth;
+                }
+                wTotal = wTotal + 4*14; // add margin
+                
+                if (wTotal > wBox) {
+                    var newW = wBox - wTotal + W[0] -1;
+                    $(childRow[0]).css('width',newW);
+                } else {
+                    $(childRow[0]).css('width',W[0]);
+                }
+        }
+
+        // The main function
+        function Pickers(sgid,P) {
+            
+            // Variables
+            var pObj  = P.inputs;
+            var spans = document.getElementsByName(sgid);
+            var sgElement = $("#" + sgid);
+            
+            // Nested Functions
+            
+            function getNewPicker(idx) {
+                        
+                html="<div class='dials'  id='picker_" + sgid + "_dials'>";
+                html+="	 <span class='fa fa-angle-up' id='" + sgid + "_" + idx + "_up' name='changeValue' style='font-size:3em'></span><br>";
+                html+="	 <span class='face' id='" + sgid + "_" + idx + "' name='" + sgid + "'>" + addLeadingZero(pObj[i].initValue,pObj[i].nChar) + "</span><br>";
+                html+="	 <span class='fa fa-angle-down' id='" + sgid + "_" + idx + "_down' name='changeValue' style='font-size:3em'></span>";
+                html+="</div>";
+                if (pObj[i].label != undefined) {
+                    html+="<div class='labels' id='picker_" + sgid + "_delimiter'>";
+                    html+="	 " + pObj[i].label + "";
+                    html+="</div>";
+                }
+                return html;
+            }
+
+            // Main bit
+            
+            for (i = 0; i < P.N; i++) {
+                pObj[i].value  = pObj[i].initValue;
+                pObj[i].spanId = sgid + "_" + i;
+                pObj[i].set    = 0;
+                
+                pObj[i].changeValue = function(direction) {
+                    if (this.set == 1) {
+                        if (direction == "up") {
+                            this.value = this.value + this.step;
+                        } else {
+                            this.value = this.value - this.step;
+                        }
+                        
+                        if (this.value < this.minValue) {
+                            this.value = this.maxValue;
+                        }
+                        if (this.value > this.maxValue) {
+                            this.value = this.minValue;
+                        }
+                    }
+                    this.set = 1;
+                    // Change the value in the span-element
+                    $("#" + this.spanId).html(addLeadingZero(this.value,this.nChar));
+                    $("#" + this.spanId).css("color","#000");
+                    
+                    // Change the value in the SG-input
+                    var str = ""
+                    var nset = 0;
+                    for (j = 0; j < pObj.length; j++) {
+                        str += addLeadingZero(pObj[j].value,pObj[j].nChar) + pObj[j].delimiter;
+                        nset = nset + pObj[j].set;
+                    }
+                                
+                    // If all elements have been set, update the SG-element
+                    if (nset === pObj.length) {
+                        sgElement.val(str);
+                    }
+                }
+            }
+                
+            var tp;
+            tp="<div id='picker_" + sgid + "' style='width:100%;'>";
+            tp+="  <div id='picker_" + sgid + "_row'>";
+            tp+="    <div class='labels' id='picker_" + sgid + "_prelabel'>";
+            tp+="	   " + P.pre + "";
+            tp+="    </div>";
+            for (i = 0; i < P.N; i++) {
+                tp+=getNewPicker(i);
+            }
+            tp+="    <div class='labels' id='picker_" + sgid + "_postlabel'>";
+            tp+="	   " + P.post + "";
+            tp+="    </div>";
+            tp+="  </div>";
+            tp+="</div>";
+            
+            var pnt = $('#' + sgid);//.parent(this);
+            pnt.after(tp);
+            $('#' + sgid).css("height","0px");
+            $('#' + sgid).css("margin","0px");
+            $('#' + sgid).css("padding","0px");
+            $('#' + sgid).css("border","none");
+            $('#' + sgid + "_prelabel").css("display","none");
+            $('#' + sgid + "_postlabel").css("display","none");
+            
+            $(document).ready(function() {
+                
+                // set the size of the elements
+                var elRow    = $("#picker_" + sgid + "_row");
+                var childRow = elRow.children();
+                var wInit    = childRow[0].offsetWidth;
+                resizePickers(sgid,wInit);
+
+                // Read the values of the hidden input if this was already set
+                // Needed in case someone clicked back.
+                readValue(sgid,pObj);
+                
+                // Get the element, add a click listener...
+                document.getElementById("picker_" + sgid).addEventListener("mousedown", function(e) {
+                    
+                    if(e.target && e.target.attributes.name && e.target.attributes.name.value == "changeValue") {
+                        
+                        info = e.target.id.split("_");
+                        
+                        idx = parseInt(info[2]);
+                        pObj[idx].changeValue(info[3])
+                        intervalObj = setInterval(function(){ 
+                            pObj[idx].changeValue(info[3]);
+                        }, 300);
+                        
+                    }
+                });
+                
+                $(window).resize(function() {
+                    clearTimeout(window.resizedFinished);
+                    window.resizedFinished = setTimeout(function(){
+                        resizePickers(sgid,wInit);
+                    }, 250);
+                });
+
+            });
+            
+        }
+    </script>
+    <script>
+        var field_id   = "PSQI_001";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue : 22,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 23,  // the maximum value
+            step      : 1,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : ":",  // the label that is shown after the picker
+            delimiter : ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue : 30,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 55,  // the maximum value
+            step      : 5,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : "",  // the label that is shown after the picker
+            delimiter : ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id,P);
+
+        var field_id   = "PSQI_002";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue : 30,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 360,  // the maximum value
+            step      : 5,   // increase or decrease step size
+            nChar     : 1,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : "",  // the label that is shown after the picker
+            delimiter : ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id,P);
+
+        var field_id   = "PSQI_003";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue : 7,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 23,  // the maximum value
+            step      : 1,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : ":",  // the label that is shown after the picker
+            delimiter : ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue : 30,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 55,  // the maximum value
+            step      : 5,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : "",  // the label that is shown after the picker
+            delimiter : ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id,P);
+
+        var field_id   = "PSQI_004";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue : 7,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 23,  // the maximum value
+            step      : 1,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : ":",  // the label that is shown after the picker
+            delimiter : ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue : 30,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 55,  // the maximum value
+            step      : 5,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : "",  // the label that is shown after the picker
+            delimiter : ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id,P);
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+        VmInclude:__CURRENT_PATH__/task-form-pickers.css
+    </style>
+</div>

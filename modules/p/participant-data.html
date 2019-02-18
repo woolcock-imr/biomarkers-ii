@@ -12,9 +12,9 @@
             var fields="Participant ID|UID,Subject_ID,Screening_Number,Subject_Initials,Gender,DOB,_Data_Entry,_Setup,_Quest,_Login_ID,_Password";
             m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
-            var login_setup_module="online-questionnaire-setup";
+            var login_setup_module=m.online_questionnaire_setup;
             var login_setup_tid=$vm.module_list[login_setup_module].Table;
-            var data_entry_module="panel-child";
+            var data_entry_module=m.panel_child;
             var online_questionnaire=$vm.public_url_$B;
             if($vm.localhost==true) online_questionnaire=$vm.local_url_$B;
             //-------------------------------------

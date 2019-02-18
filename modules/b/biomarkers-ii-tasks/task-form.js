@@ -1,7 +1,7 @@
 //-------------------------------------
 //for auto select participant
 var participant_tid =$vm.module_list['participant-data'].Table;
-var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.Subject_Initials+' '+record.DOB; else return record.UID;}
+var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials; else return record.UID; }
 //-------------------------------------
 //auto select participant
 var wait1=function(){

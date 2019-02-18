@@ -1,7 +1,7 @@
 //-------------------------------------
 var participant_pid=$vm.module_list['participant-data'].Table;
 var notes_pid=$vm.module_list['edc-notes-data'].Table;
-var participant_info=function(record){ if(record.Subject_Initials!=undefined) return record.Subject_Initials+' '+record.DOB; else return record.UID; }
+var participant_info=function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials; else return record.UID; }
 //-------------------------------------
 m.set_req=function(){
     var participant_where="";

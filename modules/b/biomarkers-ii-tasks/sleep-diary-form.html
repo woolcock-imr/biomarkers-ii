@@ -1,0 +1,846 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            Sleep Diary
+        </div>
+        <form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class='label__ID'>Participant</span><br>
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class='label__ID'>Participant ID</span><br>
+                        <input type='text' name='Participant_uid' class='form-control' readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
+
+                <!-- FORM INPUTS -->
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'>
+                    <div class='col'>
+                        <div class='row'>
+                            <div class='col'>
+                                <span class='survey-question required'>Date</span>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-sm-3'>
+                                <input type='text' placeholder='select a date' maxlength='5' class='form-control' name='CSDM_date' id='CSDM_date' required />
+                            </div>
+                            <div class='col-sm-9'>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>What time did you get into bed?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_bedTime_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_bedTime' id='CSDM_bedTime' required />
+                        <label class='survey-label' id='CSDM_bedTime_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>What time did you try to go to sleep?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_sleepTime_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_sleepTime' id='CSDM_sleepTime' required />
+                        <label class='survey-label' id='CSDM_sleepTime_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>How long did it take you to fall asleep?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_sol_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_sol' id='CSDM_sol' required />
+                        <label class='survey-label' id='CSDM_sol_postlabel'>min</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>How many times did you wake up, not counting your final awakening?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_nWake_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_nWake' id='CSDM_nWake' required />
+                        <label class='survey-label' id='CSDM_nWake_postlabel'>times</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>In total, how long did these awakenings last?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_waso_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_waso' id='CSDM_waso' required />
+                        <label class='survey-label' id='CSDM_waso_postlabel'>min</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>What time was your final awakening?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_finAwake_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_finAwake' id='CSDM_finAwake' required />
+                        <label class='survey-label' id='CSDM_finAwake_postlabel'>min</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>After your final awakening, how long did you spend in bed trying to sleep?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_snooze_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_snooze' id='CSDM_snooze' required />
+                        <label class='survey-label' id='CSDM_snooze_postlabel'>min</label>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Did you wake up earlier than you planned?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='radio' name='CSDM_earlier' id='CSDM_earlier-0' value='0' required > <label class='survey-answer' for='CSDM_earlier-0'>no</label><br />
+                        <input type='radio' name='CSDM_earlier' id='CSDM_earlier-1' value='1' > <label class='survey-answer' for='CSDM_earlier-1'>yes</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-subquestion'>If yes, how much earlier?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_earlierTime_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_earlierTime' id='CSDM_earlierTime' />
+                        <label class='survey-label' id='CSDM_earlierTime_postlabel'>min</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>What time did you get out of bed for the day?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_riseTime_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_riseTime' id='CSDM_riseTime' required />
+                        <label class='survey-label' id='CSDM_riseTime_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>In total, how long did you sleep?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label class='survey-label' id='CSDM_subjSleepTime_prelabel'></label>
+                        <input type='text' maxlength='5' class='form-control' name='CSDM_subjSleepTime' id='CSDM_subjSleepTime' required />
+                        <label class='survey-label' id='CSDM_subjSleepTime_postlabel'>(HH:MM)</label>
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>How would you rate the quality of your sleep?</span>
+                    </div>
+                </div>
+                <div class='row center__ID'>
+                    <div class='col-sm'>
+                        <label class='survey-answer' for='CSDM_sq-1'>very poor</label><br /><input type='radio' name='CSDM_sq' id='CSDM_sq-1' value='1' required > 
+                    </div>
+                    <div class='col-sm'>
+                        <label class='survey-answer' for='CSDM_sq-2'>poor</label><br /><input type='radio' name='CSDM_sq' id='CSDM_sq-2' value='2' >
+                    </div>
+                    <div class='col-sm'>
+                            <label class='survey-answer' for='CSDM_sq-3'>fair</label><br /><input type='radio' name='CSDM_sq' id='CSDM_sq-3' value='3' >
+                    </div>
+                    <div class='col-sm'>
+                            <label class='survey-answer' for='CSDM_sq-4'>good</label><br /><input type='radio' name='CSDM_sq' id='CSDM_sq-4' value='4' >
+                    </div>
+                    <div class='col-sm'>
+                            <label class='survey-answer' for='CSDM_sq-5'>very good</label><br /><input type='radio' name='CSDM_sq' id='CSDM_sq-5' value='5' >
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>How rested or refreshed did you feel when you woke-up for the day?</span>
+                    </div>
+                </div>
+                <div class='row center__ID'>
+                    <div class='col-sm'>
+                        <label class='survey-answer' for='CSDM_rested-1'>not at all rested</label><br /><input type='radio' name='CSDM_rested' id='CSDM_rested-1' value='1' required > 
+                    </div>
+                    <div class='col-sm'>
+                        <label class='survey-answer' for='CSDM_rested-2'>slightly rested</label><br /><input type='radio' name='CSDM_rested' id='CSDM_rested-2' value='2' >
+                    </div>
+                    <div class='col-sm'>
+                            <label class='survey-answer' for='CSDM_rested-3'>somewhat rested</label><br /><input type='radio' name='CSDM_rested' id='CSDM_rested-3' value='3' >
+                    </div>
+                    <div class='col-sm'>
+                            <label class='survey-answer' for='CSDM_rested-4'>well-rested</label><br /><input type='radio' name='CSDM_rested' id='CSDM_rested-4' value='4' >
+                    </div>
+                    <div class='col-sm'>
+                            <label class='survey-answer' for='CSDM_rested-5'>very well-rested</label><br /><input type='radio' name='CSDM_rested' id='CSDM_rested-5' value='5' >
+                    </div>
+                </div>
+                </div></div>
+                
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question required'>Did you take any over-the-counter or prescription medication(s) to help you sleep?</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='CSDM_meds' value='0' required > <span class='survey-answer'>no</span>
+                    </div>
+                    <div class='col-sm col-sm-2'>
+                        <input type='radio' name='CSDM_meds' value='1' > <span class='survey-answer'>yes</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm'>
+                        <span class='survey-subquestion'>If yes, list medication type, dosage, and time.</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'><span class='survey-question'>Medication name</span></div>
+                    <div class='col-sm-3'><span class='survey-question'>Dose</span></div>
+                    <div class='col-sm-4'><span class='survey-question'>Time</span></div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='CSDM_medsName_1' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='CSDM_medsDose_1' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='text' class='form-control' name='CSDM_medsTime_1' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>(HH:MM)</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='CSDM_medsName_2' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='CSDM_medsDose_2' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='text' class='form-control' name='CSDM_medsTime_2' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>(HH:MM)</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <input type='text' class='form-control' name='CSDM_medsName_3' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='number' class='form-control' name='CSDM_medsDose_3' />
+                    </div>
+                    <div class='col-sm-1' style='padding:0px 5px;'>
+                        <span class='survey-answer'>mg</span>
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <input type='text' class='form-control' name='CSDM_medsTime_3' />
+                    </div>
+                    <div class='col-sm-2' style='padding:0px 5px;'>
+                        <span class='survey-answer'>(HH:MM)</span>
+                    </div>
+                </div>
+                </div></div>
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col'>
+                        <span class='survey-question'>Comments</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <input type='text' class='form-control' name='CSDM_comment' id='CSDM_comment' />
+                    </div>
+                </div>
+                </div></div>
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+                <div class='row'>
+                    <div class='col'>
+                        <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+            </div>
+        </form>
+    </section>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            $('#CSDM_date').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+                defaultDate: 1
+            });
+
+            //---------------------------------------------------------
+            // When clicking on a DIV that contains a radio button
+            // automatically select the radio button or the 
+            // multiple-select button.
+            $('.col-sm').each(function () {
+                $(this).on('click', function () {
+                    console.log(this.children);
+                    for (i = 0; i < this.children.length; i++) {
+                        if (this.children[i].type == 'checkbox') {
+                            //this.children[i].checked = !this.children[i].checked;
+                        } else if (this.children[i].type == 'radio') {
+                            this.children[i].checked = true;
+                        }
+                    }
+                });
+            });
+
+            $('input[type=checkbox]').each(function () {
+                $(this).on('click', function () {
+                    this.checked = !this.checked;
+                    console.log('pressed checkbox');
+                });
+            });
+
+            $('#CSDM_date').on('change', function() {
+                dStr = $(this).val();
+                dStr = dStr.split('/');
+                tObj = new Date(parseInt(dStr[2]),parseInt(dStr[1])-1,parseInt(dStr[0]));
+                yObj = new Date(parseInt(dStr[2]),parseInt(dStr[1])-1,parseInt(dStr[0])-1);
+                txt  = '<h1>This diary is about the night from<br>';
+                txt += yObj.toDateString() + ' to ' + tObj.toDateString() + '</h1>';
+                el = $(this).parent().parent().children()[1];
+                $(el).html(txt);
+                console.log($(el));
+            });
+
+        }
+    </script>
+    <script>
+        // Variables
+        var intervalObj;
+        var elBox;
+        var elRow;
+        var childRow;
+        var wTotal;
+        var wBox
+        var newW;
+        var wInit
+        var W;
+
+        //Assign events
+        document.addEventListener("mouseup", mouseup);
+        document.addEventListener("mouseout", mouseup);
+
+        // Support Functions
+
+        function mouseup(e) {
+            if (intervalObj) {  //Only stop if exists
+                clearInterval(intervalObj);
+            }
+        }
+
+        // Add a leading zero to intergers 
+        function addLeadingZero(val, n) {
+            var s = String(val);
+            while (s.length < n) { s = "0" + s; }
+            return s;
+        }
+
+        function readValue(name, pObj) {
+
+            var spans = document.getElementsByName(name);
+            var val = $("#" + name).val();
+
+            if (val != "") {
+                var delimiters = []; cnt = 0;
+                for (i = 0; i < pObj.length; i++) {
+                    if (pObj[i].delimiter != "") {
+                        delimiters[cnt] = pObj[i].delimiter;
+                        cnt++;
+                    }
+                }
+
+                if (delimiters != "") {
+                    var valArr = val.split(new RegExp(delimiters.join('|'), 'g'));
+                } else {
+                    var valArr = [val];
+                }
+
+                for (i = 0; i < pObj.length; i++) {
+                    pObj[i].set = 1;
+                    pObj[i].value = parseInt(valArr[i]);
+                    $("#" + pObj[i].spanId).html(addLeadingZero(valArr[i], pObj[i].nChar));
+                    $("#" + pObj[i].spanId).css("color", "#000");
+                }
+            }
+        }
+
+        function resizePickers(sgid, wInit) {
+
+            elBox = $("#picker_" + sgid).parent();
+            elRow = $("#picker_" + sgid + "_row");
+            childRow = elRow.children();
+
+            wTotal = wInit;
+            wBox = elBox.width();
+            var W = [];
+            W[0] = wInit;
+            for (i = 1; i < childRow.length; i++) {
+                W[i] = childRow[i].offsetWidth;
+                wTotal = wTotal + childRow[i].offsetWidth;
+            }
+            wTotal = wTotal + 4 * 14; // add margin
+
+            if (wTotal > wBox) {
+                var newW = wBox - wTotal + W[0] - 1;
+                $(childRow[0]).css('width', newW);
+            } else {
+                $(childRow[0]).css('width', W[0]);
+            }
+        }
+
+        // The main function
+        function Pickers(sgid, P) {
+
+            // Variables
+            var pObj = P.inputs;
+            var spans = document.getElementsByName(sgid);
+            var sgElement = $("#" + sgid);
+
+            // Nested Functions
+
+            function getNewPicker(idx) {
+
+                html = "<div class='dials'  id='picker_" + sgid + "_dials'>";
+                html += "	 <span class='fa fa-angle-up' id='" + sgid + "_" + idx + "_up' name='changeValue' style='font-size:3em'></span><br>";
+                html += "	 <span class='face' id='" + sgid + "_" + idx + "' name='" + sgid + "'>" + addLeadingZero(pObj[i].initValue, pObj[i].nChar) + "</span><br>";
+                html += "	 <span class='fa fa-angle-down' id='" + sgid + "_" + idx + "_down' name='changeValue' style='font-size:3em'></span>";
+                html += "</div>";
+                if (pObj[i].label != undefined) {
+                    html += "<div class='labels' id='picker_" + sgid + "_delimiter'>";
+                    html += "	 " + pObj[i].label + "";
+                    html += "</div>";
+                }
+                return html;
+            }
+
+            // Main bit
+
+            for (i = 0; i < P.N; i++) {
+                pObj[i].value = pObj[i].initValue;
+                pObj[i].spanId = sgid + "_" + i;
+                pObj[i].set = 0;
+
+                pObj[i].changeValue = function (direction) {
+                    if (this.set == 1) {
+                        if (direction == "up") {
+                            this.value = this.value + this.step;
+                        } else {
+                            this.value = this.value - this.step;
+                        }
+
+                        if (this.value < this.minValue) {
+                            this.value = this.maxValue;
+                        }
+                        if (this.value > this.maxValue) {
+                            this.value = this.minValue;
+                        }
+                    }
+                    this.set = 1;
+                    // Change the value in the span-element
+                    $("#" + this.spanId).html(addLeadingZero(this.value, this.nChar));
+                    $("#" + this.spanId).css("color", "#000");
+
+                    // Change the value in the SG-input
+                    var str = ""
+                    var nset = 0;
+                    for (j = 0; j < pObj.length; j++) {
+                        str += addLeadingZero(pObj[j].value, pObj[j].nChar) + pObj[j].delimiter;
+                        nset = nset + pObj[j].set;
+                    }
+
+                    // If all elements have been set, update the SG-element
+                    if (nset === pObj.length) {
+                        sgElement.val(str);
+                    }
+                }
+            }
+
+            var tp;
+            tp = "<div id='picker_" + sgid + "' style='width:100%;'>";
+            tp += "  <div id='picker_" + sgid + "_row'>";
+            tp += "    <div class='labels' id='picker_" + sgid + "_prelabel'>";
+            tp += "	   " + P.pre + "";
+            tp += "    </div>";
+            for (i = 0; i < P.N; i++) {
+                tp += getNewPicker(i);
+            }
+            tp += "    <div class='labels' id='picker_" + sgid + "_postlabel'>";
+            tp += "	   " + P.post + "";
+            tp += "    </div>";
+            tp += "  </div>";
+            tp += "</div>";
+
+            var pnt = $('#' + sgid);//.parent(this);
+            pnt.after(tp);
+            $('#' + sgid).css("height", "0px");
+            $('#' + sgid).css("margin", "0px");
+            $('#' + sgid).css("padding", "0px");
+            $('#' + sgid).css("border", "none");
+            $('#' + sgid + "_prelabel").css("display", "none");
+            $('#' + sgid + "_postlabel").css("display", "none");
+
+            $(document).ready(function () {
+
+                // set the size of the elements
+                var elRow = $("#picker_" + sgid + "_row");
+                var childRow = elRow.children();
+                var wInit = childRow[0].offsetWidth;
+                resizePickers(sgid, wInit);
+
+                // Read the values of the hidden input if this was already set
+                // Needed in case someone clicked back.
+                readValue(sgid, pObj);
+
+                // Get the element, add a click listener...
+                document.getElementById("picker_" + sgid).addEventListener("mousedown", function (e) {
+
+                    if (e.target && e.target.attributes.name && e.target.attributes.name.value == "changeValue") {
+
+                        info = e.target.id.split("_");
+
+                        idx = parseInt(info[2]);
+                        pObj[idx].changeValue(info[3])
+                        intervalObj = setInterval(function () {
+                            pObj[idx].changeValue(info[3]);
+                        }, 300);
+
+                    }
+                });
+
+                $(window).resize(function () {
+                    clearTimeout(window.resizedFinished);
+                    window.resizedFinished = setTimeout(function () {
+                        resizePickers(sgid, wInit);
+                    }, 250);
+                });
+
+            });
+
+        }
+    </script>
+    <script>
+        var field_id = "CSDM_bedTime";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 22,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 23,  // the maximum value
+            step: 1,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: ":",  // the label that is shown after the picker
+            delimiter: ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue: 30,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 55,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_sleepTime";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 23,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 23,  // the maximum value
+            step: 1,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: ":",  // the label that is shown after the picker
+            delimiter: ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue: 15,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 55,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_sol";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 30,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 480,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 1,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_nWake";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 1,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 30,  // the maximum value
+            step: 1,   // increase or decrease step size
+            nChar: 1,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_waso";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 0,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 480,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 1,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_finAwake";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 6,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 23,  // the maximum value
+            step: 1,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: ":",  // the label that is shown after the picker
+            delimiter: ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue: 30,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 55,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_snooze";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 0,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 480,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 1,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_earlierTime";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 30,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 480,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 1,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_riseTime";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 7,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 23,  // the maximum value
+            step: 1,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: ":",  // the label that is shown after the picker
+            delimiter: ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue: 30,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 55,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+        var field_id = "CSDM_subjSleepTime";
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue: 6,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 23,  // the maximum value
+            step: 1,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: ":",  // the label that is shown after the picker
+            delimiter: ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue: 30,   // the initial value
+            minValue: 0,   // the minimal value
+            maxValue: 55,  // the maximum value
+            step: 5,   // increase or decrease step size
+            nChar: 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label: "",  // the label that is shown after the picker
+            delimiter: ""   // the delimiter between pickers that is stored in data
+        }
+        // Leave the rest alone
+        var P = { N: picker.length, pre: document.getElementById(field_id + "_prelabel").innerHTML, post: document.getElementById(field_id + "_postlabel").innerHTML, inputs: [] };
+        for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+        Pickers(field_id, P);
+
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+        VmInclude:__CURRENT_PATH__/task-form-pickers.css
+    </style>
+</div>
