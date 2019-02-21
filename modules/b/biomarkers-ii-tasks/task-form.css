@@ -10,6 +10,11 @@
     padding: 5px;
     margin-left:-15px;
 }
+
+#F__D .select-area {
+    white-space: nowrap;
+}
+
 #F__ID input[type=radio] {
     -webkit-appearance: none;
     -moz-appearance: button;
@@ -24,13 +29,13 @@
     vertical-align: middle;
 }
 #F__ID input[type=radio]:hover {
-    border: 3px solid #adb8c0;
+    border: 3px solid #798892;
 }
 #F__ID input[type=radio]:checked {
     background-color:rgba(60,60,60,1);
 }
-#F__ID .col-sm:hover input[type=radio] {
-    border: 3px solid #adb8c0;
+#F__ID .select-area:hover input[type=radio] {
+    border: 3px solid #798892;
 }
 
 #F__ID input[type=checkbox] {
@@ -47,27 +52,19 @@
     vertical-align: middle;
 }
 #F__ID input[type=checkbox]:hover {
-    border: 3px solid #adb8c0;
+    border: 3px solid #798892;
 }
 #F__ID input[type=checkbox]:checked {
     background-color:rgba(60,60,60,1);
 }
-#F__ID .col-sm:hover input[type=checkbox] {
-    border: 3px solid #adb8c0;
+#F__ID .select-area:hover input[type=checkbox] {
+    border: 3px solid #798892;
 }
 
 #F__ID .survey-question.required::after {
     content: " *";
     color: black;
 }
-
-/* #F__ID input:invalid::before {
-    content: "*";
-    position: relative;
-    color: red;
-    left:-15px;
-    top:-2em;
-} */
 
 h1 {
     text-transform: uppercase;
@@ -98,7 +95,11 @@ h2 {
 }
 .survey-question {
     font-weight: bold;
-}     
+} 
+.survey-instruction {
+    font-style: italic;
+}
 .survey-subquestion {
     font-style: italic;
-}  
+    margin-top:0.5em;
+}

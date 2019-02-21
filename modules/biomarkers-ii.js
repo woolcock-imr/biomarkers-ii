@@ -1,10 +1,7 @@
 (function(){
     var modules={
         
-
-        
         //the following are all biomarkers-ii-tasks
-
         "visit-dates-data":	  		                    {url:"$A/modules/b/biomarkers-ii-tasks/visit-dates-data.html",Table:"91000581",form_module:"visit-dates-form"},
         "visit-dates-form":	  		                    {url:"$A/modules/b/biomarkers-ii-tasks/visit-dates-form.html",Table:"91000581"},
 
@@ -41,7 +38,7 @@
         "sleep-diary-d8-data":                          {url:"$A/modules/b/biomarkers-ii-tasks/sleep-diary-data.html",Table:"91000607",form_module:"sleep-diary-d8-form"},
         "sleep-diary-d8-form":                          {url:"$A/modules/b/biomarkers-ii-tasks/sleep-diary-form.html",Table:"91000607",task_name:"Sleep Diary - day 8, fill out in the morning"},
         "day-diary-d1-data":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-data.html",Table:"91000608",form_module:"day-diary-d1-form"},
-        "day-diary-d1-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000608",task_name:"Day Diary - day 1, fill out in the evening"},
+        "day-diary-d1-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000608",task_name:"Day Diary - day 1, fill out in the evening",router:1},
         "day-diary-d2-data":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-data.html",Table:"91000609",form_module:"day-diary-d2-form"},
         "day-diary-d2-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000609",task_name:"Day Diary - day 2, fill out in the evening"},
         "day-diary-d3-data":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-data.html",Table:"91000610",form_module:"day-diary-d3-form"},
@@ -83,14 +80,6 @@
         "maintenance-wakefulness-test-data":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-data.html",Table:"91000596",form_module:'maintenance-wakefulness-test-form'},
         "maintenance-wakefulness-test-form":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-form.html",Table:"91000596"},
         
-
-
-        // "insomnia-severity-index-data":                 {url:"$A/modules/b/biomarkers-ii-tasks/insomnia-severity-index-data.html",Table:"91000573",form_module:"insomnia-severity-index-form"},
-        // "insomnia-severity-index-form":                 {url:"$A/modules/b/biomarkers-ii-tasks/insomnia-severity-index-form.html",Table:"91000573"},
-        // "pittsburgh-sleep-quality-index-data":          {url:"$A/modules/b/biomarkers-ii-tasks/pittsburgh-sleep-quality-index-data.html",Table:"91000578",form_module:"pittsburgh-sleep-quality-index-form"},
-        // "pittsburgh-sleep-quality-index-form":          {url:"$A/modules/b/biomarkers-ii-tasks/pittsburgh-sleep-quality-index-form.html",Table:"91000578"},
-        // "morningness-eveningness-questionnaire-data":   {url:"$A/modules/b/biomarkers-ii-tasks/morningness-eveningness-questionnaire-data.html",Table:"91000577",form_module:"morningness-eveningness-questionnaire-form"},
-        // "morningness-eveningness-questionnaire-form":   {url:"$A/modules/b/biomarkers-ii-tasks/morningness-eveningness-questionnaire-form.html",Table:"91000577",router:1},
     }
     for(m in modules){$vm.module_list[m]=modules[m];}
 })();

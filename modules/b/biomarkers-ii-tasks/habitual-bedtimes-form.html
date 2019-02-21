@@ -33,14 +33,10 @@
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <label class='survey-label' id='HBT_bedTime_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='HBT_bedTime' id='HBT_bedTime' />
-                            <label class='survey-label' id='HBT_bedTime_postlabel'></label>
+                            <input type='text' class='form-control picker' name='HBT_bedTime' placeholder='2019-02-02T22:30:00' data-format='HH:mm' value data-date readonly required />
                         </div>
                         <div class='col'>
-                            <label class='survey-label' id='HBT_wakeTime_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='HBT_wakeTime' id='HBT_wakeTime' />
-                            <label class='survey-label' id='HBT_wakeTime_postlabel'></label>
+                            <input type='text' class='form-control picker' name='HBT_wakeTime' placeholder='2019-02-02T07:30:00' data-format='HH:mm' value data-date readonly required />
                         </div>
                     </div>
                     </div></div>
@@ -57,14 +53,10 @@
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <label class='survey-label' id='HBT_lightsOff_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='HBT_lightsOff' id='HBT_lightsOff' />
-                            <label class='survey-label' id='HBT_lightsOff_postlabel'></label>
+                            <input type='text' class='form-control picker' name='HBT_lightsOff' placeholder='2019-02-02T23:30:00' data-format='HH:mm' value data-date readonly required />
                         </div>
                         <div class='col'>
-                            <label class='survey-label' id='HBT_lightsOn_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='HBT_lightsOn' id='HBT_lightsOn' />
-                            <label class='survey-label' id='HBT_lightsOn_postlabel'></label>
+                            <input type='text' class='form-control picker' name='HBT_lightsOn' placeholder='2019-02-02T08:30:00' data-format='HH:mm' value data-date readonly required />
                         </div>
                     </div>
                     </div></div>
@@ -81,14 +73,10 @@
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <label class='survey-label' id='LAB_bedTime_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='LAB_bedTime' id='LAB_bedTime' />
-                            <label class='survey-label' id='LAB_bedTime_postlabel'></label>
+                            <input type='text' class='form-control picker' name='LAB_bedTime' placeholder='2019-02-02T22:30:00' data-format='HH:mm:ss' value data-date readonly required />
                         </div>
                         <div class='col'>
-                            <label class='survey-label' id='LAB_wakeTime_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='LAB_wakeTime' id='LAB_wakeTime' />
-                            <label class='survey-label' id='LAB_wakeTime_postlabel'></label>
+                            <input type='text' class='form-control picker' name='LAB_wakeTime' placeholder='2019-02-02T07:30:00' data-format='HH:mm:ss' value data-date readonly required />
                         </div>
                     </div>
                     </div></div>
@@ -105,14 +93,10 @@
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <label class='survey-label' id='LAB_lightsOff_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='LAB_lightsOff' id='LAB_lightsOff' />
-                            <label class='survey-label' id='LAB_lightsOff_postlabel'></label>
+                            <input type='text' class='form-control picker' name='LAB_lightsOff' placeholder='2019-02-02T23:30:00' data-format='HH:mm:ss' value data-date readonly required />
                         </div>
                         <div class='col'>
-                            <label class='survey-label' id='LAB_lightsOn_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='LAB_lightsOn' id='LAB_lightsOn' />
-                            <label class='survey-label' id='LAB_lightsOn_postlabel'></label>
+                            <input type='text' class='form-control picker' name='LAB_lightsOn' placeholder='2019-02-02T08:30:00' data-format='HH:mm:ss' value data-date readonly required />
                         </div>
                     </div>
                     </div></div>
@@ -134,448 +118,117 @@
                 VmInclude:'__COMPONENT__/f/form.01.js'
                 VmInclude:'__CURRENT_PATH__/task-form.js'
                 //-------------------------------------
-    
-                //---------------------------------------------------------
-                // When clicking on a DIV that contains a radio button
-                // automatically select the radio button or the 
-                // multiple-select button.
-                $('.col-sm').each(function() {
-                    $(this).on('click',function() {
-                        console.log(this.children);
-                        for (i=0;i<this.children.length;i++) {
-                            if (this.children[i].type == 'checkbox') {
-                                //this.children[i].checked = !this.children[i].checked;
-                            } else if (this.children[i].type == 'radio') {
-                                this.children[i].checked = true;
-                            }
-                        }
-                    });
-                });
 
-                $('input[type=checkbox]').each(function() {
-                    $(this).on('click',function() {
-                        this.checked = !this.checked;
-                        console.log('pressed checkbox');
-                    });
-                });
-            }
-        </script>
-        <script>
-            // Variables
-            var intervalObj;
-            var elBox;
-            var elRow;
-            var childRow;
-            var wTotal;
-            var wBox
-            var newW;
-            var wInit
-            var W;
-    
-            //Assign events
-            document.addEventListener("mouseup", mouseup);
-            document.addEventListener("mouseout", mouseup);
-    
-            // Support Functions
-    
-            function mouseup(e) {
-                if(intervalObj) {  //Only stop if exists
-                    clearInterval(intervalObj);
-                }
-            }
-    
-            // Add a leading zero to intergers 
-            function addLeadingZero(val,n) {
-                var s = String(val);
-                while (s.length < n) {s = "0" + s;}
-                return s;
-            }
-    
-            function readValue(name,pObj) {
-                
-                var spans = document.getElementsByName(name);
-                var val = $("#" + name).val();
-                
-                if (val != "") {
-                    var delimiters = [];cnt=0;
-                    for (i = 0; i < pObj.length; i++) {
-                        if (pObj[i].delimiter != "") {
-                            delimiters[cnt] = pObj[i].delimiter;
-                            cnt++;
-                        }
-                    }
+                function changeValue( event ) {
+                    // Get the closest input element to read the data
+                    el = $(event.target).closest('.picker-time-face').find('input');
+                    var v = $(el).val();
+                    var f = $(el).attr('data-format');
+                    d = moment(el.attr('data-date'));
                     
-                    if (delimiters != "") {
-                        var valArr = val.split(new RegExp(delimiters.join('|'), 'g'));
+                    if (v != "") {
+                        // Change the data accordingly
+                        if ((event.data.change == 'Y' || event.data.change == 'YY' || event.data.change == 'YYYY') && event.data.direction == 1) { // Up the Years
+                            d = moment(el.attr('data-date')).add(1, 'years').format('YYYY-MM-DDTHH:mm:ss');
+                        } else if ((event.data.change == 'Y' || event.data.change == 'YY' || event.data.change == 'YYYY') && event.data.direction == -1) { // Down the Years
+                            d = moment(el.attr('data-date')).subtract(1, 'years').format('YYYY-MM-DDTHH:mm:ss');
+                        } 
+                        else if ((event.data.change == 'M' || event.data.change == 'MM' || event.data.change == 'MMM' || event.data.change == 'MMMM' ) && event.data.direction == 1) { // Up the Months
+                            d = moment(el.attr('data-date')).add(1, 'months').format('YYYY-MM-DDTHH:mm:ss');
+                        } else if ((event.data.change == 'M' || event.data.change == 'MM' || event.data.change == 'MMM' || event.data.change == 'MMMM' ) && event.data.direction == -1) { // Down the Months
+                            d = moment(el.attr('data-date')).subtract(1, 'months').format('YYYY-MM-DDTHH:mm:ss');
+                        }
+                        else if ((event.data.change == 'D' || event.data.change == 'Do' || event.data.change == 'DD') && event.data.direction == 1) { // Up the Days
+                            d = moment(el.attr('data-date')).add(1, 'days').format('YYYY-MM-DDTHH:mm:ss');
+                        } else if ((event.data.change == 'D' || event.data.change == 'Do' || event.data.change == 'DD') && event.data.direction == -1) { // Down the Days
+                            d = moment(el.attr('data-date')).subtract(1, 'days').format('YYYY-MM-DDTHH:mm:ss');
+                        } 
+                        else if ((event.data.change == 'H' || event.data.change == 'HH' || event.data.change == 'h' || event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event.data.direction == 1) { // Up the hours
+                            d = moment(el.attr('data-date')).add(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
+                        } else if ((event.data.change == 'H' || event.data.change == 'HH' || event.data.change == 'h' || event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event.data.direction == -1) { // Down the hours
+                            d = moment(el.attr('data-date')).subtract(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
+                        } 
+                        else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction == 1) { // Up the minutes
+                            d = moment(el.attr('data-date')).add(1, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
+                        } else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction == -1) { // Down the minutes
+                            d = moment(el.attr('data-date')).subtract(1, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
+                        } 
+                        else if ((event.data.change == 's' || event.data.change == 'ss') && event.data.direction == 1) { // Up the seconds
+                            d = moment(el.attr('data-date')).add(5, 'seconds').format('YYYY-MM-DDTHH:mm:ss');
+                        } else if ((event.data.change == 's' || event.data.change == 'ss') && event.data.direction == -1) { // Down the seconds
+                            d = moment(el.attr('data-date')).subtract(5, 'seconds').format('YYYY-MM-DDTHH:mm:ss');
+                        }
                     } else {
-                        var valArr = [val];
+                        d = moment(el.attr('data-date')).format('YYYY-MM-DDTHH:mm:ss');
                     }
-                    
-                    for (i = 0; i < pObj.length; i++) {
-                        pObj[i].set = 1;
-                        pObj[i].value = parseInt(valArr[i]);
-                        $("#" + pObj[i].spanId).html(addLeadingZero(valArr[i],pObj[i].nChar));
-                        $("#" + pObj[i].spanId).css("color","#000");
-                    }
+                    // Store the data and value.
+                    $(el).attr('data-date',d);
+                    $(el).val(moment(d).format(f));
                 }
-            }
-    
-            function resizePickers(sgid,wInit) {
-                
-                    elBox    = $("#picker_" + sgid).parent();
-                    elRow    = $("#picker_" + sgid + "_row");
-                    childRow = elRow.children();
+
+                $('.picker').each(function () {
+                    // Get the default date and data-format
+                    var d = $(this).attr('placeholder');
+                    var f = $(this).attr('data-format');
+
+                    // Split the data-format string into its components
+                    var dlm = f.split(/[^A-Za-z0-9]/);
                     
-                    wTotal = wInit;
-                    wBox   = elBox.width();
-                    var W = [];
-                    W[0] = wInit;
-                    for (i = 1; i < childRow.length; i++) {
-                        W[i] = childRow[i].offsetWidth;
-                        wTotal= wTotal + childRow[i].offsetWidth;
-                    }
-                    wTotal = wTotal + 4*14; // add margin
+                    // Create the Moment.js object according to standardized formatting
+                    // and store it in the data-date attribute
+                    $(this).attr('data-date',moment(d).format('YYYY-MM-DDTHH:mm:ss'));
+
+                    // Create the Moment.js object accorting to the desired formatting
+                    // and store it in the placeholder
+                    $(this).attr('placeholder',moment(d).format(f));
                     
-                    if (wTotal > wBox) {
-                        var newW = wBox - wTotal + W[0] -1;
-                        $(childRow[0]).css('width',newW);
+                    // Wrap the input with a div element of width 'w'
+                    var w = (moment(d).format(f).length * 12 + 18) + "px;"
+                    var wrapper = "<div class='picker-time-face' style='width:" + w + ";'></div>";
+                    $(this).wrap(wrapper);
+
+                    // If the formatting includes time, i.e. it includes minutes,
+                    // the user can only change hours, minutes and seconds, not the days months or years.
+                    if (dlm.includes('m') || dlm.includes('mm')) {
+                        var permitted = ['s','ss','m','mm','H','HH','h','hh','k','kk'];
                     } else {
-                        $(childRow[0]).css('width',W[0]);
+                        var permitted = ['D','Do','DD','M','MM','MMM','MMMM','Y','YY','YYYY'];
                     }
-            }
-    
-            // The main function
-            function Pickers(sgid,P) {
-                
-                // Variables
-                var pObj  = P.inputs;
-                var spans = document.getElementsByName(sgid);
-                var sgElement = $("#" + sgid);
-                
-                // Nested Functions
-                
-                function getNewPicker(idx) {
-                            
-                    html="<div class='dials'  id='picker_" + sgid + "_dials'>";
-                    html+="	 <span class='fa fa-angle-up' id='" + sgid + "_" + idx + "_up' name='changeValue' style='font-size:3em'></span><br>";
-                    html+="	 <span class='face' id='" + sgid + "_" + idx + "' name='" + sgid + "'>" + addLeadingZero(pObj[i].initValue,pObj[i].nChar) + "</span><br>";
-                    html+="	 <span class='fa fa-angle-down' id='" + sgid + "_" + idx + "_down' name='changeValue' style='font-size:3em'></span>";
-                    html+="</div>";
-                    if (pObj[i].label != undefined) {
-                        html+="<div class='labels' id='picker_" + sgid + "_delimiter'>";
-                        html+="	 " + pObj[i].label + "";
-                        html+="</div>";
+
+                    // Create the up and down arror elements
+                    // - The row has a padding equal to the padding of the input
+                    var rowUp = $('<div style="padding:0 0.75em;"></div>');
+                    var rowDw = $('<div style="padding:0 0.75em;"></div>');
+                    
+                    // - For each field, create a column div that contains the arrow
+                    // - And assign a change-function to the event of a click
+                    for (var n = 0; n < dlm.length; n++) {
+                        if (permitted.includes(dlm[n])) {
+                            var spnFc = $("<div class='picker-face' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
+                            var spnUp = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
+                            var spnDw = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-down'></span></div>");
+                            spnUp.on('click', {
+                                direction: 1,
+                                change: dlm[n]
+                            }, changeValue );
+                            spnDw.on('click', {
+                                direction: -1,
+                                change: dlm[n]
+                            }, changeValue );
+                        } else {
+                            var spnUp = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'></div>");
+                            var spnDw = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'></div>");
+                        }
+                        // Append the column div to the row.
+                        rowUp.append(spnUp);
+                        rowDw.append(spnDw);
                     }
-                    return html;
-                }
-    
-                // Main bit
-                
-                for (i = 0; i < P.N; i++) {
-                    pObj[i].value  = pObj[i].initValue;
-                    pObj[i].spanId = sgid + "_" + i;
-                    pObj[i].set    = 0;
-                    
-                    pObj[i].changeValue = function(direction) {
-                        if (this.set == 1) {
-                            if (direction == "up") {
-                                this.value = this.value + this.step;
-                            } else {
-                                this.value = this.value - this.step;
-                            }
-                            
-                            if (this.value < this.minValue) {
-                                this.value = this.maxValue;
-                            }
-                            if (this.value > this.maxValue) {
-                                this.value = this.minValue;
-                            }
-                        }
-                        this.set = 1;
-                        // Change the value in the span-element
-                        $("#" + this.spanId).html(addLeadingZero(this.value,this.nChar));
-                        $("#" + this.spanId).css("color","#000");
-                        
-                        // Change the value in the SG-input
-                        var str = ""
-                        var nset = 0;
-                        for (j = 0; j < pObj.length; j++) {
-                            str += addLeadingZero(pObj[j].value,pObj[j].nChar) + pObj[j].delimiter;
-                            nset = nset + pObj[j].set;
-                        }
-                                    
-                        // If all elements have been set, update the SG-element
-                        if (nset === pObj.length) {
-                            sgElement.val(str);
-                        }
-                    }
-                }
-                    
-                var tp;
-                tp="<div id='picker_" + sgid + "' style='width:100%;'>";
-                tp+="  <div id='picker_" + sgid + "_row'>";
-                tp+="    <div class='labels' id='picker_" + sgid + "_prelabel'>";
-                tp+="	   " + P.pre + "";
-                tp+="    </div>";
-                for (i = 0; i < P.N; i++) {
-                    tp+=getNewPicker(i);
-                }
-                tp+="    <div class='labels' id='picker_" + sgid + "_postlabel'>";
-                tp+="	   " + P.post + "";
-                tp+="    </div>";
-                tp+="  </div>";
-                tp+="</div>";
-                
-                var pnt = $('#' + sgid);//.parent(this);
-                pnt.after(tp);
-                $('#' + sgid).css("height","0px");
-                $('#' + sgid).css("margin","0px");
-                $('#' + sgid).css("padding","0px");
-                $('#' + sgid).css("border","none");
-                $('#' + sgid + "_prelabel").css("display","none");
-                $('#' + sgid + "_postlabel").css("display","none");
-                
-                $(document).ready(function() {
-                    
-                    // set the size of the elements
-                    var elRow    = $("#picker_" + sgid + "_row");
-                    var childRow = elRow.children();
-                    var wInit    = childRow[0].offsetWidth;
-                    resizePickers(sgid,wInit);
-    
-                    // Read the values of the hidden input if this was already set
-                    // Needed in case someone clicked back.
-                    readValue(sgid,pObj);
-                    
-                    // Get the element, add a click listener...
-                    document.getElementById("picker_" + sgid).addEventListener("mousedown", function(e) {
-                        
-                        if(e.target && e.target.attributes.name && e.target.attributes.name.value == "changeValue") {
-                            
-                            info = e.target.id.split("_");
-                            
-                            idx = parseInt(info[2]);
-                            pObj[idx].changeValue(info[3])
-                            intervalObj = setInterval(function(){ 
-                                pObj[idx].changeValue(info[3]);
-                            }, 300);
-                            
-                        }
-                    });
-                    
-                    $(window).resize(function() {
-                        clearTimeout(window.resizedFinished);
-                        window.resizedFinished = setTimeout(function(){
-                            resizePickers(sgid,wInit);
-                        }, 250);
-                    });
-    
+                    // Insert the rows before and after the input element.
+                    $(this).before(rowUp);
+                    $(this).after(rowDw);
                 });
                 
             }
-        </script>
-        <script>
-            
-            var field_id   = "HBT_bedTime";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 22,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "HBT_wakeTime";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 6,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "HBT_lightsOff";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 23,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "HBT_lightsOn";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 6,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "LAB_bedTime";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 22,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "LAB_wakeTime";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 6,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "LAB_lightsOff";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 22,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
-            var field_id   = "LAB_lightsOn";
-            var picker = [];
-            picker[0] = {      // the index of this picker starting at zero
-                initValue : 6,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 23,  // the maximum value
-                step      : 1,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : ":",  // the label that is shown after the picker
-                delimiter : ":"   // the delimiter between pickers that is stored in data
-            }
-            picker[1] = {      // the index of this picker starting at zero
-                initValue : 30,   // the initial value
-                minValue  : 0,   // the minimal value
-                maxValue  : 55,  // the maximum value
-                step      : 5,   // increase or decrease step size
-                nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
-                label     : "",  // the label that is shown after the picker
-                delimiter : ""   // the delimiter between pickers that is stored in data
-            }
-            // Leave the rest alone
-            var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
-            for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
-            Pickers(field_id,P);
-            
         </script>
         <style>
             VmInclude:__COMPONENT__/f/form.01.css

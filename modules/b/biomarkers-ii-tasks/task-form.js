@@ -70,24 +70,31 @@ m.show_hide=function(el){
     var $rd=$(el).find('input[type=radio]');
     var nm=$rd.attr('name');
     var v=$($rd).val();
-   if(v==0){
-       $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').hide();
-   }
-   else if(v==1){
-        $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').show();
-   }
+    if(v==0){
+        $('#F__ID input[name*='+nm+'_]').each(function() { 
+            if (this.type == 'radio') { 
+                this.checked = false; 
+            } else { 
+                $(this).val(null); 
+            }
+        });
+        $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').slideUp(200);
+    }
+    else if(v==1){
+        $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').slideDown(200);
+    }
 }
 
-$('#F__ID .col-sm').each(function() {
+$('#F__ID .select-area').each(function() {
     $(this).on('click',function() {
-        for (i=0;i<this.children.length;i++) {
-            if (this.children[i].type == 'checkbox') {
-                this.children[i].checked = !this.children[i].checked;
-                console.log('pressed col-sm');
-            } else if (this.children[i].type == 'radio') {
-                this.children[i].checked = true;
-                m.show_hide(this);
-            }
+        var $rd=$(this).find('input[type=radio]');
+        var $cb=$(this).find('input[type=checkbox]');
+        if ($rd.length > 0) {
+            $rd[0].checked = true;
+            m.show_hide(this);
+        }
+        if ($cb.length > 0) {
+            $cb[0].checked = !$cb[0].checked;
         }
     });
 });
@@ -95,6 +102,5 @@ $('#F__ID .col-sm').each(function() {
 $('#F__ID input[type=checkbox]').each(function() {
     $(this).on('click',function() {
         this.checked = !this.checked;
-        console.log('pressed checkbox');
     });
 });
