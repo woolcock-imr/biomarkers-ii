@@ -15,11 +15,13 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.05,0.03]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.06,0.03]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         //------------------------------------
         //app urls
         $vm.public_url_$A='https://biomarkers-ii.rt.org.au';
         $vm.local_url_$A='http://127.0.0.1:8000/woolcock-imr/biomarkers-ii';
+        $vm.public_url_$B='https://biomarkers-ii-online-questionnaire.rt.org.au';
+        $vm.local_url_$B='http://127.0.0.1:8000/woolcock-imr/biomarkers-ii-online-questionnaire';
         //------------------------------------
         //where are your start modules
         $vm.start_modules=[
@@ -35,12 +37,12 @@
             "panel-child-b-ii": 		        {url:"$A/modules/p/panel-child.html"},
             "panel-permission":   			    {url:"$A/modules/p/panel-permission.html",router:1},
             "permission-check":                 {url:"$A/modules/p/permission-check.html"},
-            "permission-role-login-data":       {url:"$A/modules/p/permission-role-login-data.html",Table:"91000570",form_module:"permission-role-login-form"},
-            "permission-role-login-form":       {url:"$A/modules/p/permission-role-login-form.html",Table:"91000570"},
-            "permission-role-table-group-data": {url:"$A/modules/p/permission-role-table-group-data.html",Table:"91000570",form_module:"permission-role-table-group-form"},
-            "permission-role-table-group-form": {url:"$A/modules/p/permission-role-table-group-form.html",Table:"91000570"},
-            "permission-query-data":            {url:"$A/modules/p/permission-query-data.html",Table:"91000569",form_module:"permission-query-form"},
-            "permission-query-form":            {url:"$A/modules/p/permission-query-form.html",Table:"91000569"},
+            "permission-role-login-data":       {url:"$A/modules/p/permission-role-login-data.html",Table:"91000569",form_module:"permission-role-login-form"},
+            "permission-role-login-form":       {url:"$A/modules/p/permission-role-login-form.html",Table:"91000569"},
+            "permission-role-table-group-data": {url:"$A/modules/p/permission-role-table-group-data.html",Table:"91000568",form_module:"permission-role-table-group-form"},
+            "permission-role-table-group-form": {url:"$A/modules/p/permission-role-table-group-form.html",Table:"91000568"},
+            "permission-query-data":            {url:"$A/modules/p/permission-query-data.html",Table:"91000567",form_module:"permission-query-form"},
+            "permission-query-form":            {url:"$A/modules/p/permission-query-form.html",Table:"91000567"},
 
             "participant-data":     	        {url:"$A/modules/p/participant-data.html", Table:"91000570",
                                                     form_module:"participant-form",
