@@ -384,7 +384,6 @@
             });
 
             $('#CSDM_date').on('mousedown', function() {
-                this.form.reset();
                 $('#foldout').slideUp();
             });
 
@@ -421,6 +420,7 @@
                     var dStr = moment(df[i].dObj).format('YYYY') + '-' + moment(df[i].dObj).format('MM') + '-' + moment(df[i].dObj).format('DD') + 'T' + df[i].dfVal + ':00'
                     $('input[name='+ df[i].elName +']').attr('placeholder',moment(dStr).format($('input[name='+ df[i].elName +']').attr('data-format')));
                     $('input[name='+ df[i].elName +']').attr('data-date',moment(dStr).format('YYYY-MM-DDTHH:mm:ss'));
+                    $('input[name='+ df[i].elName +']').val('');
                 }
 
             });
