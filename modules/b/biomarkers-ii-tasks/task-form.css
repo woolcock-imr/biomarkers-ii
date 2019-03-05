@@ -10,7 +10,12 @@
     padding: 5px;
     margin-left:-15px;
 }
-
+#F__ID h2 {
+    text-transform: uppercase;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 5px;
+}
 #F__D .select-area {
     white-space: nowrap;
 }
@@ -64,20 +69,6 @@
 #F__ID .survey-question.required::after {
     content: " *";
     color: black;
-}
-
-h1 {
-    text-transform: uppercase;
-    font-size: 12pt;
-    font-weight: bold;
-    border-top: rgba(60,60,60,1) solid 1px;
-    padding: 5px;
-}
-h2 {
-    text-transform: uppercase;
-    font-size: 10pt;
-    font-weight: bold;
-    padding: 5px;
 }
 .row__ID {
     border-top:#ced4da solid 1px;

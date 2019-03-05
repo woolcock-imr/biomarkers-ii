@@ -34,7 +34,7 @@
                         </div>
                         <div class='row'>
                             <div class='col-sm-3'>
-                                <input type='text' placeholder='select a date' maxlength='5' class='form-control' name='CSDM_date' id='CSDM_date' required />
+                                <input type='text' placeholder='select a date' maxlength='5' class='form-control' name='CSDM_date' id='CSDM_date__ID' required />
                             </div>
                             <br />
                             <br />
@@ -374,20 +374,28 @@
             VmInclude: '__CURRENT_PATH__/task-form.js'
             //-------------------------------------
 
-            $('#foldout').hide();
+            //$('#foldout').hide();
 
-            $('#CSDM_date').datepicker({
+            var old_load=m.load;
+            m.load=function(){
+                old_load();
+                var d=$('#CSDM_date__ID').val();
+                if(d=="") $('#foldout__ID').hide();
+                else $('#foldout__ID').show();
+            }
+            
+            $('#CSDM_date__ID').datepicker({
                 dateFormat: 'dd/mm/yy',
                 changeMonth: true,
                 changeYear: true,
                 defaultDate: 1
             });
 
-            $('#CSDM_date').on('mousedown', function() {
+            $('#CSDM_date__ID').on('mousedown', function() {
                 $('#foldout').slideUp();
             });
 
-            $('#CSDM_date').on('change', function() {
+            $('#CSDM_date__ID').on('change', function() {
                 var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
                 dStr = $(this).val().split('/');
                 tObj = new Date(parseInt(dStr[2]),parseInt(dStr[1])-1,parseInt(dStr[0]));
