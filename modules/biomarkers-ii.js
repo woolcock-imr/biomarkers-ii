@@ -75,6 +75,8 @@
         "pvt-form":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-form.html",Table:"91000591"},
         "choice-reaction-time-data":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-data.html",Table:"91000594",form_module:'choice-reaction-time-form'},
         "choice-reaction-time-form":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-form.html",Table:"91000594"},
+        "digital-symbol-substitution-data":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-data.html",Table:"91000621",form_module:'digital-symbol-substitution-task'},
+        "digital-symbol-substitution-task":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-task.html",Table:"91000621"},
         "karolinska-drowsiness-test-data":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-data.html",Table:"91000595",form_module:'karolinska-drowsiness-test-form'},
         "karolinska-drowsiness-test-form":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-form.html",Table:"91000595"},
         "maintenance-wakefulness-test-data":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-data.html",Table:"91000596",form_module:'maintenance-wakefulness-test-form'},

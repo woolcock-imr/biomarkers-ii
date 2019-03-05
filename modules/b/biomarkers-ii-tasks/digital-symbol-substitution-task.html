@@ -1,0 +1,193 @@
+<div id=thirdparty_container__ID>
+    <div class="container" style="margin: auto; text-align:center;">
+        <div class="row row__ID">
+            <div class="col-sm">
+                <table style="margin: auto;">
+                    <tr>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/0.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/1.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/2.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/3.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/4.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/5.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/6.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/7.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/8.jpg'></td>
+                        <td><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/9.jpg'></td>
+                    </tr>
+                    <tr style="border">
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic0.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic1.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic2.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic3.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic4.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic5.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic6.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic7.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic8.jpg'></td>
+                        <td class=symbol_pic><img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic9.jpg'></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row row__ID">
+            <div class="col-sm" id=examples__ID style='margin-top:20px; font-size:large; color:rgba(255,150,150,255)'>
+                Example: </div>
+        </div>
+        <div class="row row__ID">
+            <div class="col-sm" style='margin-top:20px;'> <img src='__CURRENT_PATH__/digital-symbol-substitution-task-images/pic0.jpg' id=current_symbol__ID>
+            </div>
+        </div>
+        <div class="row row__ID">
+            <div class="col-sm"> <button id=start_button__ID style="margin-top:40px;"
+                    class='btn btn-primary btn-lg'>Start</button> </div>
+        </div>
+        <div class="row row__ID" id=instructions__ID>
+            <div class="col-sm" style='margin-top:40px; font-size:x-large; color:rgba(0,0,255,255)'> Instructions: Using
+                the guide above, press the number on your keypad corresponding to the random symbol displayed. Work as
+                quickly as you can. </div>
+        </div>
+    </div> <canvas id=main_canvas__ID width=1100 height=300 style="margin: auto; display: block;"></canvas>
+</div>
+<script> 
+    function F__ID(){ 
+        $('#header__ID').hide(); 
+        $('body').css('background','white'); 
+        var intervals = []; 
+        //------------------------------------ 
+        var this_module=$vm.module_list[$vm.vm['__ID'].name]; 
+        //------------------------------------ 
+        $('#D__ID').on('load',function(){ 
+            $('#thirdparty_container__ID').css('height',$vm.min_height); 
+            third_party("thirdparty_container__ID",data_process); 
+        });
+        //------------------------------------ 
+        var ClearIntervals = function() { 
+            for (var i=0; i<intervals.length; i++) { 
+                clearTimeout(intervals[i]); 
+            } 
+            intervals = []; 
+        } 
+        //------------------------------------ 
+        $('#D__ID').on('unload',function(){ 
+            //alert('unload'); 
+            ClearIntervals(); 
+        });
+        //------------------------------------ 
+        var data_process=function(record){ 
+            //alert(JSON.stringify(record)); 
+            var req={
+                cmd:"add_json_record",
+                db_pid:this_module.table_id,
+                data:record,
+                dbv:{
+                    V3:this_module.v3
+                }
+            }; 
+            $VmAPI.request({
+                data:req,
+                callback:function(res){ 
+                    $vm.refresh=1; 
+                    $vm.alert('Your data has been successfully submitted'); 
+                }
+            }); 
+            //-------------------------------------------------------- 
+        } 
+        //------------------------------------ 
+        var third_party=function(containerID,callback){ 
+            var images = ['__CURRENT_PATH__/digital-symbol-substitution-task-images/pic0.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic1.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic2.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic3.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic4.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic5.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic6.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic7.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic8.jpg','__CURRENT_PATH__/digital-symbol-substitution-task-images/pic9.jpg']; 
+            $('#instructions').show(); 
+            ClearIntervals(); 
+            $('#'+containerID).css('background-color','#ffffff'); 
+            $("#start_button__ID").css("visibility", "visible"); 
+            $("#examples__ID").css("visibility", "hidden"); 
+            var timelimit = 10000; 
+            var current = -1; 
+            var repeat = 0; 
+            var examples = 3; 
+            var example = 0; 
+            var started = false; 
+            var startTime; 
+            var results = { 
+                Count : 0, 
+                Correct : 0, 
+                timelimit 
+            }; 
+            var Start = function() { 
+                if ($("#thirdparty_container__ID").is(':hidden')) {
+                    //hacky and ugly way :
+                    return; 
+                }
+                $("#start_button__ID").css("visibility", "hidden"); 
+                Next(); 
+                started = true; 
+            } 
+            var Next = function() { 
+                if (example == examples) { 
+                    example++; 
+                    $("#examples__ID").css("visibility", "hidden"); 
+                    $('#instructions__ID').hide(); 
+                    intervals.push(setTimeout(Finish, timelimit)); 
+                } else if (example < examples) { 
+                    example++; 
+                    $("#examples__ID").css("visibility", "visible"); 
+                    $("#examples__ID").text("EXAMPLE " + example + "/" + examples); 
+                } 
+                var next; 
+                do { 
+                    next = Math.floor(Math.random() * images.length); 
+                }
+                while (current == next); 
+                current = next; 
+                $("#current_symbol__ID").attr("src", images[current]); 
+            } 
+            $(document).keypress(function(e){ 
+                if ($("#thirdparty_container__ID").is(':hidden') || !started) {
+                    //hacky and ugly way
+                    return; 
+                }
+                if (example >= examples) { 
+                    if (current == e.key) results.Correct++; 
+                    results.Count++; 
+                } 
+                Next(); 
+                e.preventDefault(); 
+            }); 
+            var Finish = function() { 
+                alert('Finished')
+                started = false; 
+                if ($("#thirdparty_container__ID").is(':hidden')) {
+                    //hacky and ugly way :( 
+                    return; 
+                }
+                if (example >= examples) { 
+                    results.TestCount = results.Count; 
+                    results.CorrectCount = results.Correct; 
+                    results.Duration=(results.timelimit)/1000;
+                    callback(results); 
+                } 
+            } 
+            $('#start_button__ID').on('click',function(){ 
+                Start(); 
+            }); 
+            //------------------------------------ 
+        } 
+        //------------------------------------ 
+    } 
+</script> 
+<style> 
+    #D__ID{ 
+        height:100%; 
+        overflow:auto; 
+        animation: vm_module_fadein 1.0s; 
+    } 
+    #thirdparty_container__ID{ 
+        overflow: hidden; 
+    } 
+    table { 
+        border-collapse: collapse; 
+    } 
+    td.symbol_pic { 
+        border: 1px solid black; 
+    }
+</style> 

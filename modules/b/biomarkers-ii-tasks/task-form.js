@@ -55,7 +55,10 @@ m.load=function(){
         I2++; if(I2>50){ clearInterval(loop_2); alert("jquery-ui.min.js is not installed.");}
     },100);
     //-------------------------------------
-    $('#F__ID .sh__ID').hide();
+    // $('#F__ID .sh__ID').hide();
+    $('#F__ID .select-area').each(function() {
+        m.show_hide(this);
+    });
 }
 //-------------------------------------
 m.before_submit=function(record,dbv){
@@ -67,7 +70,7 @@ m.before_submit=function(record,dbv){
 };
 //-------------------------------------
 m.show_hide=function(el){
-    var $rd=$(el).find('input[type=radio]');
+    var $rd=$(el).find('input[type=radio]:checked');
     var nm=$rd.attr('name');
     var v=$($rd).val();
     if(v==0){
@@ -79,9 +82,11 @@ m.show_hide=function(el){
             }
         });
         $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').slideUp(200);
-    }
-    else if(v==1){
+    } else if(v==1){
         $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').slideDown(200);
+    } else {
+        nm=$(el).find('input[type=radio]').attr('name');
+        $('#F__ID input[name*='+nm+'_]').closest('div.sh__ID').slideUp(200);
     }
 }
 

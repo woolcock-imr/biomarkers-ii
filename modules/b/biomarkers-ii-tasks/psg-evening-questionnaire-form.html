@@ -99,7 +99,11 @@
                             <input type='number' class='form-control' name='PSGE_meds_dose_1' min='0' />
                         </div>
                         <div class='col-sm-1' style='padding:0px 5px;'>
-                            <span class='survey-answer'>mg</span>
+                            <select class='form-control' name="PSGE_meds_unit_1">
+                                <option value="mg">mg</option>
+                                <option value="ug">&micro;g</option>
+                                <option value="ml">ml</option>
+                            </select>
                         </div>
                         <br />
                         <div class='col-sm-5'>
@@ -115,7 +119,11 @@
                             <input type='number' class='form-control' name='PSGE_meds_dose_2' min='0' />
                         </div>
                         <div class='col-sm-1' style='padding:0px 5px;'>
-                            <span class='survey-answer'>mg</span>
+                            <select class='form-control' name="PSGE_meds_unit_2">
+                                <option value="mg">mg</option>
+                                <option value="ug">&micro;g</option>
+                                <option value="ml">ml</option>
+                            </select>
                         </div>
                         <br />
                         <div class='col-sm-5'>
@@ -131,7 +139,11 @@
                             <input type='number' class='form-control' name='PSGE_meds_dose_3' min='0' />
                         </div>
                         <div class='col-sm-1' style='padding:0px 5px;'>
-                            <span class='survey-answer'>mg</span>
+                            <select class='form-control' name="PSGE_meds_unit_3">
+                                <option value="mg">mg</option>
+                                <option value="ug">&micro;g</option>
+                                <option value="ml">ml</option>
+                            </select>
                         </div>
                         <br />
                         <div class='col-sm-5'>
@@ -147,7 +159,11 @@
                             <input type='number' class='form-control' name='PSGE_meds_dose_4' min='0' />
                         </div>
                         <div class='col-sm-1' style='padding:0px 5px;'>
-                            <span class='survey-answer'>mg</span>
+                            <select class='form-control' name="PSGE_meds_unit_4">
+                                <option value="mg">mg</option>
+                                <option value="ug">&micro;g</option>
+                                <option value="ml">ml</option>
+                            </select>
                         </div>
                         <br />
                         <div class='col-sm-5'>
@@ -163,7 +179,11 @@
                             <input type='number' class='form-control' name='PSGE_meds_dose_5' min='0' />
                         </div>
                         <div class='col-sm-1' style='padding:0px 5px;'>
-                            <span class='survey-answer'>mg</span>
+                            <select class='form-control' name="PSGE_meds_unit_5">
+                                <option value="mg">mg</option>
+                                <option value="ug">&micro;g</option>
+                                <option value="ml">ml</option>
+                            </select>
                         </div>
                     </div>
                     </div></div>
@@ -320,7 +340,7 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question required'>How much cups or glasses of these drinks have you consumed in the last 12 hours?</span>
+                            <span class='survey-question required'>How many cups or glasses of these caffeinated drinks have you consumed in the last 12 hours?</span>
                         </div>
                     </div>
                     <div class='row'>
@@ -392,11 +412,17 @@
                         </div>
                     </div>
                     <div class='row'>
-                        <div class='col'>
-                            <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_back' value='back' required>  <label class='survey-answer' for='PSGE_sleepPos_back'>Back</label><br />
-                            <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_left' value='left'>  <label class='survey-answer' for='PSGE_sleepPos_left'>Left</label><br />
-                            <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_right' value='left'> <label class='survey-answer' for='PSGE_sleepPos_right'>Right</label><br />
-                            <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_belly' value='left'> <label class='survey-answer' for='PSGE_sleepPos_belly'>Belly</label><br />
+                        <div class='col-sm-12 select-area'>
+                            <input type='checkbox' name='PSGE_sleepPos_back' value='back' /> <span class='survey-answer'>Back</span>
+                        </div>
+                        <div class='col-sm-12 select-area'>
+                            <input type='checkbox' name='PSGE_sleepPos_belly' value='belly' /> <span class='survey-answer'>Belly</span>
+                        </div>
+                        <div class='col-sm-12 select-area'>
+                            <input type='checkbox' name='PSGE_sleepPos_left' value='left' /> <span class='survey-answer'>Left</span>
+                        </div>
+                        <div class='col-sm-12 select-area'>
+                            <input type='checkbox' name='PSGE_sleepPos_right' value='right' /> <span class='survey-answer'>Right</span>
                         </div>
                     </div>
                     </div></div>
