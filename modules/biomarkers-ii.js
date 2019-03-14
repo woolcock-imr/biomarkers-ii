@@ -3,22 +3,22 @@
         
         //the following are all biomarkers-ii-tasks
         "visit-dates-data":	  		                    {url:"$A/modules/b/biomarkers-ii-tasks/visit-dates-data.html",Table:"91000581",form_module:"visit-dates-form"},
-        "visit-dates-form":	  		                    {url:"$A/modules/b/biomarkers-ii-tasks/visit-dates-form.html",Table:"91000581"},
+        "visit-dates-form":	  		                    {url:"$A/modules/b/biomarkers-ii-tasks/visit-dates-form.html",Table:"91000581",task_name:"Visit dates"},
 
         // Column 2, Screening visit
         "in-exclusion-criteria-data":                   {url:"$A/modules/b/biomarkers-ii-tasks/in-exclusion-criteria-data.html",Table:"91000582",form_module:"in-exclusion-criteria-form"},
-        "in-exclusion-criteria-form":	 	            {url:"$A/modules/b/biomarkers-ii-tasks/in-exclusion-criteria-form.html",Table:"91000582"},
+        "in-exclusion-criteria-form":	 	            {url:"$A/modules/b/biomarkers-ii-tasks/in-exclusion-criteria-form.html",Table:"91000582",task_name:"In- and exclusion criteria"},
         "anthropometry-data":	                        {url:"$A/modules/b/biomarkers-ii-tasks/anthropometry-data.html",Table:"91000572",form_module:"anthropometry-form"},
-        "anthropometry-form":	 	                    {url:"$A/modules/b/biomarkers-ii-tasks/anthropometry-form.html",Table:"91000572"},
+        "anthropometry-form":	 	                    {url:"$A/modules/b/biomarkers-ii-tasks/anthropometry-form.html",Table:"91000572",task_name:"Anthropometry"},
         "education-data":	                            {url:"$A/modules/b/biomarkers-ii-tasks/education-data.html",Table:"91000583",form_module:"education-form"},
-        "education-form":	 	                        {url:"$A/modules/b/biomarkers-ii-tasks/education-form.html",Table:"91000583"},
+        "education-form":	 	                        {url:"$A/modules/b/biomarkers-ii-tasks/education-form.html",Table:"91000583",task_name:"Education questionnaire"},
         // Column 2, Baseline psychometry
         "state-trait-anxiety-inventory-data":           {url:"$A/modules/b/biomarkers-ii-tasks/state-trait-anxiety-inventory-data.html",Table:"91000579",form_module:"state-trait-anxiety-inventory-form"},
-        "state-trait-anxiety-inventory-form":           {url:"$A/modules/b/biomarkers-ii-tasks/state-trait-anxiety-inventory-form.html",Table:"91000579"},
+        "state-trait-anxiety-inventory-form":           {url:"$A/modules/b/biomarkers-ii-tasks/state-trait-anxiety-inventory-form.html",Table:"91000579",task_name:"State-trait anxiety inventory questionnaire"},
         "thermoregulatory-index-data":                  {url:"$A/modules/b/biomarkers-ii-tasks/thermoregulatory-index-data.html",Table:"91000580",form_module:"thermoregulatory-index-form"},
-        "thermoregulatory-index-form":                  {url:"$A/modules/b/biomarkers-ii-tasks/thermoregulatory-index-form.html",Table:"91000580"},
-        "driving-accident-history-data":                {url:"$A/modules/b/biomarkers-ii-tasks/driving-accident-history-data.html",Table:"91000575",form_module:"driving-accident-history-form"},
-        "driving-accident-history-form":                {url:"$A/modules/b/biomarkers-ii-tasks/driving-accident-history-form.html",Table:"91000575"},
+        "thermoregulatory-index-form":                  {url:"$A/modules/b/biomarkers-ii-tasks/thermoregulatory-index-form.html",Table:"91000580",task_name:"Thermoregulatory index questionnaire"},
+        // "driving-accident-history-data":                {url:"$A/modules/b/biomarkers-ii-tasks/driving-accident-history-data.html",Table:"91000575",form_module:"driving-accident-history-form"},
+        // "driving-accident-history-form":                {url:"$A/modules/b/biomarkers-ii-tasks/driving-accident-history-form.html",Table:"91000575"},
         
         // Column 3, Ambulatory week
         "sleep-diary-d1-data":                          {url:"$A/modules/b/biomarkers-ii-tasks/sleep-diary-data.html",Table:"91000600",form_module:"sleep-diary-d1-form"},
@@ -53,6 +53,8 @@
         "day-diary-d7-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000614",task_name:"Day Diary - day 7, fill out in the evening"},
         "actigraphy-ambulatory-data":                   {url:"$A/modules/b/biomarkers-ii-tasks/actigraphy-data.html",Table:"91000592",form_module:"actigraphy-ambulatory-form"},
         "actigraphy-ambulatory-form":                   {url:"$A/modules/b/biomarkers-ii-tasks/actigraphy-form.html",Table:"91000592"},
+        "fitbit-data":                                  {url:"$A/modules/b/biomarkers-ii-tasks/fitbit-data.html",Table:"91000625",form_module:"fitbit-form"},
+        "fitbit-form":                                  {url:"$A/modules/b/biomarkers-ii-tasks/fitbit-form.html",Table:"91000625"},
         
         // Column 4, Experimental visit
         "psg-evening-questionnaire-data":               {url:"$A/modules/b/biomarkers-ii-tasks/psg-evening-questionnaire-data.html",Table:"91000586",form_module:"psg-evening-questionnaire-form"},
@@ -72,9 +74,9 @@
         
         // Column 4, tasks
         "pvt-data":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-data.html",Table:"91000591",form_module:'pvt-form'},
-        "pvt-form":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-form.html",Table:"91000591"},
+        "pvt-form":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-form.html",Table:"91000591",task_name:"Psychomotor vigilance task"},
         "choice-reaction-time-data":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-data.html",Table:"91000594",form_module:'choice-reaction-time-form'},
-        "choice-reaction-time-form":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-form.html",Table:"91000594"},
+        "choice-reaction-time-form":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-form.html",Table:"91000594",task_name:"4 choice reaction time task"},
         "digital-symbol-substitution-data":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-data.html",Table:"91000621",form_module:'digital-symbol-substitution-task'},
         "digital-symbol-substitution-task":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-task.html",Table:"91000621"},
         "karolinska-drowsiness-test-data":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-data.html",Table:"91000595",form_module:'karolinska-drowsiness-test-form'},

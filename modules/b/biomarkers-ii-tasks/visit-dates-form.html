@@ -80,30 +80,36 @@
                 <div class='row row__ID'><div class='col'>
                 <div class='row'>
                     <div class='col'>
-                        <span class='survey-question'>Has the participant's clinician been notified of participation?</span>
+                        <span class='survey-question required'>Has the participant's clinician been notified of participation?</span>
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='col-sm'>
-                        <input type='radio' class='form-control' name='clinicianNotified' value='0'> no
+                    <div class='col-sm-2 select-area'>
+                        <input type='radio' name='clinicianNotified' value='0' required> <span class='survey-answer'>no</span>
                     </div>
-                </div>
-                <div class='row'>
-                    <div class='col-sm col-sm-3'>
-                        <input type='radio' class='form-control' name='clinicianNotified' value='1'> yes, on date
-                    </div>
-                    <div class='col-sm-3'>
-                        <input type='text' placeholder='dd/mm/yyyy' class='form-control' data-custom='1' data-provide='clinicianNotified_date' data-id='clinicianNotified_date' name='clinicianNotified_date' id='clinicianNotified_date' />
+                    <div class='col-sm-2 select-area'>
+                        <input type='radio' name='clinicianNotified' value='1'> <span class='survey-answer'>yes</span>
                     </div>
                 </div>
                 <div class='row sh__ID'>
-                    <div class='col-sm'>
-                        <span class='survey-subquestion'>Please provide details</span>
-                        <br />
+                    <div class='col-sm-3'>
+                        <span class='survey-subquestion'>If yes, on date:</span>
+                        <input type='text' placeholder='dd/mm/yyyy' class='form-control' data-custom='1' data-provide='clinicianNotified_date' data-id='clinicianNotified_date' name='clinicianNotified_date' id='clinicianNotified_date' />
+                    </div>
+                    <div class='col-sm-9'>
+                        <span class='survey-subquestion'>Please provide details:</span>
                         <input type='text' placeholder='details...' class='form-control' data-custom='1' data-provide='clinicianNotified_specify' data-id='clinicianNotified_specify' name='clinicianNotified_specify' id='clinicianNotified_specify' />
                     </div>
                 </div>
                 </div></div>
+
+                <div class='row row__ID'>
+                    <div class='col'>
+                        <span class='survey-question'>Does the participant have any dietary requirements?</span>
+                        <input type=text class=form-control name=dietaryReqs>
+                    </div>
+                </div>
+
                 <!-- submit button part for all tsak forms------------>
                 <br>
     			<div class='row'>
@@ -139,23 +145,6 @@
 				changeYear: true,
 				defaultDate: 1
 			});
-
-            //---------------------------------------------------------
-            // When clicking on a DIV that contains a radio button
-            // automatically select the radio button or the 
-            // multiple-select button.
-            $('.col-sm').each(function() {
-                $(this).on('click',function() {
-                    console.log(this.children);
-                    for (i=0;i<this.children.length;i++) {
-                        if (this.children[i].type == 'checkbox') {
-                            //this.children[i].checked = !this.children[i].checked;
-                        } else if (this.children[i].type == 'radio') {
-                            this.children[i].checked = true;
-                        }
-                    }
-                });
-            });
         }
     </script>
     <style>

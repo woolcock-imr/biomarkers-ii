@@ -11,7 +11,8 @@ var wait1=function(){
         var items=[];
         for(var i=0;i<records.length;i++){
             var obj={};
-            obj.label=records[i].UID+' '+records[i].Subject_Initials+' '+records[i].Screening_Number;
+            // obj.label=records[i].UID+' '+records[i].Subject_Initials+' '+records[i].Screening_Number;
+            obj.label=records[i].Screening_Number+'-'+records[i].UID;
             obj['UID']=records[i].UID;
             items.push(obj);
         }
