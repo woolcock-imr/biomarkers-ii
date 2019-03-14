@@ -1,17 +1,17 @@
 //-------------------------------------
 //for auto select participant
 var participant_tid =$vm.module_list['participant-data'].Table;
-var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials; else return record.UID; }
+var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials+" "+record.Screening_Number; else return record.UID; }
 //-------------------------------------
 //auto select participant
 var wait1=function(){
-    var sql="with tb as (select UID,Subject_Initials=JSON_VALUE(Information,'$.Subject_Initials') from [TABLE-"+participant_tid+"])";
-    sql+=" select top 10 UID,Subject_Initials from tb where Subject_Initials like '%'+@S1+'%' ";
+    var sql="with tb as (select UID,Subject_Initials=JSON_VALUE(Information,'$.Subject_Initials'),Screening_Number=JSON_VALUE(Information,'$.Screening_Number') from [TABLE-"+participant_tid+"])";
+    sql+=" select top 10 UID,Subject_Initials,Screening_Number from tb where Subject_Initials like '%'+@S1+'%' ";
     var autocomplete_list=function(records){
         var items=[];
         for(var i=0;i<records.length;i++){
             var obj={};
-            obj.label=records[i].UID+' '+records[i].Subject_Initials;
+            obj.label=records[i].UID+' '+records[i].Subject_Initials+' '+records[i].Screening_Number;
             obj['UID']=records[i].UID;
             items.push(obj);
         }
