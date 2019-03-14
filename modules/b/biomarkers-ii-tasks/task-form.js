@@ -1,3 +1,26 @@
+
+/*
+$vm.autocomplete_s=function($input,sql,autocomplete_list,callback){
+    var field=$input.attr('data-id');
+    $input.focus(function(){$input.autocomplete("search","");});
+    return $input.autocomplete({
+        minLength:0,
+        source:function(request,response){
+            $VmAPI.request({data:{cmd:'read',qid:$vm.qid,s1:request.term,sql:sql,minLength:0},callback:function(res){
+                response(autocomplete_list(res.records));
+            }});
+        },
+        select: function(event,ui){
+            if(callback!=undefined){
+                callback(ui.item);
+            }
+        }
+    })
+}
+//-------------------------------------
+*/
+
+
 //-------------------------------------
 //for auto select participant
 var participant_tid =$vm.module_list['participant-data'].Table;
