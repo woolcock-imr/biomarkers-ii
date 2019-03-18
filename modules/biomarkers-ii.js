@@ -53,6 +53,8 @@
         "day-diary-d7-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000614",task_name:"Day Diary - day 7, fill out in the evening"},
         "actigraphy-ambulatory-data":                   {url:"$A/modules/b/biomarkers-ii-tasks/actigraphy-data.html",Table:"91000592",form_module:"actigraphy-ambulatory-form"},
         "actigraphy-ambulatory-form":                   {url:"$A/modules/b/biomarkers-ii-tasks/actigraphy-form.html",Table:"91000592"},
+        "apnea-link-data":                              {url:"$A/modules/b/biomarkers-ii-tasks/apnea-link-data.html",Table:"91000646",form_module:"apnea-link-form"},
+        "apnea-link-form":                              {url:"$A/modules/b/biomarkers-ii-tasks/apnea-link-form.html",Table:"91000646"},
         "fitbit-data":                                  {url:"$A/modules/b/biomarkers-ii-tasks/fitbit-data.html",Table:"91000625",form_module:"fitbit-form"},
         "fitbit-form":                                  {url:"$A/modules/b/biomarkers-ii-tasks/fitbit-form.html",Table:"91000625"},
         
