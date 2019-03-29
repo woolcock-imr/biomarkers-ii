@@ -21,7 +21,38 @@
 
                 
                 <!-- Form Inputs-------------------------------------->
-                
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col-4'>
+                            <span class='survey-question required'>What session is this?</span>
+                        </div>
+                        <div class='col-4'>
+                            <span class='survey-question required'>Start time of the task</span>
+                        </div>
+                        <div class='col-4'>
+                            <span class='survey-question required'>End time of the task</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-4'>
+                            <input type='radio' name='Posture_session' id='Posture_session_preDrive_1' value='drive_1' required>  <label class='survey-answer' for='Posture_session_preDrive_1'>Pre-drive 1</label><br />
+                            <input type='radio' name='Posture_session' id='Posture_session_1' value='neuroBeh_1'>  <label class='survey-answer' for='Posture_session_1'>Session 1 - 9:00 am</label><br />
+                            <input type='radio' name='Posture_session' id='Posture_session_2' value='neuroBeh_2'> <label class='survey-answer' for='Posture_session_2'>Session 2 - 11:00 am</label><br />
+                            <input type='radio' name='Posture_session' id='Posture_session_3' value='neuroBeh_3'> <label class='survey-answer' for='Posture_session_3'>Session 3 - 13:00 pm</label><br />
+                            <input type='radio' name='Posture_session' id='Posture_session_4' value='neuroBeh_4'> <label class='survey-answer' for='Posture_session_4'>Session 4 - 15:00 pm</label><br />
+                            <input type='radio' name='Posture_session' id='Posture_session_5' value='neuroBeh_5'> <label class='survey-answer' for='Posture_session_5'>Session 5 - 17:00 pm</label><br />
+                            <input type='radio' name='Posture_session' id='Posture_session_preDrive_2' value='drive_2'> <label class='survey-answer' for='Posture_session_preDrive_2'>Pre-drive 2</label>
+                        </div>
+                        <div class='col-4'>
+                            <input type='text' class='form-control picker' name='Posture_startTime' placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly required />
+                        </div>
+                        <div class='col-4'>
+                            <input type='text' class='form-control picker' name='Posture_endTime' placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly required />
+                        </div>
+                    </div>
+                </div></div>
+
                 <div class='row row__ID'>
                     <div class="col">
                         <span>FILE UPLOAD </span>
@@ -31,7 +62,7 @@
                             <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
                             <br />
                             <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
-                            Select which night you want to upload: <select id="rowSelector" name="night" class="form-control"></select>
+                            Select which trial you want to upload: <select id="rowSelector" name="trial" class="form-control"></select>
                             <br />
                             <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
                         </div>
@@ -40,51 +71,176 @@
                 <!---------------------------------------------------->
 
                 <!-- Variable Inputs---------------------------------->
-
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Start Time</span> <input type=text class=form-control name=Start_Time>
-                    </div>
+                    <div class='col'> <span>Last Name</span> <input type=text class=form-control name=Last_Name> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>End Time</span> <input type=text class=form-control name=End_Time> 
-                    </div>
+                    <div class='col'> <span>First Name</span> <input type=text class=form-control name=First_Name> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Asleep</span> <input type=text class=form-control name=Minutes_Asleep>
-                    </div>
+                    <div class='col'> <span>Mid Name</span> <input type=text class=form-control name=Mid_Name> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Awake</span> <input type=text class=form-control name=Minutes_Awake>
-                    </div>
+                    <div class='col'> <span>Data File</span> <input type=text class=form-control name=Data_File> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Number of Awakenings</span> <input type=text class=form-control name=Number_of_Awakenings> 
-                    </div>
+                    <div class='col'> <span>Trial Type</span> <input type=text class=form-control name=Trial_Type> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Time in Bed</span> <input type=text class=form-control name=Time_in_Bed>
-                    </div>
+                    <div class='col'> <span>Sub Type</span> <input type=text class=form-control name=Sub_Type> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes REM Sleep</span> <input type=text class=form-control name=Minutes_REM_Sleep> 
-                    </div>
+                    <div class='col'> <span>X Avg</span> <input type=text class=form-control name=X_Avg> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Light Sleep</span> <input type=text class=form-control name=Minutes_Light_Sleep> 
-                    </div>
+                    <div class='col'> <span>X Max</span> <input type=text class=form-control name=X_Max> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Deep Sleep</span> <input type=text class=form-control name=Minutes_Deep_Sleep> 
-                    </div>
+                    <div class='col'> <span>X Min</span> <input type=text class=form-control name=X_Min> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>X SD</span> <input type=text class=form-control name=X_SD> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>X Skew</span> <input type=text class=form-control name=X_Skew> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>X Krts</span> <input type=text class=form-control name=X_Krts> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>X D Avg</span> <input type=text class=form-control name=X_D_Avg> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y Avg</span> <input type=text class=form-control name=Y_Avg> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y Max</span> <input type=text class=form-control name=Y_Max> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y Min</span> <input type=text class=form-control name=Y_Min> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y SD</span> <input type=text class=form-control name=Y_SD> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y Skew</span> <input type=text class=form-control name=Y_Skew> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y Krts</span> <input type=text class=form-control name=Y_Krts> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Y D Avg</span> <input type=text class=form-control name=Y_D_Avg> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Rdl D Avg</span> <input type=text class=form-control name=Rdl_D_Avg> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Rdl D SD</span> <input type=text class=form-control name=Rdl_D_SD> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Area Circ</span> <input type=text class=form-control name=Area_Circ> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Area Rect</span> <input type=text class=form-control name=Area_Rect> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Area Efft</span> <input type=text class=form-control name=Area_Efft> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Path Lgth</span> <input type=text class=form-control name=Path_Lgth> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Unit Path</span> <input type=text class=form-control name=Unit_Path> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>PathArea</span> <input type=text class=form-control name=PathArea> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Vx Max</span> <input type=text class=form-control name=Vx_Max> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Vx Min</span> <input type=text class=form-control name=Vx_Min> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Vy Max</span> <input type=text class=form-control name=Vy_Max> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Vy Min</span> <input type=text class=form-control name=Vy_Min> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>V Avg</span> <input type=text class=form-control name=V_Avg> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>DCG X</span> <input type=text class=form-control name=DCG_X> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>DCG Y</span> <input type=text class=form-control name=DCG_Y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Cov</span> <input type=text class=form-control name=Cov> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Area95</span> <input type=text class=form-control name=Area95> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Majr95</span> <input type=text class=form-control name=Majr95> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Minr95</span> <input type=text class=form-control name=Minr95> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Tan95</span> <input type=text class=form-control name=Tan95> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>Slope95</span> <input type=text class=form-control name=Slope95> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS0x</span> <input type=text class=form-control name=BOS0x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS0y</span> <input type=text class=form-control name=BOS0y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS1x</span> <input type=text class=form-control name=BOS1x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS1y</span> <input type=text class=form-control name=BOS1y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS2x</span> <input type=text class=form-control name=BOS2x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS2y</span> <input type=text class=form-control name=BOS2y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS3x</span> <input type=text class=form-control name=BOS3x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS3y</span> <input type=text class=form-control name=BOS3y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS4x</span> <input type=text class=form-control name=BOS4x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS4y</span> <input type=text class=form-control name=BOS4y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS5x</span> <input type=text class=form-control name=BOS5x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS5y</span> <input type=text class=form-control name=BOS5y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS6x</span> <input type=text class=form-control name=BOS6x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS6y</span> <input type=text class=form-control name=BOS6y> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS7x</span> <input type=text class=form-control name=BOS7x> </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class='col'> <span>BOS7y</span> <input type=text class=form-control name=BOS7y> </div>
                 </div>
                 <!---------------------------------------------------->
             
