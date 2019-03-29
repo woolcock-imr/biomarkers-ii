@@ -83,8 +83,8 @@
         "digital-symbol-substitution-task":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-task.html",Table:"91000621"},
         "karolinska-drowsiness-test-data":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-data.html",Table:"91000595",form_module:'karolinska-drowsiness-test-form'},
         "karolinska-drowsiness-test-form":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-form.html",Table:"91000595"},
-        "posture-data":                                 {url:"$A/modules/b/biomarkers-ii-tasks/posture-data.html",Table:"91000678",form_module:'posture-form'},
-        "posture-form":                                 {url:"$A/modules/b/biomarkers-ii-tasks/posture-form.html",Table:"91000678",task_name:"Balance board"},
+        "posturography-data":                           {url:"$A/modules/b/biomarkers-ii-tasks/posturography-data.html",Table:"91000678",form_module:'posturography-form'},
+        "posturography-form":                           {url:"$A/modules/b/biomarkers-ii-tasks/posturography-form.html",Table:"91000678",task_name:"Balance board"},
         "maintenance-wakefulness-test-data":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-data.html",Table:"91000596",form_module:'maintenance-wakefulness-test-form'},
         "maintenance-wakefulness-test-form":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-form.html",Table:"91000596"},
         
