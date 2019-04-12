@@ -1,0 +1,61 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+    		DSST
+    	</div>
+    	<form id=F__ID>
+            <div class="container">
+                <!-- participant part for all tsak forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+                <!---------------------------------------------------->
+                <!-- Form Inputs-------------------------------------->
+                <div id=dynamic_part__ID></div>
+                <!---------------------------------------------------->
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+    			<div class="row">
+    				<div class=col>
+    					<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+    				</div>
+    			</div>
+                <!---------------------------------------------------->
+        	</div>
+        </form>
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            //build text input fields
+			var fields="TestCount,CorrectCount,Duration";
+            var fs=fields.split(',');
+            var txt="";
+            for(var i=0;i<fs.length;i++){
+                txt+="<div class='row row__ID'><div class='col'>\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
+                txt+="</div></div>\r\n";
+            }
+            $('#dynamic_part__ID').html(txt);
+            //-------------------------------------
+			VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+        }
+    </script>
+    <style>
+		VmInclude:__COMPONENT__/f/form.01.css
+		#form_container__ID{
+			max-width:600px;
+		}
+    </style>
+</div>

@@ -1,0 +1,23 @@
+<section>
+    VmInclude:__COMPONENT__/g/grid.01.html
+  </section>
+  <script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        VmInclude:__CURRENT_PATH__/task-data.js
+        //-------------------------------------
+        $('#title__ID').text('Digital Symbol Substitution Task')
+        //-------------------------------------
+		    var fields="TestCount,CorrectCount,Duration";
+        m.fields="_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        //-------------------------------------
+        $('#new__ID').off('click').on('click',function(){
+            $vm.load_module(m.prefix+m.game_module,'',{});
+        })
+        //-------------------------------------
+    }
+  </script>
+  <style>
+    VmInclude:__COMPONENT__/g/grid.01.css
+  </style>
