@@ -88,6 +88,39 @@
         "maintenance-wakefulness-test-data":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-data.html",Table:"91000596",form_module:'maintenance-wakefulness-test-form'},
         "maintenance-wakefulness-test-form":            {url:"$A/modules/b/biomarkers-ii-tasks/maintenance-wakefulness-test-form.html",Table:"91000596"},
         
+        "s1-nback1-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000686", form_module:"s1-nback1-form",game_module:"s1-nback1-game"},
+        "s1-nback1-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000686"},
+        "s1-nback1-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-game.html",Table:"91000686"},
+        "s2-nback1-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000687", form_module:"s2-nback1-form",game_module:"s2-nback1-game"},
+        "s2-nback1-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000687"},
+        "s2-nback1-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-game.html",Table:"91000687"},
+        "s3-nback1-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000688", form_module:"s3-nback1-form",game_module:"s3-nback1-game"},
+        "s3-nback1-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000688"},
+        "s3-nback1-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-game.html",Table:"91000688"},
+        "s4-nback1-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000689", form_module:"s4-nback1-form",game_module:"s4-nback1-game"},
+        "s4-nback1-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000689"},
+        "s4-nback1-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-game.html",Table:"91000689"},
+        "s5-nback1-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000690", form_module:"s5-nback1-form",game_module:"s5-nback1-game"},
+        "s5-nback1-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000690"},
+        "s5-nback1-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-game.html",Table:"91000690"},
+
+        "s1-dsst-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-data.html",Table:"91000691", form_module:"s1-dsst-form",game_module:"s1-dsst-game"},
+        "s1-dsst-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-form.html",Table:"91000691"},
+        "s1-dsst-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-game.html",Table:"91000691"},
+        "s2-dsst-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-data.html",Table:"91000692", form_module:"s2-dsst-form",game_module:"s2-dsst-game"},
+        "s2-dsst-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-form.html",Table:"91000692"},
+        "s2-dsst-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-game.html",Table:"91000692"},
+        "s3-dsst-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-data.html",Table:"91000693", form_module:"s3-dsst-form",game_module:"s3-dsst-game"},
+        "s3-dsst-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-form.html",Table:"91000693"},
+        "s3-dsst-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-game.html",Table:"91000693"},
+        "s4-dsst-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-data.html",Table:"91000694", form_module:"s4-dsst-form",game_module:"s4-dsst-game"},
+        "s4-dsst-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-form.html",Table:"91000694"},
+        "s4-dsst-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-game.html",Table:"91000694"},
+        "s5-dsst-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-data.html",Table:"91000695", form_module:"s5-dsst-form",game_module:"s5-dsst-game"},
+        "s5-dsst-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-form.html",Table:"91000695"},
+        "s5-dsst-game":    	                {url:"$A/modules/b/biomarkers-ii-tasks/dsst-game.html",Table:"91000695"},
+        
+
     }
     for(m in modules){$vm.module_list[m]=modules[m];}
 })();
