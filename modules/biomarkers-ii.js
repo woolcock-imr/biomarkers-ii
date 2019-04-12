@@ -38,7 +38,7 @@
         "sleep-diary-d8-data":                          {url:"$A/modules/b/biomarkers-ii-tasks/sleep-diary-data.html",Table:"91000607",form_module:"sleep-diary-d8-form"},
         "sleep-diary-d8-form":                          {url:"$A/modules/b/biomarkers-ii-tasks/sleep-diary-form.html",Table:"91000607",task_name:"Sleep Diary - day 8, fill out in the morning"},
         "day-diary-d1-data":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-data.html",Table:"91000608",form_module:"day-diary-d1-form"},
-        "day-diary-d1-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000608",task_name:"Day Diary - day 1, fill out in the evening",router:1},
+        "day-diary-d1-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000608",task_name:"Day Diary - day 1, fill out in the evening"},
         "day-diary-d2-data":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-data.html",Table:"91000609",form_module:"day-diary-d2-form"},
         "day-diary-d2-form":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-form.html",Table:"91000609",task_name:"Day Diary - day 2, fill out in the evening"},
         "day-diary-d3-data":                            {url:"$A/modules/b/biomarkers-ii-tasks/day-diary-data.html",Table:"91000610",form_module:"day-diary-d3-form"},
