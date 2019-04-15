@@ -91,10 +91,10 @@
         "practice-nback1-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000696", form_module:"practice-nback1-form",game_module:"practice-nback1-game"},
         "practice-nback1-form":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000696"},
         "practice-nback1-game":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback1-game.html",Table:"91000696"},
-        "practice-nback2-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback2-data.html",Table:"91000708", form_module:"practice-nback1-form",game_module:"practice-nback1-game"},
+        "practice-nback2-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback2-data.html",Table:"91000708", form_module:"practice-nback2-form",game_module:"practice-nback2-game"},
         "practice-nback2-form":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback2-form.html",Table:"91000708"},
         "practice-nback2-game":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback2-game.html",Table:"91000708"},
-        "practice-nback3-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-data.html",Table:"91000709", form_module:"practice-nback1-form",game_module:"practice-nback1-game"},
+        "practice-nback3-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-data.html",Table:"91000709", form_module:"practice-nback3-form",game_module:"practice-nback3-game"},
         "practice-nback3-form":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-form.html",Table:"91000709"},
         "practice-nback3-game":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-game.html",Table:"91000709"},
 
