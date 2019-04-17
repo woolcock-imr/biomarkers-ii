@@ -97,6 +97,9 @@
         "practice-nback3-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-data.html",Table:"91000709", form_module:"practice-nback3-form",game_module:"practice-nback3-game"},
         "practice-nback3-form":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-form.html",Table:"91000709",task_name:"3-back task"},
         "practice-nback3-game":    	            {url:"$A/modules/b/biomarkers-ii-tasks/nback3-game.html",Table:"91000709",task_name:"3-back task"},
+        "practice-dsst-data":    	            {url:"$A/modules/b/biomarkers-ii-tasks/dsst-data.html",Table:"91000696", form_module:"practice-dsst-form",game_module:"practice-dsst-game"},
+        "practice-dsst-form":    	            {url:"$A/modules/b/biomarkers-ii-tasks/dsst-form.html",Table:"91000696",task_name:"DSST task"},
+        "practice-dsst-game":    	            {url:"$A/modules/b/biomarkers-ii-tasks/dsst-game.html",Table:"91000696",task_name:"DSST task"},
 
         "s1-nback1-data":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-data.html",Table:"91000686", form_module:"s1-nback1-form",game_module:"s1-nback1-game"},
         "s1-nback1-form":    	                {url:"$A/modules/b/biomarkers-ii-tasks/nback1-form.html",Table:"91000686",task_name:"1-back task"},
