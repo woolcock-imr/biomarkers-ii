@@ -29,7 +29,7 @@ var participant_name =function(record) {
     if(record.Screening_Number!=undefined) { 
         return record.Screening_Number + "-" + record.UID; 
     } else if(record.Data!=undefined) {
-        return record.Data.Screening_Number + "-" + record.Data.UID; 
+        return record.Data.Screening_Number + "-" + record.UID; 
     } else {
         return record.UID; 
     }
