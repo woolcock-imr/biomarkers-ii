@@ -75,12 +75,10 @@
         "post-test-self-assessment-form":               {url:"$A/modules/b/biomarkers-ii-tasks/post-test-self-assessment-form.html",Table:"91000590",task_name:"Post-test self-assessment"},
         
         // Column 4, tasks
-        "pvt-data":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-data.html",Table:"91000591",form_module:'pvt-form'},
-        "pvt-form":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-form.html",Table:"91000591",task_name:"Psychomotor vigilance task"},
+        "pvt-data":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-data.html",Table:"91000725",form_module:'pvt-form'},
+        "pvt-form":                                     {url:"$A/modules/b/biomarkers-ii-tasks/pvt-form.html",Table:"91000725",task_name:"Psychomotor vigilance task"},
         "choice-reaction-time-data":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-data.html",Table:"91000594",form_module:'choice-reaction-time-form'},
         "choice-reaction-time-form":                    {url:"$A/modules/b/biomarkers-ii-tasks/choice-reaction-time-form.html",Table:"91000594",task_name:"4 choice reaction time task"},
-        "digital-symbol-substitution-data":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-data.html",Table:"91000621",form_module:'digital-symbol-substitution-task'},
-        "digital-symbol-substitution-task":             {url:"$A/modules/b/biomarkers-ii-tasks/digital-symbol-substitution-task.html",Table:"91000621",task_name:"Digital symbol substitution task"},
         "karolinska-drowsiness-test-data":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-data.html",Table:"91000595",form_module:'karolinska-drowsiness-test-form'},
         "karolinska-drowsiness-test-form":              {url:"$A/modules/b/biomarkers-ii-tasks/karolinska-drowsiness-test-form.html",Table:"91000595",task_name:"Karolinska drowsiness test"},
         "posturography-data":                           {url:"$A/modules/b/biomarkers-ii-tasks/posturography-data.html",Table:"91000678",form_module:'posturography-form'},
