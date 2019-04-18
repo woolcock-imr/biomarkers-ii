@@ -12,9 +12,18 @@
 		    var fields="TestCount,CorrectCount,Duration";
         m.fields="_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
         //-------------------------------------
+        /*
         $('#new__ID').off('click').on('click',function(){
             $vm.load_module(m.prefix+m.game_module,'',{});
         })
+        */
+        //-------------------------------------
+        m.new=function(){
+            if(m.form_module!=undefined){
+                var participant_record=$vm.vm['__ID'].input.record; //from the child panel
+                $vm.load_module(m.prefix+m.game_module,'',{participant_record:participant_record,goback:1});
+            }
+        }
         //-------------------------------------
     }
   </script>
