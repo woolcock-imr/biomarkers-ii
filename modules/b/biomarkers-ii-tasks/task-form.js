@@ -64,6 +64,7 @@ m.load=function(){
         $("#F__ID input[name=Participant]").val(participant_name(participant_record));
         $("#F__ID input[name=Participant_uid]").val(participant_record.UID);
     }
+	if($vm.online_questionnaire===1) $('#row_participant__ID').hide();
     //--------------------------
     var wait2=function(){
         $('#F__ID input[name=Participant]').prop('readonly',false);
