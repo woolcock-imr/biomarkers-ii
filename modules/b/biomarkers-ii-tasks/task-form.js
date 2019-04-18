@@ -24,7 +24,8 @@ $vm.autocomplete_s=function($input,sql,autocomplete_list,callback){
 //-------------------------------------
 //for auto select participant
 var participant_tid =$vm.module_list['participant-data'].Table;
-var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials+" "+record.Screening_Number; else return record.UID; }
+// var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials+" "+record.Screening_Number; else return record.UID; }
+var participant_name =function(record){ if(record.Screening_Number!=undefined) return record.Screening_Number + "-" + record.UID; else return record.UID; }
 //-------------------------------------
 //auto select participant
 var wait1=function(){
