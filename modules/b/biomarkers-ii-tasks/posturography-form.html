@@ -285,9 +285,9 @@
                         d = moment(el.attr('data-date')).subtract(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
                     } 
                     else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction == 1) { // Up the minutes
-                        d = moment(el.attr('data-date')).add(5, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
+                        d = moment(el.attr('data-date')).add(1, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction == -1) { // Down the minutes
-                        d = moment(el.attr('data-date')).subtract(5, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
+                        d = moment(el.attr('data-date')).subtract(1, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
                     } 
                     else if ((event.data.change == 's' || event.data.change == 'ss') && event.data.direction == 1) { // Up the seconds
                         d = moment(el.attr('data-date')).add(5, 'seconds').format('YYYY-MM-DDTHH:mm:ss');
