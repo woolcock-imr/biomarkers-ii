@@ -269,10 +269,22 @@
                 $(this).before(rowUp);
                 $(this).after(rowDw);
             });
+            
+            var varNames;
+            var varValues = Array();
 
             $('#F__ID input[name=File_Name]').on('change',function(evt){
                 if(this.files.length==1){
                     file_process(this.files[0])
+                }
+            });
+            $('#rowSelector').on('change',function(evt){
+                var selectRow = $('#rowSelector').val()-1;
+                console.log('row changed:' + selectRow)
+                console.log(varValues);
+                // Store the value of each variable in the form-input field
+                for (var v = 0; v < varNames.length; v++) {
+                    $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[selectRow][v]);
                 }
             });
 
