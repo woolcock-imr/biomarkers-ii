@@ -9,8 +9,7 @@
                 <div class='row row__ID' id=row_participant__ID>
                     <div class='col-sm-12 col-lg-9 input__ID'>
                         <span class='label__ID'>Participant</span><br>
-                        <input type='text' name='Participant' class='form-control' id='Participant__ID'
-                            data-id='Participant' required />
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
                     </div>
                     <div class='col-sm-12 col-lg-3 input__ID'>
                         <span class='label__ID'>Participant ID</span><br>
@@ -20,9 +19,7 @@
                 </div>
                 <!---------------------------------------------------->
 
-
                 <!-- Form Inputs-------------------------------------->
-                <!-- Question and Answerset -->
                 <div class='row row__ID'>
                     <div class='col'>
                         <div class='row'>
@@ -38,9 +35,7 @@
                         </div>
                         <div class='row'>
                             <div class='col-4'>
-                                <input type='radio' name='Posture_session' id='Posture_session_preDrive_1'
-                                    value='drive_1' required> <label class='survey-answer'
-                                    for='Posture_session_preDrive_1'>Pre-drive 1</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_session_preDrive_1' value='drive_1' required> <label class='survey-answer' for='Posture_session_preDrive_1'>Pre-drive 1</label><br />
                                 <input type='radio' name='Posture_session' id='Posture_session_1' value='neuroBeh_1'>
                                 <label class='survey-answer' for='Posture_session_1'>Session 1 - 9:00 am</label><br />
                                 <input type='radio' name='Posture_session' id='Posture_session_2' value='neuroBeh_2'>
@@ -51,24 +46,19 @@
                                 <label class='survey-answer' for='Posture_session_4'>Session 4 - 15:00 pm</label><br />
                                 <input type='radio' name='Posture_session' id='Posture_session_5' value='neuroBeh_5'>
                                 <label class='survey-answer' for='Posture_session_5'>Session 5 - 17:00 pm</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_preDrive_2'
-                                    value='drive_2'> <label class='survey-answer'
-                                    for='Posture_session_preDrive_2'>Pre-drive 2</label>
+                                <input type='radio' name='Posture_session' id='Posture_session_preDrive_2' value='drive_2'>
+                                <label class='survey-answer' for='Posture_session_preDrive_2'>Pre-drive 2</label>
                             </div>
                             <div class='col-4'>
-                                <input type='text' class='form-control picker' name='Posture_startTime'
-                                    placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly
-                                    required />
+                                <input type='text' class='form-control picker' name='Posture_startTime' placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly required />
                             </div>
                             <div class='col-4'>
-                                <input type='text' class='form-control picker' name='Posture_endTime'
-                                    placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly
-                                    required />
+                                <input type='text' class='form-control picker' name='Posture_endTime' placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly required />
                             </div>
                         </div>
                         <div class='row'>
                             <div class='col-4'>
-                                &nbsp; 
+                                &nbsp;
                             </div>
                             <div class='col-4'>
                                 <span class='survey-answer'>Systolic blood pressure</span><br />
@@ -90,10 +80,9 @@
                             <br>
                             <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
                             <br />
-                            <button id=x_File_Name__ID type="button" class='btn btn-secondary'
-                                onClick="this.form.reset()">Remove</button>
-                            Select which trial you want to upload: <select id="rowSelector" name="trial"
-                                class="form-control"></select>
+                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
+                            Select which trial you want to upload: 
+                            <select id="rowSelector" name="trial" class="form-control"></select>
                             <br />
                             <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
                         </div>
@@ -106,8 +95,7 @@
                     <div class='col'> <span>Last Name</span> <input type=text class=form-control name=Last_Name> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> <span>First Name</span> <input type=text class=form-control name=First_Name>
-                    </div>
+                    <div class='col'> <span>First Name</span> <input type=text class=form-control name=First_Name> </div>
                 </div>
                 <div class='row row__ID'>
                     <div class='col'> <span>Mid Name</span> <input type=text class=form-control name=Mid_Name> </div>
@@ -116,8 +104,7 @@
                     <div class='col'> <span>Data File</span> <input type=text class=form-control name=Data_File> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> <span>Trial Type</span> <input type=text class=form-control name=Trial_Type>
-                    </div>
+                    <div class='col'> <span>Trial Type</span> <input type=text class=form-control name=Trial_Type> </div>
                 </div>
                 <div class='row row__ID'>
                     <div class='col'> <span>Sub Type</span> <input type=text class=form-control name=Sub_Type> </div>
@@ -505,4 +492,8 @@
 
         }
     </script>
+    <style>
+        VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+    </style>
 </div>
