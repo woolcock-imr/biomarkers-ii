@@ -74,7 +74,7 @@
                             <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
                             <br />
                             <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
-                            Select which trial you want to upload: 
+                            Select which trial you want to upload:
                             <select id="rowSelector" name="trial" class="form-control"></select>
                             <br />
                             <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
@@ -433,8 +433,7 @@
                     // Get contents
                     var contents = e.target.result;
                     // Split the contents into rows based on the new-line character '\n'
-                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split(
-                        '\n');
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
                     var optionsHTML = "<option value='na'>Select a row...</option>";
                     for (var r = startRow; r < rows.length - 1; r++) {
                         optionsHTML += "<option value='" + (r + 1 - startRow) + "'>" + (r + 1 - startRow) +
@@ -488,5 +487,6 @@
     <style>
         VmInclude:__COMPONENT__/f/form.01.css
         VmInclude:__CURRENT_PATH__/task-form.css
+        VmInclude:__CURRENT_PATH__/task-form-pickers.css
     </style>
 </div>
