@@ -20,58 +20,51 @@
                 <!---------------------------------------------------->
 
                 <!-- Form Inputs-------------------------------------->
-                <div class='row row__ID'>
-                    <div class='col'>
-                        <div class='row'>
-                            <div class='col-4'>
-                                <span class='survey-question required'>What session is this?</span>
-                            </div>
-                            <div class='col-4'>
-                                <span class='survey-question required'>Start time of the task</span>
-                            </div>
-                            <div class='col-4'>
-                                <span class='survey-question required'>End time of the task</span>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div class='col-4'>
-                                <input type='radio' name='Posture_session' id='Posture_session_preDrive_1' value='drive_1' required> <label class='survey-answer' for='Posture_session_preDrive_1'>Pre-drive 1</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_1' value='neuroBeh_1'>
-                                <label class='survey-answer' for='Posture_session_1'>Session 1 - 9:00 am</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_2' value='neuroBeh_2'>
-                                <label class='survey-answer' for='Posture_session_2'>Session 2 - 11:00 am</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_3' value='neuroBeh_3'>
-                                <label class='survey-answer' for='Posture_session_3'>Session 3 - 13:00 pm</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_4' value='neuroBeh_4'>
-                                <label class='survey-answer' for='Posture_session_4'>Session 4 - 15:00 pm</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_5' value='neuroBeh_5'>
-                                <label class='survey-answer' for='Posture_session_5'>Session 5 - 17:00 pm</label><br />
-                                <input type='radio' name='Posture_session' id='Posture_session_preDrive_2' value='drive_2'>
-                                <label class='survey-answer' for='Posture_session_preDrive_2'>Pre-drive 2</label>
-                            </div>
-                            <div class='col-4'>
-                                <input type='text' class='form-control picker' name='Posture_startTime' placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly required />
-                            </div>
-                            <div class='col-4'>
-                                <input type='text' class='form-control picker' name='Posture_endTime' placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly required />
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div class='col-4'>
-                                &nbsp;
-                            </div>
-                            <div class='col-4'>
-                                <span class='survey-answer'>Systolic blood pressure</span><br />
-                                <input type='number' placeholder='' class='form-control input_box_medium__ID' data-custom='1' data-provide='Posture_systolicBP' data-id='Posture_systolicBP' name='Posture_systolicBP' id='Posture_systolicBP' />
-                            </div>
-                            <div class='col-4'>
-                                <span class='survey-answer'>Diastolic blood pressure</span><br />
-                                <input type='number' placeholder='' class='form-control input_box_medium__ID' data-custom='1' data-provide='Posture_diastolicBP' data-id='Posture_diastolicBP' name='Posture_diastolicBP' id='Posture_diastolicBP' />
-                            </div>
-                        </div>
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col-4'>
+                        <span class='survey-question required'>What session is this?</span>
+                    </div>
+                    <div class='col-4'>
+                        <span class='survey-question required'>Start time of the task</span>
+                    </div>
+                    <div class='col-4'>
+                        <span class='survey-question required'>End time of the task</span>
                     </div>
                 </div>
+                <div class='row'>
+                    <div class='col-4'>
+                        <input type='radio' name='Posture_session' id='Posture_session_practice' value='practice' required>  <label class='survey-answer' for='Posture_session_practice'>Practice</label><br />
+                        <input type='radio' name='Posture_session' id='Posture_session_1' value='1'>  <label class='survey-answer' for='Posture_session_1'>Session 1 - 9:00 am</label><br />
+                        <input type='radio' name='Posture_session' id='Posture_session_2' value='2'> <label class='survey-answer' for='Posture_session_2'>Session 2 - 11:00 am</label><br />
+                        <input type='radio' name='Posture_session' id='Posture_session_3' value='3'> <label class='survey-answer' for='Posture_session_3'>Session 3 - 13:00 pm</label><br />
+                        <input type='radio' name='Posture_session' id='Posture_session_4' value='4'> <label class='survey-answer' for='Posture_session_4'>Session 4 - 15:00 pm</label><br />
+                        <input type='radio' name='Posture_session' id='Posture_session_5' value='5'> <label class='survey-answer' for='Posture_session_5'>Session 5 - 17:00 pm</label><br />
+                    </div>
+                    <div class='col-4'>
+                        <input type='text' class='form-control picker' name='Posture_startTime' placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly required />
+                    </div>
+                    <div class='col-4'>
+                        <input type='text' class='form-control picker' name='Posture_endTime' placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly required />
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-4'>
+                        &nbsp;
+                    </div>
+                    <div class='col-4'>
+                        <span class='survey-answer'>Systolic blood pressure</span><br />
+                        <input type='number' placeholder='' class='form-control input_box_medium__ID' data-custom='1' data-provide='Posture_systolicBP' data-id='Posture_systolicBP' name='Posture_systolicBP' id='Posture_systolicBP' />
+                    </div>
+                    <div class='col-4'>
+                        <span class='survey-answer'>Diastolic blood pressure</span><br />
+                        <input type='number' placeholder='' class='form-control input_box_medium__ID' data-custom='1' data-provide='Posture_diastolicBP' data-id='Posture_diastolicBP' name='Posture_diastolicBP' id='Posture_diastolicBP' />
+                    </div>
+                </div>
+                </div></div>
 
+                <!-- Question and Answerset -->
                 <div class='row row__ID'>
                     <div class="col">
                         <span>FILE UPLOAD </span>
