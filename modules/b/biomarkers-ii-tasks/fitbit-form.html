@@ -185,7 +185,7 @@
 					// Specify the delimiter
 					var columnWise = true;
 					var delimiter = ',';
-					var startRow = 0;
+					var startRow = 1;
 
 					// Get contents
 					var contents = e.target.result;
@@ -213,11 +213,6 @@
 							// The first row contains all variable names
 							if (r == startRow) {
 								varNames = rows[r].split(delimiter);
-								console.log(varNames);
-								if (varNames == 'Sleep') {
-									startRow = 1;
-									continue;
-								}
 								// Replace any <space> or other special character
 								for (v = 0; v < varNames.length; v++) {
 									varNames[v] = parseVariableName(varNames[v]);
