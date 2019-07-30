@@ -1,200 +1,261 @@
-<div id=D__ID>
-    <section id=form_container__ID>
-        <div id=header__ID>
-            Fitbit - data upload
-        </div>
-        <form id=F__ID>
-            <div class='container'>
-                <!-- participant part for all tsak forms -------------------->
-                <div class='row row__ID' id=row_participant__ID>
-                    <div class='col-sm-12 col-lg-9 input__ID'>
-                        <span class='label__ID'>Participant</span><br>
-                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
-                    </div>
-                    <div class='col-sm-12 col-lg-3 input__ID'>
-                        <span class='label__ID'>Participant ID</span><br>
-                        <input type='text' name='Participant_uid' class='form-control' readonly />
-                    </div>
-                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
-                </div>
-                <!---------------------------------------------------->
+<div id="D__ID">
+	<section id="form_container__ID">
+		<div id="header__ID">
+			Fitbit - data upload
+		</div>
+		<form id="F__ID">
+			<div class="container">
+				<!-- participant part for all tsak forms -------------------->
+				<div class="row row__ID" id="row_participant__ID">
+					<div class="col-sm-12 col-lg-9 input__ID">
+						<span class="label__ID">Participant</span><br />
+						<input
+							type="text"
+							name="Participant"
+							class="form-control"
+							id="Participant__ID"
+							data-id="Participant"
+							required
+						/>
+					</div>
+					<div class="col-sm-12 col-lg-3 input__ID">
+						<span class="label__ID">Participant ID</span><br />
+						<input
+							type="text"
+							name="Participant_uid"
+							class="form-control"
+							readonly
+						/>
+					</div>
+					<hr style="border-top: 1px solid #888;width: 100%;margin:10px 0" />
+				</div>
+				<!---------------------------------------------------->
 
-                
-                <!-- Form Inputs-------------------------------------->
-                
-                <div class='row row__ID'>
-                    <div class="col">
-                        <span>FILE UPLOAD </span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_File_Name__ID></u>
-                            <br>
-                            <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
-                            <br />
-                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
-                            Select which night you want to upload: <select id="rowSelector" name="night" class="form-control"></select>
-                            <br />
-                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
-                        </div>
-                    </div>
-                </div>            
-                <!---------------------------------------------------->
+				<!-- Form Inputs-------------------------------------->
 
-                <!-- Variable Inputs---------------------------------->
+				<div class="row row__ID">
+					<div class="col">
+						<span>FILE UPLOAD </span>
+						<div class="form-control">
+							<u style="cursor:pointer" id="link_File_Name__ID"></u>
+							<br />
+							<input
+								type="file"
+								name="File_Name"
+								style="margin-top:6px"
+								class="btn btn-secondary"
+							/><br />
+							<br />
+							<button
+								id="x_File_Name__ID"
+								type="button"
+								class="btn btn-secondary"
+								onClick="this.form.reset()"
+							>
+								Remove
+							</button>
+							Select which night you want to upload:
+							<select
+								id="rowSelector"
+								name="night"
+								class="form-control"
+							></select>
+							<br />
+							<button id="submit__ID" type="submit" class="btn btn-secondary">
+								Submit
+							</button>
+						</div>
+					</div>
+				</div>
+				<!---------------------------------------------------->
 
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Start Time</span> <input type=text class=form-control name=Start_Time>
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>End Time</span> <input type=text class=form-control name=End_Time> 
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Asleep</span> <input type=text class=form-control name=Minutes_Asleep>
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Awake</span> <input type=text class=form-control name=Minutes_Awake>
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Number of Awakenings</span> <input type=text class=form-control name=Number_of_Awakenings> 
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Time in Bed</span> <input type=text class=form-control name=Time_in_Bed>
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes REM Sleep</span> <input type=text class=form-control name=Minutes_REM_Sleep> 
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Light Sleep</span> <input type=text class=form-control name=Minutes_Light_Sleep> 
-                    </div>
-                </div>
-                <div class='row row__ID'>
-                    <div class='col'> 
-                        <span>Minutes Deep Sleep</span> <input type=text class=form-control name=Minutes_Deep_Sleep> 
-                    </div>
-                </div>
-                <!---------------------------------------------------->
-            
-            </div>
-        </form>
-    </section>
-    VmInclude:__COMPONENT__/m/model.01.html
-    <script>
-        function F__ID(){
-            //-------------------------------------
-            VmInclude:'__COMPONENT__/f/form.01.js'
-            VmInclude:'__CURRENT_PATH__/task-form.js'
-            //-------------------------------------
+				<!-- Variable Inputs---------------------------------->
 
-            var varNames;
-            var varValues = Array();
+				<div class="row row__ID">
+					<div class="col">
+						<span>Start Time</span>
+						<input type="text" class="form-control" name="Start_Time" />
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>End Time</span>
+						<input type="text" class="form-control" name="End_Time" />
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Minutes Asleep</span>
+						<input type="text" class="form-control" name="Minutes_Asleep" />
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Minutes Awake</span>
+						<input type="text" class="form-control" name="Minutes_Awake" />
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Number of Awakenings</span>
+						<input
+							type="text"
+							class="form-control"
+							name="Number_of_Awakenings"
+						/>
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Time in Bed</span>
+						<input type="text" class="form-control" name="Time_in_Bed" />
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Minutes REM Sleep</span>
+						<input type="text" class="form-control" name="Minutes_REM_Sleep" />
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Minutes Light Sleep</span>
+						<input
+							type="text"
+							class="form-control"
+							name="Minutes_Light_Sleep"
+						/>
+					</div>
+				</div>
+				<div class="row row__ID">
+					<div class="col">
+						<span>Minutes Deep Sleep</span>
+						<input type="text" class="form-control" name="Minutes_Deep_Sleep" />
+					</div>
+				</div>
+				<!---------------------------------------------------->
+			</div>
+		</form>
+	</section>
+	VmInclude:__COMPONENT__/m/model.01.html
+	<script>
+		function F__ID() {
+			//-------------------------------------
+			VmInclude: '__COMPONENT__/f/form.01.js';
+			VmInclude: '__CURRENT_PATH__/task-form.js';
+			//-------------------------------------
 
-            $('#F__ID input[name=File_Name]').on('change',function(evt){
-                if(this.files.length==1){
-                    file_process(this.files[0])
-                }
-            });
-            $('#rowSelector').on('change',function(evt){
-                var selectRow = $('#rowSelector').val()-1;
-                console.log('row changed:' + selectRow)
-                console.log(varValues);
-                // Store the value of each variable in the form-input field
-                for (var v = 0; v < varNames.length; v++) {
-                    $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[selectRow][v]);
-                }
-            });
+			var varNames;
+			var varValues = Array();
 
-            function parseVariableName(str) {
-                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
-                str = str.trim();                   // Trim any <space> characters from start or end of string
-                str = str.replace(/^\d+\s*/, '');   // String cannot start with numbers
-                str = str.split(' ').join('_');     // Join any remaining bits of string with underscores
-                return str;
-            }
+			$('#F__ID input[name=File_Name]').on('change', function(evt) {
+				if (this.files.length == 1) {
+					file_process(this.files[0]);
+				}
+			});
+			$('#rowSelector').on('change', function(evt) {
+				var selectRow = $('#rowSelector').val() - 1;
+				console.log('row changed:' + selectRow);
+				console.log(varValues);
+				// Store the value of each variable in the form-input field
+				for (var v = 0; v < varNames.length; v++) {
+					$('#F__ID input[name="' + varNames[v] + '"]').val(
+						varValues[selectRow][v]
+					);
+				}
+			});
 
-            //-------------------------------------
-            // File reader function
-            var file_process = function (file) {
-                // Create a new file reader and on loading a file -> run
-                var reader = new FileReader();
-                reader.onload = (function (e) {
-                    
-                    ///////////////////////////////////////////////////////////////////////////////
-                    // MANUAL EDIT REQUIRED HERE 
-                    // Specify whether the variabels are listed as rows (false) or as columns (true)
-                    // Specify the delimiter
-                    var columnWise = true;
-                    var delimiter  = ',';
-                    var startRow   = 1;
-                    
-                    // Get contents
-                    var contents = e.target.result;
-                    // Split the contents into rows based on the new-line character '\n'
-                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
-                    var optionsHTML = "<option value='na'>Select a row...</option>";
-                    for (var r = startRow; r < rows.length-1; r++) {
-                        optionsHTML+="<option value='"+(r+1-startRow)+"'>"+(r+1-startRow)+"</option>";
-                    }
-                    $('#rowSelector').html(optionsHTML);
+			function parseVariableName(str) {
+				str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+				str = str.trim(); // Trim any <space> characters from start or end of string
+				str = str.replace(/^\d+\s*/, ''); // String cannot start with numbers
+				str = str.split(' ').join('_'); // Join any remaining bits of string with underscores
+				return str;
+			}
 
-                    // Extract the data
-                    if (columnWise) { // Column-wise
-                        for (var r = startRow; r < rows.length; r++) {
-                            // The first row contains all variable names
-                            if ( r == startRow ) {
-                                    varNames = rows[r].split(delimiter);
-                                // Replace any <space> or other special character
-                                for (v = 0; v < varNames.length; v++) {
-                                    varNames[v] = parseVariableName(varNames[v]);
-                                }
-                            } else {
-                                // The subsequent rows contains the values
-                                varValues[r-1-startRow] = rows[r].split(delimiter);
-                            }
-                        }
-                    } else { // Row-wise
-                        // Initialize the varNames and varValue arrays
-                        varNames  = Array();
-                        varValues = Array();
-                        // For each row, extract the variable name and value, and store in the form-input field.
-                        for (var r = 0; r < rows.length; r++) {
-                            // Split the variable name and value pair based on the delimiter
-                            var row = rows[r].split(delimiter);
-                            varNames[r]  = parseVariableName(varNames[r]);
-                            varValues[r] = row[1];
-                            // Store the value of each variable in the form-input field
-                            $('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
-                        }
-                    }
-                    console.log(varNames.join());
-                });
-                reader.readAsText(file);
-            }
+			//-------------------------------------
+			// File reader function
+			var file_process = function(file) {
+				// Create a new file reader and on loading a file -> run
+				var reader = new FileReader();
+				reader.onload = function(e) {
+					///////////////////////////////////////////////////////////////////////////////
+					// MANUAL EDIT REQUIRED HERE
+					// Specify whether the variabels are listed as rows (false) or as columns (true)
+					// Specify the delimiter
+					var columnWise = true;
+					var delimiter = ',';
+					var startRow = 0;
 
-            var old_load=m.load;
-            m.load=function(){
-                old_load();
-                m.set_file_link("File_Name");
-            }
+					// Get contents
+					var contents = e.target.result;
+					// Split the contents into rows based on the new-line character '\n'
+					var rows = contents
+						.replace(/"/g, '')
+						.replace(/\r/, '\n')
+						.replace(/\n\n/, '\n')
+						.split('\n');
+					var optionsHTML = "<option value='na'>Select a row...</option>";
+					for (var r = startRow; r < rows.length - 1; r++) {
+						optionsHTML +=
+							"<option value='" +
+							(r + 1 - startRow) +
+							"'>" +
+							(r + 1 - startRow) +
+							'</option>';
+					}
+					$('#rowSelector').html(optionsHTML);
 
+					// Extract the data
+					if (columnWise) {
+						// Column-wise
+						for (var r = startRow; r < rows.length; r++) {
+							// The first row contains all variable names
+							if (r == startRow) {
+								varNames = rows[r].split(delimiter);
+								console.log(varNames);
+								if (varNames == 'Sleep') {
+									startRow = 1;
+									continue;
+								}
+								// Replace any <space> or other special character
+								for (v = 0; v < varNames.length; v++) {
+									varNames[v] = parseVariableName(varNames[v]);
+								}
+							} else {
+								// The subsequent rows contains the values
+								varValues[r - 1 - startRow] = rows[r].split(delimiter);
+							}
+						}
+					} else {
+						// Row-wise
+						// Initialize the varNames and varValue arrays
+						varNames = Array();
+						varValues = Array();
+						// For each row, extract the variable name and value, and store in the form-input field.
+						for (var r = 0; r < rows.length; r++) {
+							// Split the variable name and value pair based on the delimiter
+							var row = rows[r].split(delimiter);
+							varNames[r] = parseVariableName(varNames[r]);
+							varValues[r] = row[1];
+							// Store the value of each variable in the form-input field
+							$('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
+						}
+					}
+					console.log(varNames.join());
+				};
+				reader.readAsText(file);
+			};
 
-        }
-    </script>
-    <style>
-        VmInclude:__COMPONENT__/f/form.01.css
-        VmInclude:__CURRENT_PATH__/task-form.css
-    </style>
+			var old_load = m.load;
+			m.load = function() {
+				old_load();
+				m.set_file_link('File_Name');
+			};
+		}
+	</script>
+	<style>
+		VmInclude:__COMPONENT__/f/form.01.css
+		VmInclude:__CURRENT_PATH__/task-form.css
+	</style>
 </div>
