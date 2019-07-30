@@ -9,23 +9,12 @@
 				<div class="row row__ID" id="row_participant__ID">
 					<div class="col-sm-12 col-lg-9 input__ID">
 						<span class="label__ID">Participant</span><br />
-						<input
-							type="text"
-							name="Participant"
-							class="form-control"
-							id="Participant__ID"
-							data-id="Participant"
-							required
-						/>
+						<input type="text" name="Participant" class="form-control" id="Participant__ID"
+							data-id="Participant" required />
 					</div>
 					<div class="col-sm-12 col-lg-3 input__ID">
 						<span class="label__ID">Participant ID</span><br />
-						<input
-							type="text"
-							name="Participant_uid"
-							class="form-control"
-							readonly
-						/>
+						<input type="text" name="Participant_uid" class="form-control" readonly />
 					</div>
 					<hr style="border-top: 1px solid #888;width: 100%;margin:10px 0" />
 				</div>
@@ -39,27 +28,15 @@
 						<div class="form-control">
 							<u style="cursor:pointer" id="link_File_Name__ID"></u>
 							<br />
-							<input
-								type="file"
-								name="File_Name"
-								style="margin-top:6px"
-								class="btn btn-secondary"
-							/><br />
+							<input type="file" name="File_Name" style="margin-top:6px"
+								class="btn btn-secondary" /><br />
 							<br />
-							<button
-								id="x_File_Name__ID"
-								type="button"
-								class="btn btn-secondary"
-								onClick="this.form.reset()"
-							>
+							<button id="x_File_Name__ID" type="button" class="btn btn-secondary"
+								onClick="this.form.reset()">
 								Remove
 							</button>
 							Select which night you want to upload:
-							<select
-								id="rowSelector"
-								name="night"
-								class="form-control"
-							></select>
+							<select id="rowSelector" name="night" class="form-control"></select>
 							<br />
 							<button id="submit__ID" type="submit" class="btn btn-secondary">
 								Submit
@@ -98,11 +75,7 @@
 				<div class="row row__ID">
 					<div class="col">
 						<span>Number of Awakenings</span>
-						<input
-							type="text"
-							class="form-control"
-							name="Number_of_Awakenings"
-						/>
+						<input type="text" class="form-control" name="Number_of_Awakenings" />
 					</div>
 				</div>
 				<div class="row row__ID">
@@ -120,11 +93,7 @@
 				<div class="row row__ID">
 					<div class="col">
 						<span>Minutes Light Sleep</span>
-						<input
-							type="text"
-							class="form-control"
-							name="Minutes_Light_Sleep"
-						/>
+						<input type="text" class="form-control" name="Minutes_Light_Sleep" />
 					</div>
 				</div>
 				<div class="row row__ID">
@@ -141,19 +110,19 @@
 	<script>
 		function F__ID() {
 			//-------------------------------------
-			VmInclude: '__COMPONENT__/f/form.01.js';
-			VmInclude: '__CURRENT_PATH__/task-form.js';
+			VmInclude: '__COMPONENT__/f/form.01.js'
+			VmInclude: '__CURRENT_PATH__/task-form.js'
 			//-------------------------------------
 
 			var varNames;
 			var varValues = Array();
 
-			$('#F__ID input[name=File_Name]').on('change', function(evt) {
+			$('#F__ID input[name=File_Name]').on('change', function (evt) {
 				if (this.files.length == 1) {
 					file_process(this.files[0]);
 				}
 			});
-			$('#rowSelector').on('change', function(evt) {
+			$('#rowSelector').on('change', function (evt) {
 				var selectRow = $('#rowSelector').val() - 1;
 				console.log('row changed:' + selectRow);
 				console.log(varValues);
@@ -175,10 +144,10 @@
 
 			//-------------------------------------
 			// File reader function
-			var file_process = function(file) {
+			var file_process = function (file) {
 				// Create a new file reader and on loading a file -> run
 				var reader = new FileReader();
-				reader.onload = function(e) {
+				reader.onload = function (e) {
 					///////////////////////////////////////////////////////////////////////////////
 					// MANUAL EDIT REQUIRED HERE
 					// Specify whether the variabels are listed as rows (false) or as columns (true)
@@ -243,7 +212,7 @@
 			};
 
 			var old_load = m.load;
-			m.load = function() {
+			m.load = function () {
 				old_load();
 				m.set_file_link('File_Name');
 			};
