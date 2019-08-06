@@ -84,13 +84,13 @@
             </form>
         </section>
         <script>
-            var nowObj;
-            var str;
             function F__ID(){
                 //-------------------------------------
                 VmInclude:'__COMPONENT__/f/form.01.js'
                 VmInclude:'__CURRENT_PATH__/task-form.js'
                 //-------------------------------------
+                var nowObj;
+                var str;
     
                 //---------------------------------------------------------
                 // When clicking on a DIV that contains a radio button
@@ -122,12 +122,19 @@
                     while (s.length < n) {s = "0" + s;}
                     return s;
                 }
-
+                /*
                 nowObj = new Date();
                 str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth()+1,2) + '-' + addLeadingZero(nowObj.getDate(),2) + 'T' + addLeadingZero(nowObj.getHours(),2) + ':' + addLeadingZero(nowObj.getMinutes(),2);
                 $(document).ready(function() {
                     $('#KSS_time').val(str);
                 });
+                */
+
+                $("#D__ID").on('load',function(){
+                    nowObj = new Date();
+                    str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth()+1,2) + '-' + addLeadingZero(nowObj.getDate(),2) + 'T' + addLeadingZero(nowObj.getHours(),2) + ':' + addLeadingZero(nowObj.getMinutes(),2);
+                    if($('#KSS_time').val()=="") $('#KSS_time').val(str);
+                })
             }
         </script>
         
