@@ -27,8 +27,7 @@
                     <div class='col'>
                         <div class='row'>
                             <div class='col'>
-                                <input type='text' maxlength='5' class='form-control' name='PTSA_time' id='PTSA_time'
-                                    readonly />
+                                <input type='text' maxlength='5' class='form-control' name='PTSA_time' id='PTSA_time' />
                             </div>
                         </div>
                     </div>
@@ -396,18 +395,23 @@
                 return s;
             }
 
-            nowObj = new Date();
-            str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth() + 1, 2) + '-' + addLeadingZero(nowObj
-                .getDate(), 2) + 'T' + addLeadingZero(nowObj.getHours(), 2) + ':' + addLeadingZero(nowObj.getMinutes(),
-                2);
-            $(document).ready(function () {
-                $('#PTSA_time').val(str);
+            // nowObj = new Date();
+            // str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth() + 1, 2) + '-' + addLeadingZero(nowObj
+            //     .getDate(), 2) + 'T' + addLeadingZero(nowObj.getHours(), 2) + ':' + addLeadingZero(nowObj.getMinutes(),
+            //     2);
+            // $(document).ready(function () {
+            //     $('#PTSA_time').val(str);
+            // });
+
+            $("#D__ID").on('load', function () {
+                var nowObj = new Date();
+                var str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth() + 1, 2) + '-' + addLeadingZero(nowObj.getDate(), 2) + 'T' + addLeadingZero(nowObj.getHours(), 2) + ':' + addLeadingZero(nowObj.getMinutes(), 2);
+                if ($('#PTSA_time').val() == "") $('#PTSA_time').val(str);
             });
 
         }
     </script>
     <style>
-        VmInclude:__COMPONENT__/f/form.01.css
-        VmInclude:__CURRENT_PATH__/task-form.css
+        VmInclude:__COMPONENT__/f/form.01.css VmInclude:__CURRENT_PATH__/task-form.css
     </style>
 </div>

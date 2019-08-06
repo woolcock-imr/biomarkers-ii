@@ -9,7 +9,8 @@
                 <div class='row row__ID' id=row_participant__ID>
                     <div class='col-sm-12 col-lg-9 input__ID'>
                         <span class='label__ID'>Participant</span><br>
-                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID'
+                            data-id='Participant' required />
                     </div>
                     <div class='col-sm-12 col-lg-3 input__ID'>
                         <span class='label__ID'>Participant ID</span><br>
@@ -21,48 +22,69 @@
 
                 <!-- Form Inputs-------------------------------------->
                 <!-- Question and Answerset -->
-                <div class='row row__ID'><div class='col'>
-                <div class='row'>
-                    <div class='col-4'>
-                        <span class='survey-question required'>What session is this?</span>
-                    </div>
-                    <div class='col-4'>
-                        <span class='survey-question required'>Start time of the task</span>
-                    </div>
-                    <div class='col-4'>
-                        <span class='survey-question required'>End time of the task</span>
+                <div class='row row__ID'>
+                    <div class='col'>
+                        <div class='row'>
+                            <div class='col-4'>
+                                <span class='survey-question required'>What session is this?</span>
+                            </div>
+                            <div class='col-4'>
+                                <span class='survey-question required'>Start time of the task</span>
+                            </div>
+                            <div class='col-4'>
+                                <span class='survey-question required'>End time of the task</span>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-4'>
+                                <input type='radio' name='Posture_session' id='Posture_session_practice'
+                                    value='practice' required> <label class='survey-answer'
+                                    for='Posture_session_practice'>Practice</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_predrive_1' value='d1'> <label
+                                    class='survey-answer' for='Posture_predrive_1'>Predrive 1 - 7:15 am</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_session_1' value='s1'> <label
+                                    class='survey-answer' for='Posture_session_1'>Session 1 - 9:00 am</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_session_2' value='s2'> <label
+                                    class='survey-answer' for='Posture_session_2'>Session 2 - 11:00 am</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_session_3' value='s3'> <label
+                                    class='survey-answer' for='Posture_session_3'>Session 3 - 13:00 pm</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_session_4' value='s4'> <label
+                                    class='survey-answer' for='Posture_session_4'>Session 4 - 15:00 pm</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_session_5' value='s5'> <label
+                                    class='survey-answer' for='Posture_session_5'>Session 5 - 17:00 pm</label><br />
+                                <input type='radio' name='Posture_session' id='Posture_predrive_2' value='d2'> <label
+                                    class='survey-answer' for='Posture_predrive_2'>Predrive 2 - 0:50 am</label><br />
+                            </div>
+                            <div class='col-4'>
+                                <input type='text' class='form-control picker' name='Posture_startTime'
+                                    placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly
+                                    required />
+                            </div>
+                            <div class='col-4'>
+                                <input type='text' class='form-control picker' name='Posture_endTime'
+                                    placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly
+                                    required />
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-4'>
+                                &nbsp;
+                            </div>
+                            <div class='col-4'>
+                                <span class='survey-answer'>Systolic blood pressure</span><br />
+                                <input type='number' placeholder='' class='form-control input_box_medium__ID'
+                                    data-custom='1' data-provide='Posture_systolicBP' data-id='Posture_systolicBP'
+                                    name='Posture_systolicBP' id='Posture_systolicBP' />
+                            </div>
+                            <div class='col-4'>
+                                <span class='survey-answer'>Diastolic blood pressure</span><br />
+                                <input type='number' placeholder='' class='form-control input_box_medium__ID'
+                                    data-custom='1' data-provide='Posture_diastolicBP' data-id='Posture_diastolicBP'
+                                    name='Posture_diastolicBP' id='Posture_diastolicBP' />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class='row'>
-                    <div class='col-4'>
-                        <input type='radio' name='Posture_session' id='Posture_session_practice' value='practice' required>  <label class='survey-answer' for='Posture_session_practice'>Practice</label><br />
-                        <input type='radio' name='Posture_session' id='Posture_session_1' value='1'>  <label class='survey-answer' for='Posture_session_1'>Session 1 - 9:00 am</label><br />
-                        <input type='radio' name='Posture_session' id='Posture_session_2' value='2'> <label class='survey-answer' for='Posture_session_2'>Session 2 - 11:00 am</label><br />
-                        <input type='radio' name='Posture_session' id='Posture_session_3' value='3'> <label class='survey-answer' for='Posture_session_3'>Session 3 - 13:00 pm</label><br />
-                        <input type='radio' name='Posture_session' id='Posture_session_4' value='4'> <label class='survey-answer' for='Posture_session_4'>Session 4 - 15:00 pm</label><br />
-                        <input type='radio' name='Posture_session' id='Posture_session_5' value='5'> <label class='survey-answer' for='Posture_session_5'>Session 5 - 17:00 pm</label><br />
-                    </div>
-                    <div class='col-4'>
-                        <input type='text' class='form-control picker' name='Posture_startTime' placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly required />
-                    </div>
-                    <div class='col-4'>
-                        <input type='text' class='form-control picker' name='Posture_endTime' placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly required />
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-4'>
-                        &nbsp;
-                    </div>
-                    <div class='col-4'>
-                        <span class='survey-answer'>Systolic blood pressure</span><br />
-                        <input type='number' placeholder='' class='form-control input_box_medium__ID' data-custom='1' data-provide='Posture_systolicBP' data-id='Posture_systolicBP' name='Posture_systolicBP' id='Posture_systolicBP' />
-                    </div>
-                    <div class='col-4'>
-                        <span class='survey-answer'>Diastolic blood pressure</span><br />
-                        <input type='number' placeholder='' class='form-control input_box_medium__ID' data-custom='1' data-provide='Posture_diastolicBP' data-id='Posture_diastolicBP' name='Posture_diastolicBP' id='Posture_diastolicBP' />
-                    </div>
-                </div>
-                </div></div>
 
                 <!-- Question and Answerset -->
                 <div class='row row__ID'>
@@ -73,7 +95,8 @@
                             <br>
                             <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
                             <br />
-                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
+                            <button id=x_File_Name__ID type="button" class='btn btn-secondary'
+                                onClick="this.form.reset()">Remove</button>
                             Select which trial you want to upload:
                             <select id="rowSelector" name="trial" class="form-control"></select>
                             <br />
@@ -88,7 +111,8 @@
                     <div class='col'> <span>Last Name</span> <input type=text class=form-control name=Last_Name> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> <span>First Name</span> <input type=text class=form-control name=First_Name> </div>
+                    <div class='col'> <span>First Name</span> <input type=text class=form-control name=First_Name>
+                    </div>
                 </div>
                 <div class='row row__ID'>
                     <div class='col'> <span>Mid Name</span> <input type=text class=form-control name=Mid_Name> </div>
@@ -97,7 +121,8 @@
                     <div class='col'> <span>Data File</span> <input type=text class=form-control name=Data_File> </div>
                 </div>
                 <div class='row row__ID'>
-                    <div class='col'> <span>Trial Type</span> <input type=text class=form-control name=Trial_Type> </div>
+                    <div class='col'> <span>Trial Type</span> <input type=text class=form-control name=Trial_Type>
+                    </div>
                 </div>
                 <div class='row row__ID'>
                     <div class='col'> <span>Sub Type</span> <input type=text class=form-control name=Sub_Type> </div>
@@ -284,10 +309,10 @@
                         event.data.direction == -1) { // Down the Years
                         d = moment(el.attr('data-date')).subtract(1, 'years').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'M' || event.data.change == 'MM' || event.data.change == 'MMM' ||
-                            event.data.change == 'MMMM') && event.data.direction == 1) { // Up the Months
+                        event.data.change == 'MMMM') && event.data.direction == 1) { // Up the Months
                         d = moment(el.attr('data-date')).add(1, 'months').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'M' || event.data.change == 'MM' || event.data.change == 'MMM' ||
-                            event.data.change == 'MMMM') && event.data.direction == -1) { // Down the Months
+                        event.data.change == 'MMMM') && event.data.direction == -1) { // Down the Months
                         d = moment(el.attr('data-date')).subtract(1, 'months').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'D' || event.data.change == 'Do' || event.data.change == 'DD') &&
                         event.data.direction == 1) { // Up the Days
@@ -296,12 +321,12 @@
                         event.data.direction == -1) { // Down the Days
                         d = moment(el.attr('data-date')).subtract(1, 'days').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'H' || event.data.change == 'HH' || event.data.change == 'h' ||
-                            event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event
-                        .data.direction == 1) { // Up the hours
+                        event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event
+                            .data.direction == 1) { // Up the hours
                         d = moment(el.attr('data-date')).add(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'H' || event.data.change == 'HH' || event.data.change == 'h' ||
-                            event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event
-                        .data.direction == -1) { // Down the hours
+                        event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event
+                            .data.direction == -1) { // Down the hours
                         d = moment(el.attr('data-date')).subtract(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
                     } else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction ==
                         1) { // Up the minutes
@@ -485,8 +510,6 @@
         }
     </script>
     <style>
-        VmInclude:__COMPONENT__/f/form.01.css
-        VmInclude:__CURRENT_PATH__/task-form.css
-        VmInclude:__CURRENT_PATH__/task-form-pickers.css
+        VmInclude:__COMPONENT__/f/form.01.css VmInclude:__CURRENT_PATH__/task-form.css VmInclude:__CURRENT_PATH__/task-form-pickers.css
     </style>
 </div>
