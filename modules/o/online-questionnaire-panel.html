@@ -105,8 +105,7 @@
 						jQuery.ajaxSetup({async:true});
 					}
 		        }
-				console.log(status[m])
-		        if(status[m].rid==0 || status[m].Table == "91000589" || status[m].Table == "91000590" ){
+		        if (status[m].rid==0 || status[m].Table == "91000589" || status[m].Table == "91000590" ) {
 					$li.removeClass('li_not_allowed__ID')
 					$li.addClass('li_allowed__ID')
 		            var task_name=$li.html();
@@ -117,7 +116,9 @@
                         var record=$vm.vm['__ID'].input.record;
 						$vm.load_module(m,'',{participant_record:record,goback:1});
 		            });
-		            return false; // break out the loop
+					if (status[m].Table != "91000589" && status[m].Table != "91000590" ) {
+		            	return false; // break out the loop
+					}
 		        }
 		    })
 		    //----------------------------------
