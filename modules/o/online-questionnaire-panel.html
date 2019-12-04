@@ -81,6 +81,7 @@
 						jQuery.ajaxSetup({async:false});
 						$VmAPI.request({data:req,callback:function(res){
 							if(res.records.length==0){
+								status[m].rid=1;
 							}
 							else{
 								status[m].rid=1;
