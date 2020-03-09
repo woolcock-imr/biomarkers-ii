@@ -870,8 +870,7 @@
                     // Get contents
                     var contents = e.target.result;
                     // Split the contents into rows based on the new-line character '\n'
-                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split(
-                        '\n');
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
 
                     // Extract the data
                     if (columnWise) { // Column-wise
@@ -906,9 +905,9 @@
                     }
                     // Store the value of each variable in the form-input field
                     for (var v = 0; v < varNames.length; v++) {
+                        console.log(varNames[v] + ': ' + varValues[v])
                         $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[v]);
                     }
-                    console.log(varNames.join());
                 });
                 reader.readAsText(file);
             }
