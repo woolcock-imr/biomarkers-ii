@@ -211,12 +211,12 @@
             $('.picker').each(function () {
                 // Add event listener
                 $(this).on("wheel", function (e) {
-                    e.preventDefault();
                     var f = $(this).attr('data-format');
                     var d = moment(this.attr('data-date')).add(e.originalEvent.deltaY, 'minutes').format('YYYY-MM-DDTHH:mm:ss');;
                     // Store the data and value.
                     $(this).attr('data-date',d);
                     $(this).val(moment(d).format(f));
+                    e.preventDefault();
                 })
                 // Get the default date and data-format
                 var d = $(this).attr('placeholder');
@@ -258,11 +258,11 @@
                         var spnFc = $("<div class='picker-face' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
                         var spnUp = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
                         var spnDw = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-down'></span></div>");
-                        spnUp.on('click mousedown', {
+                        spnUp.on('click', {
                             direction: 1,
                             change: dlm[n]
                         }, changeValue );
-                        spnDw.on('click mousedown', {
+                        spnDw.on('click', {
                             direction: -1,
                             change: dlm[n]
                         }, changeValue );
