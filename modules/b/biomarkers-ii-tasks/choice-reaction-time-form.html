@@ -118,6 +118,7 @@
                   data-format="HH:mm:ss"
                   value
                   data-date
+                  readonly
                   required
                 />
               </div>
@@ -130,6 +131,7 @@
                   data-format="HH:mm:ss"
                   value
                   data-date
+                  readonly
                   required
                 />
               </div>
@@ -524,7 +526,7 @@
                 "%;'><span class='picker-fa fa fa-angle-down'></span></div>"
             );
             spnUp.on(
-              "click",
+              "click mousedown",
               {
                 direction: 1,
                 change: dlm[n],
@@ -532,7 +534,7 @@
               changeValue
             );
             spnDw.on(
-              "click",
+              "click mousedownx",
               {
                 direction: -1,
                 change: dlm[n],
