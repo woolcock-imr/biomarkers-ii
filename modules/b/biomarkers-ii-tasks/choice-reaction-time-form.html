@@ -1,673 +1,370 @@
-<div id="D__ID">
-  <section id="form_container__ID">
-    <div id="header__ID">4 Choice Reaction Time Task - data upload</div>
-    <form id="F__ID">
-      <div class="container">
-        <!-- participant part for all tsak forms -------------------->
-        <div class="row row__ID" id="row_participant__ID">
-          <div class="col-sm-12 col-lg-9 input__ID">
-            <span class="label__ID">Participant</span><br />
-            <input
-              type="text"
-              name="Participant"
-              class="form-control"
-              id="Participant__ID"
-              data-id="Participant"
-              required
-            />
-          </div>
-          <div class="col-sm-12 col-lg-3 input__ID">
-            <span class="label__ID">Participant ID</span><br />
-            <input
-              type="text"
-              name="Participant_uid"
-              class="form-control"
-              readonly
-            />
-          </div>
-          <hr style="border-top: 1px solid #888; width: 100%; margin: 10px 0" />
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            4 Choice Reaction Time Task - data upload
         </div>
-        <!---------------------------------------------------->
+        <form id=F__ID>
+            <div class='container'>
+                <!-- participant part for all tsak forms -------------------->
+                <div class='row row__ID' id=row_participant__ID>
+                    <div class='col-sm-12 col-lg-9 input__ID'>
+                        <span class='label__ID'>Participant</span><br>
+                        <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
+                    </div>
+                    <div class='col-sm-12 col-lg-3 input__ID'>
+                        <span class='label__ID'>Participant ID</span><br>
+                        <input type='text' name='Participant_uid' class='form-control' readonly />
+                    </div>
+                    <hr style='border-top: 1px solid #888;width: 100%;margin:10px 0'>
+                </div>
+                <!---------------------------------------------------->
 
-        <!-- Form Inputs-------------------------------------->
+                
+                <!-- Form Inputs-------------------------------------->
+    
+                <!-- Question and Answerset -->
+                <div class='row row__ID'><div class='col'>
+                <div class='row'>
+                    <div class='col-4'>
+                        <span class='survey-question required'>What session is this?</span>
+                    </div>
+                    <div class='col-4'>
+                        <span class='survey-question required'>Start time of the task</span>
+                    </div>
+                    <div class='col-4'>
+                        <span class='survey-question required'>End time of the task</span>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-4'>
+                        <input type='radio' name='CRTT_session' id='CRTT_session_practice' value='practice' required>  <label class='survey-answer' for='CRTT_session_practice'>Practice</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_1' value='1'>  <label class='survey-answer' for='CRTT_session_1'>Session 1 - 9:00 am</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_2' value='2'> <label class='survey-answer' for='CRTT_session_2'>Session 2 - 11:00 am</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_3' value='3'> <label class='survey-answer' for='CRTT_session_3'>Session 3 - 13:00 pm</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_4' value='4'> <label class='survey-answer' for='CRTT_session_4'>Session 4 - 15:00 pm</label><br />
+                        <input type='radio' name='CRTT_session' id='CRTT_session_5' value='5'> <label class='survey-answer' for='CRTT_session_5'>Session 5 - 17:00 pm</label><br />
+                    </div>
+                    <div class='col-4'>
+                        <input type='text' class='form-control picker' name='CRTT_startTime' placeholder='2019-02-01T13:00:00' data-format='HH:mm:ss' value data-date readonly required />
+                    </div>
+                    <div class='col-4'>
+                        <input type='text' class='form-control picker' name='CRTT_endTime' placeholder='2019-02-01T13:10:00' data-format='HH:mm:ss' value data-date readonly required />
+                    </div>
+                </div>
+                </div></div>
+                
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span>FILE UPLOAD </span><br />
+                        <span>Upload the header-file</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_File_Name__ID></u>
+                            <br>
+                            <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
+                            <br />
+                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
+                            Select which trial you want to upload: <select id="rowSelector" name="trial" class="form-control"></select>
+                            <br />
+                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
+                        </div>
+                    </div>
+                </div>            
+                <!---------------------------------------------------->
 
-        <!-- Question and Answerset -->
-        <div class="row row__ID">
-          <div class="col">
-            <div class="row">
-              <div class="col-4">
-                <span class="survey-question required"
-                  >What session is this?</span
-                >
-              </div>
-              <div class="col-4">
-                <span class="survey-question required"
-                  >Start time of the task</span
-                >
-              </div>
-              <div class="col-4">
-                <span class="survey-question required"
-                  >End time of the task</span
-                >
-              </div>
+                <!-- Variable Inputs---------------------------------->
+                <div class='row row__ID'><div class='col'>
+                    <span>PID</span>
+                    <input type=text class=form-control name=PID>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Premature Responses</span>
+                    <input type=text class=form-control name=Premature_Responses>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Anticipated Responses</span>
+                    <input type=text class=form-control name=Anticipated_Responses>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Count</span>
+                    <input type=text class=form-control name=Correct_Count>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Mean</span>
+                    <input type=text class=form-control name=Correct_Mean>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Median</span>
+                    <input type=text class=form-control name=Correct_Median>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Variance</span>
+                    <input type=text class=form-control name=Correct_Variance>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct StdDev</span>
+                    <input type=text class=form-control name=Correct_StdDev>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Skewness</span>
+                    <input type=text class=form-control name=Correct_Skewness>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Correct Kurtosis</span>
+                    <input type=text class=form-control name=Correct_Kurtosis>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Count</span>
+                    <input type=text class=form-control name=Wrong_Count>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Mean</span>
+                    <input type=text class=form-control name=Wrong_Mean>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Median</span>
+                    <input type=text class=form-control name=Wrong_Median>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Variance</span>
+                    <input type=text class=form-control name=Wrong_Variance>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong StdDev</span>
+                    <input type=text class=form-control name=Wrong_StdDev>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Skewness</span>
+                    <input type=text class=form-control name=Wrong_Skewness>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wrong Kurtosis</span>
+                    <input type=text class=form-control name=Wrong_Kurtosis>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>mac address</span>
+                    <input type=text class=form-control name=mac_address>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>start time</span>
+                    <input type=text class=form-control name=start_time>
+                </div></div>            
+                <!---------------------------------------------------->
+            
             </div>
-            <div class="row">
-              <div class="col-4">
-                <input
-                  type="radio"
-                  name="CRTT_session"
-                  id="CRTT_session_practice"
-                  value="practice"
-                  required
-                />
-                <label class="survey-answer" for="CRTT_session_practice"
-                  >Practice</label
-                ><br />
-                <input
-                  type="radio"
-                  name="CRTT_session"
-                  id="CRTT_session_1"
-                  value="1"
-                />
-                <label class="survey-answer" for="CRTT_session_1"
-                  >Session 1 - 9:00 am</label
-                ><br />
-                <input
-                  type="radio"
-                  name="CRTT_session"
-                  id="CRTT_session_2"
-                  value="2"
-                />
-                <label class="survey-answer" for="CRTT_session_2"
-                  >Session 2 - 11:00 am</label
-                ><br />
-                <input
-                  type="radio"
-                  name="CRTT_session"
-                  id="CRTT_session_3"
-                  value="3"
-                />
-                <label class="survey-answer" for="CRTT_session_3"
-                  >Session 3 - 13:00 pm</label
-                ><br />
-                <input
-                  type="radio"
-                  name="CRTT_session"
-                  id="CRTT_session_4"
-                  value="4"
-                />
-                <label class="survey-answer" for="CRTT_session_4"
-                  >Session 4 - 15:00 pm</label
-                ><br />
-                <input
-                  type="radio"
-                  name="CRTT_session"
-                  id="CRTT_session_5"
-                  value="5"
-                />
-                <label class="survey-answer" for="CRTT_session_5"
-                  >Session 5 - 17:00 pm</label
-                ><br />
-              </div>
-              <div class="col-4">
-                <input
-                  type="text"
-                  class="form-control picker"
-                  name="CRTT_startTime"
-                  placeholder="2019-02-01T13:00:00"
-                  data-format="HH:mm:ss"
-                  value
-                  data-date
-                  readonly
-                  required
-                />
-              </div>
-              <div class="col-4">
-                <input
-                  type="text"
-                  class="form-control picker"
-                  name="CRTT_endTime"
-                  placeholder="2019-02-01T13:10:00"
-                  data-format="HH:mm:ss"
-                  value
-                  data-date
-                  readonly
-                  required
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            console.log("loading form 01")
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
 
-        <div class="row row__ID">
-          <div class="col">
-            <span>FILE UPLOAD </span><br />
-            <span>Upload the header-file</span>
-            <div class="form-control">
-              <u style="cursor: pointer" id="link_File_Name__ID"></u>
-              <br />
-              <input
-                type="file"
-                name="File_Name"
-                style="margin-top: 6px"
-                class="btn btn-secondary"
-              /><br />
-              <br />
-              <button
-                id="x_File_Name__ID"
-                type="button"
-                class="btn btn-secondary"
-                onClick="this.form.reset()"
-              >
-                Remove
-              </button>
-              Select which trial you want to upload:
-              <select
-                id="rowSelector"
-                name="trial"
-                class="form-control"
-              ></select>
-              <br />
-              <button id="submit__ID" type="submit" class="btn btn-secondary">
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-        <!---------------------------------------------------->
-
-        <!-- Variable Inputs---------------------------------->
-        <div class="row row__ID">
-          <div class="col">
-            <span>PID</span>
-            <input type="text" class="form-control" name="PID" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Premature Responses</span>
-            <input
-              type="text"
-              class="form-control"
-              name="Premature_Responses"
-            />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Anticipated Responses</span>
-            <input
-              type="text"
-              class="form-control"
-              name="Anticipated_Responses"
-            />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct Count</span>
-            <input type="text" class="form-control" name="Correct_Count" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct Mean</span>
-            <input type="text" class="form-control" name="Correct_Mean" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct Median</span>
-            <input type="text" class="form-control" name="Correct_Median" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct Variance</span>
-            <input type="text" class="form-control" name="Correct_Variance" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct StdDev</span>
-            <input type="text" class="form-control" name="Correct_StdDev" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct Skewness</span>
-            <input type="text" class="form-control" name="Correct_Skewness" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Correct Kurtosis</span>
-            <input type="text" class="form-control" name="Correct_Kurtosis" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong Count</span>
-            <input type="text" class="form-control" name="Wrong_Count" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong Mean</span>
-            <input type="text" class="form-control" name="Wrong_Mean" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong Median</span>
-            <input type="text" class="form-control" name="Wrong_Median" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong Variance</span>
-            <input type="text" class="form-control" name="Wrong_Variance" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong StdDev</span>
-            <input type="text" class="form-control" name="Wrong_StdDev" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong Skewness</span>
-            <input type="text" class="form-control" name="Wrong_Skewness" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>Wrong Kurtosis</span>
-            <input type="text" class="form-control" name="Wrong_Kurtosis" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>mac address</span>
-            <input type="text" class="form-control" name="mac_address" />
-          </div>
-        </div>
-        <div class="row row__ID">
-          <div class="col">
-            <span>start time</span>
-            <input type="text" class="form-control" name="start_time" />
-          </div>
-        </div>
-        <!---------------------------------------------------->
-      </div>
-    </form>
-  </section>
-  VmInclude:__COMPONENT__/m/model.01.html
-  <script>
-    function F__ID() {
-      //-------------------------------------
-      VmInclude: "__COMPONENT__/f/form.01.js";
-      VmInclude: "__CURRENT_PATH__/task-form.js";
-      //-------------------------------------
-
-      function changeValue(event) {
-        // Get the closest input element to read the data
-        el = $(event.target).closest(".picker-time-face").find("input");
-        var v = $(el).val();
-        var f = $(el).attr("data-format");
-        d = moment(el.attr("data-date"));
-
-        if (v != "") {
-          // Change the data accordingly
-          if (
-            (event.data.change == "Y" ||
-              event.data.change == "YY" ||
-              event.data.change == "YYYY") &&
-            event.data.direction == 1
-          ) {
-            // Up the Years
-            d = moment(el.attr("data-date"))
-              .add(1, "years")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "Y" ||
-              event.data.change == "YY" ||
-              event.data.change == "YYYY") &&
-            event.data.direction == -1
-          ) {
-            // Down the Years
-            d = moment(el.attr("data-date"))
-              .subtract(1, "years")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "M" ||
-              event.data.change == "MM" ||
-              event.data.change == "MMM" ||
-              event.data.change == "MMMM") &&
-            event.data.direction == 1
-          ) {
-            // Up the Months
-            d = moment(el.attr("data-date"))
-              .add(1, "months")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "M" ||
-              event.data.change == "MM" ||
-              event.data.change == "MMM" ||
-              event.data.change == "MMMM") &&
-            event.data.direction == -1
-          ) {
-            // Down the Months
-            d = moment(el.attr("data-date"))
-              .subtract(1, "months")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "D" ||
-              event.data.change == "Do" ||
-              event.data.change == "DD") &&
-            event.data.direction == 1
-          ) {
-            // Up the Days
-            d = moment(el.attr("data-date"))
-              .add(1, "days")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "D" ||
-              event.data.change == "Do" ||
-              event.data.change == "DD") &&
-            event.data.direction == -1
-          ) {
-            // Down the Days
-            d = moment(el.attr("data-date"))
-              .subtract(1, "days")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "H" ||
-              event.data.change == "HH" ||
-              event.data.change == "h" ||
-              event.data.change == "hh" ||
-              event.data.change == "k" ||
-              event.data.change == "kk") &&
-            event.data.direction == 1
-          ) {
-            // Up the hours
-            d = moment(el.attr("data-date"))
-              .add(1, "hours")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "H" ||
-              event.data.change == "HH" ||
-              event.data.change == "h" ||
-              event.data.change == "hh" ||
-              event.data.change == "k" ||
-              event.data.change == "kk") &&
-            event.data.direction == -1
-          ) {
-            // Down the hours
-            d = moment(el.attr("data-date"))
-              .subtract(1, "hours")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "m" || event.data.change == "mm") &&
-            event.data.direction == 1
-          ) {
-            // Up the minutes
-            d = moment(el.attr("data-date"))
-              .add(1, "minutes")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "m" || event.data.change == "mm") &&
-            event.data.direction == -1
-          ) {
-            // Down the minutes
-            d = moment(el.attr("data-date"))
-              .subtract(1, "minutes")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "s" || event.data.change == "ss") &&
-            event.data.direction == 1
-          ) {
-            // Up the seconds
-            d = moment(el.attr("data-date"))
-              .add(5, "seconds")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          } else if (
-            (event.data.change == "s" || event.data.change == "ss") &&
-            event.data.direction == -1
-          ) {
-            // Down the seconds
-            d = moment(el.attr("data-date"))
-              .subtract(5, "seconds")
-              .format("YYYY-MM-DDTHH:mm:ss");
-          }
-        } else {
-          d = moment(el.attr("data-date")).format("YYYY-MM-DDTHH:mm:ss");
-        }
-        // Store the data and value.
-        $(el).attr("data-date", d);
-        $(el).val(moment(d).format(f));
-      }
-
-      $(".picker").each(function () {
-        // Get the default date and data-format
-        var d = $(this).attr("placeholder");
-        var f = $(this).attr("data-format");
-
-        // Split the data-format string into its components
-        var dlm = f.split(/[^A-Za-z0-9]/);
-
-        // Create the Moment.js object according to standardized formatting
-        // and store it in the data-date attribute
-        $(this).attr("data-date", moment(d).format("YYYY-MM-DDTHH:mm:ss"));
-
-        // Create the Moment.js object accorting to the desired formatting
-        // and store it in the placeholder
-        $(this).attr("placeholder", moment(d).format(f));
-
-        // Wrap the input with a div element of width 'w'
-        var w = moment(d).format(f).length * 12 + 18 + "px;";
-        var wrapper =
-          "<div class='picker-time-face' style='width:" + w + ";'></div>";
-        $(this).wrap(wrapper);
-
-        // If the formatting includes time, i.e. it includes minutes,
-        // the user can only change hours, minutes and seconds, not the days months or years.
-        if (dlm.includes("m") || dlm.includes("mm")) {
-          var permitted = [
-            "s",
-            "ss",
-            "m",
-            "mm",
-            "H",
-            "HH",
-            "h",
-            "hh",
-            "k",
-            "kk",
-          ];
-        } else {
-          var permitted = [
-            "D",
-            "Do",
-            "DD",
-            "M",
-            "MM",
-            "MMM",
-            "MMMM",
-            "Y",
-            "YY",
-            "YYYY",
-          ];
-        }
-
-        // Create the up and down arror elements
-        // - The row has a padding equal to the padding of the input
-        var rowUp = $('<div style="padding:0 0.75em;"></div>');
-        var rowDw = $('<div style="padding:0 0.75em;"></div>');
-
-        // - For each field, create a column div that contains the arrow
-        // - And assign a change-function to the event of a click
-        for (var n = 0; n < dlm.length; n++) {
-          if (permitted.includes(dlm[n])) {
-            var spnFc = $(
-              "<div class='picker-face' style='width:" +
-                100 / dlm.length +
-                "%;'><span class='picker-fa fa fa-angle-up'></span></div>"
-            );
-            var spnUp = $(
-              "<div class='picker-dial' style='width:" +
-                100 / dlm.length +
-                "%;'><span class='picker-fa fa fa-angle-up'></span></div>"
-            );
-            var spnDw = $(
-              "<div class='picker-dial' style='width:" +
-                100 / dlm.length +
-                "%;'><span class='picker-fa fa fa-angle-down'></span></div>"
-            );
-            spnUp.on(
-              "click mousedown",
-              {
-                direction: 1,
-                change: dlm[n],
-              },
-              changeValue
-            );
-            spnDw.on(
-              "click mousedown",
-              {
-                direction: -1,
-                change: dlm[n],
-              },
-              changeValue
-            );
-          } else {
-            var spnUp = $(
-              "<div class='picker-dial' style='width:" +
-                100 / dlm.length +
-                "%;'></div>"
-            );
-            var spnDw = $(
-              "<div class='picker-dial' style='width:" +
-                100 / dlm.length +
-                "%;'></div>"
-            );
-          }
-          // Append the column div to the row.
-          rowUp.append(spnUp);
-          rowDw.append(spnDw);
-        }
-        // Insert the rows before and after the input element.
-        $(this).before(rowUp);
-        $(this).after(rowDw);
-      });
-
-      var varNames;
-      var varValues = Array();
-
-      $("#F__ID input[name=File_Name]").on("change", function (evt) {
-        if (this.files.length == 1) {
-          file_process(this.files[0]);
-        }
-      });
-      $("#rowSelector").on("change", function (evt) {
-        var selectRow = $("#rowSelector").val() - 1;
-        console.log("row changed:" + selectRow);
-        console.log(varValues);
-        // Store the value of each variable in the form-input field
-        for (var v = 0; v < varNames.length; v++) {
-          $('#F__ID input[name="' + varNames[v] + '"]').val(
-            varValues[selectRow][v]
-          );
-        }
-      });
-
-      function parseVariableName(str) {
-        str = str.replace(/[^\w\s]/gi, ""); // String may not contain special characters
-        str = str.trim(); // Trim any <space> characters from start or end of string
-        str = str.replace(/^\d+\s*/, ""); // String cannot start with numbers
-        str = str.split(" ").join("_"); // Join any remaining bits of string with underscores
-        return str;
-      }
-
-      //-------------------------------------
-      // File reader function
-      var file_process = function (file) {
-        // Create a new file reader and on loading a file -> run
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          ///////////////////////////////////////////////////////////////////////////////
-          // MANUAL EDIT REQUIRED HERE
-          // Specify whether the variabels are listed as rows (false) or as columns (true)
-          // Specify the delimiter
-          var columnWise = true;
-          var delimiter = ",";
-          var startRow = 0;
-
-          // Get contents
-          var contents = e.target.result;
-          // Split the contents into rows based on the new-line character '\n'
-          var rows = contents
-            .replace(/"/g, "")
-            .replace(/\r/, "\n")
-            .replace(/\n\n/, "\n")
-            .split("\n");
-          var optionsHTML = "<option value='na'>Select a row...</option>";
-          for (var r = startRow; r < rows.length - 1; r++) {
-            optionsHTML +=
-              "<option value='" +
-              (r + 1 - startRow) +
-              "'>" +
-              (r + 1 - startRow) +
-              "</option>";
-          }
-          $("#rowSelector").html(optionsHTML);
-
-          // Extract the data
-          if (columnWise) {
-            // Column-wise
-            for (var r = startRow; r < rows.length; r++) {
-              // The first row contains all variable names
-              if (r == startRow) {
-                varNames = rows[r].split(delimiter);
-                // Replace any <space> or other special character
-                for (v = 0; v < varNames.length; v++) {
-                  varNames[v] = parseVariableName(varNames[v]);
+            function changeValue( event ) {
+                // Get the closest input element to read the data
+                el = $(event.target).closest('.picker-time-face').find('input');
+                var v = $(el).val();
+                var f = $(el).attr('data-format');
+                d = moment(el.attr('data-date'));
+                
+                if (v != "") {
+                    // Change the data accordingly
+                    if ((event.data.change == 'Y' || event.data.change == 'YY' || event.data.change == 'YYYY') && event.data.direction == 1) { // Up the Years
+                        d = moment(el.attr('data-date')).add(1, 'years').format('YYYY-MM-DDTHH:mm:ss');
+                    } else if ((event.data.change == 'Y' || event.data.change == 'YY' || event.data.change == 'YYYY') && event.data.direction == -1) { // Down the Years
+                        d = moment(el.attr('data-date')).subtract(1, 'years').format('YYYY-MM-DDTHH:mm:ss');
+                    } 
+                    else if ((event.data.change == 'M' || event.data.change == 'MM' || event.data.change == 'MMM' || event.data.change == 'MMMM' ) && event.data.direction == 1) { // Up the Months
+                        d = moment(el.attr('data-date')).add(1, 'months').format('YYYY-MM-DDTHH:mm:ss');
+                    } else if ((event.data.change == 'M' || event.data.change == 'MM' || event.data.change == 'MMM' || event.data.change == 'MMMM' ) && event.data.direction == -1) { // Down the Months
+                        d = moment(el.attr('data-date')).subtract(1, 'months').format('YYYY-MM-DDTHH:mm:ss');
+                    }
+                    else if ((event.data.change == 'D' || event.data.change == 'Do' || event.data.change == 'DD') && event.data.direction == 1) { // Up the Days
+                        d = moment(el.attr('data-date')).add(1, 'days').format('YYYY-MM-DDTHH:mm:ss');
+                    } else if ((event.data.change == 'D' || event.data.change == 'Do' || event.data.change == 'DD') && event.data.direction == -1) { // Down the Days
+                        d = moment(el.attr('data-date')).subtract(1, 'days').format('YYYY-MM-DDTHH:mm:ss');
+                    } 
+                    else if ((event.data.change == 'H' || event.data.change == 'HH' || event.data.change == 'h' || event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event.data.direction == 1) { // Up the hours
+                        d = moment(el.attr('data-date')).add(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
+                    } else if ((event.data.change == 'H' || event.data.change == 'HH' || event.data.change == 'h' || event.data.change == 'hh' || event.data.change == 'k' || event.data.change == 'kk') && event.data.direction == -1) { // Down the hours
+                        d = moment(el.attr('data-date')).subtract(1, 'hours').format('YYYY-MM-DDTHH:mm:ss');
+                    } 
+                    else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction == 1) { // Up the minutes
+                        d = moment(el.attr('data-date')).add(1, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
+                    } else if ((event.data.change == 'm' || event.data.change == 'mm') && event.data.direction == -1) { // Down the minutes
+                        d = moment(el.attr('data-date')).subtract(1, 'minutes').format('YYYY-MM-DDTHH:mm:ss');
+                    } 
+                    else if ((event.data.change == 's' || event.data.change == 'ss') && event.data.direction == 1) { // Up the seconds
+                        d = moment(el.attr('data-date')).add(5, 'seconds').format('YYYY-MM-DDTHH:mm:ss');
+                    } else if ((event.data.change == 's' || event.data.change == 'ss') && event.data.direction == -1) { // Down the seconds
+                        d = moment(el.attr('data-date')).subtract(5, 'seconds').format('YYYY-MM-DDTHH:mm:ss');
+                    }
+                } else {
+                    d = moment(el.attr('data-date')).format('YYYY-MM-DDTHH:mm:ss');
                 }
-              } else {
-                // The subsequent rows contains the values
-                varValues[r - 1 - startRow] = rows[r].split(delimiter);
-              }
+                // Store the data and value.
+                $(el).attr('data-date',d);
+                $(el).val(moment(d).format(f));
             }
-          } else {
-            // Row-wise
-            // Initialize the varNames and varValue arrays
-            varNames = Array();
-            varValues = Array();
-            // For each row, extract the variable name and value, and store in the form-input field.
-            for (var r = 0; r < rows.length; r++) {
-              // Split the variable name and value pair based on the delimiter
-              var row = rows[r].split(delimiter);
-              varNames[r] = parseVariableName(varNames[r]);
-              varValues[r] = row[1];
-              // Store the value of each variable in the form-input field
-              $('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
+
+            $('.picker').each(function () {
+                // Get the default date and data-format
+                var d = $(this).attr('placeholder');
+                var f = $(this).attr('data-format');
+
+                // Split the data-format string into its components
+                var dlm = f.split(/[^A-Za-z0-9]/);
+                
+                // Create the Moment.js object according to standardized formatting
+                // and store it in the data-date attribute
+                $(this).attr('data-date',moment(d).format('YYYY-MM-DDTHH:mm:ss'));
+
+                // Create the Moment.js object accorting to the desired formatting
+                // and store it in the placeholder
+                $(this).attr('placeholder',moment(d).format(f));
+                
+                // Wrap the input with a div element of width 'w'
+                var w = (moment(d).format(f).length * 12 + 18) + "px;"
+                var wrapper = "<div class='picker-time-face' style='width:" + w + ";'></div>";
+                $(this).wrap(wrapper);
+
+                // If the formatting includes time, i.e. it includes minutes,
+                // the user can only change hours, minutes and seconds, not the days months or years.
+                if (dlm.includes('m') || dlm.includes('mm')) {
+                    var permitted = ['s','ss','m','mm','H','HH','h','hh','k','kk'];
+                } else {
+                    var permitted = ['D','Do','DD','M','MM','MMM','MMMM','Y','YY','YYYY'];
+                }
+
+                // Create the up and down arror elements
+                // - The row has a padding equal to the padding of the input
+                var rowUp = $('<div style="padding:0 0.75em;"></div>');
+                var rowDw = $('<div style="padding:0 0.75em;"></div>');
+                
+                // - For each field, create a column div that contains the arrow
+                // - And assign a change-function to the event of a click
+                for (var n = 0; n < dlm.length; n++) {
+                    if (permitted.includes(dlm[n])) {
+                        var spnFc = $("<div class='picker-face' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
+                        var spnUp = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
+                        var spnDw = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-down'></span></div>");
+                        spnUp.on('click mousedown', {
+                            direction: 1,
+                            change: dlm[n]
+                        }, changeValue );
+                        spnDw.on('click mousedown', {
+                            direction: -1,
+                            change: dlm[n]
+                        }, changeValue );
+                    } else {
+                        var spnUp = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'></div>");
+                        var spnDw = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'></div>");
+                    }
+                    // Append the column div to the row.
+                    rowUp.append(spnUp);
+                    rowDw.append(spnDw);
+                }
+                // Insert the rows before and after the input element.
+                $(this).before(rowUp);
+                $(this).after(rowDw);
+            });
+            
+            var varNames;
+            var varValues = Array();
+
+            $('#F__ID input[name=File_Name]').on('change',function(evt){
+                if(this.files.length==1){
+                    file_process(this.files[0])
+                }
+            });
+            $('#rowSelector').on('change',function(evt){
+                var selectRow = $('#rowSelector').val()-1;
+                console.log('row changed:' + selectRow)
+                console.log(varValues);
+                // Store the value of each variable in the form-input field
+                for (var v = 0; v < varNames.length; v++) {
+                    $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[selectRow][v]);
+                }
+            });
+
+            function parseVariableName(str) {
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim();                   // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, '');   // String cannot start with numbers
+                str = str.split(' ').join('_');     // Join any remaining bits of string with underscores
+                return str;
             }
-          }
-          console.log(varNames.join());
-        };
-        reader.readAsText(file);
-      };
-      var old_load = m.load;
-      m.load = function () {
-        old_load();
-        m.set_file_link("File_Name");
-      };
-    }
-  </script>
-  <style>
-    VmInclude:__COMPONENT__/f/form.01.css
-    VmInclude:__CURRENT_PATH__/task-form.css
-    VmInclude:__CURRENT_PATH__/task-form-pickers.css
-  </style>
+
+            //-------------------------------------
+            // File reader function
+            var file_process = function (file) {
+                // Create a new file reader and on loading a file -> run
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+                    
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = true;
+                    var delimiter  = ',';
+                    var startRow   = 0;
+                    
+                    // Get contents
+                    var contents = e.target.result;
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+                    var optionsHTML = "<option value='na'>Select a row...</option>";
+                    for (var r = startRow; r < rows.length-1; r++) {
+                        optionsHTML+="<option value='"+(r+1-startRow)+"'>"+(r+1-startRow)+"</option>";
+                    }
+                    $('#rowSelector').html(optionsHTML);
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = startRow; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if ( r == startRow ) {
+                                    varNames = rows[r].split(delimiter);
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // The subsequent rows contains the values
+                                varValues[r-1-startRow] = rows[r].split(delimiter);
+                            }
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        varNames  = Array();
+                        varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            varNames[r]  = parseVariableName(varNames[r]);
+                            varValues[r] = row[1];
+                            // Store the value of each variable in the form-input field
+                            $('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
+                        }
+                    }
+                    console.log(varNames.join());
+                });
+                reader.readAsText(file);
+            }
+            var old_load=m.load;
+            m.load=function(){
+                old_load();
+                m.set_file_link("File_Name");
+            }
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/f/form.01.css
+        VmInclude:__CURRENT_PATH__/task-form.css
+        VmInclude:__CURRENT_PATH__/task-form-pickers.css
+    </style>
 </div>
