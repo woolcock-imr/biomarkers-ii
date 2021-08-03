@@ -249,11 +249,11 @@
                         var spnFc = $("<div class='picker-face' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
                         var spnUp = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-up'></span></div>");
                         var spnDw = $("<div class='picker-dial' style='width:" + 100 / dlm.length + "%;'><span class='picker-fa fa fa-angle-down'></span></div>");
-                        spnUp.on('click', {
+                        spnUp.on('click mousedown', {
                             direction: 1,
                             change: dlm[n]
                         }, changeValue );
-                        spnDw.on('click', {
+                        spnDw.on('click mousedown', {
                             direction: -1,
                             change: dlm[n]
                         }, changeValue );
