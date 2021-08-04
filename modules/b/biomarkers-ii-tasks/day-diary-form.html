@@ -233,11 +233,17 @@
                 $(this).on("wheel", function (e) {
                     e.preventDefault();
                     var f = $(this).attr('data-format');
-                    var d = moment($(this).attr('data-date')).add(e.originalEvent.deltaY, 'seconds').format('YYYY-MM-DDTHH:mm:ss');;
+                    var a = 0;
+                    if (e.originalEvent.deltaY > 0) {
+                        a = 1
+                    } else if (e.originalEvent.deltaY < 0) {
+                        a = -1
+                    }
+                    var d = moment($(this).attr('data-date')).add(a, 'minutes').format('YYYY-MM-DDTHH:mm:ss');;
                     // Store the data and value.
                     $(this).attr('data-date',d);
                     $(this).val(moment(d).format(f));
-                })
+                });
                 // Get the default date and data-format
                 var d = $(this).attr('placeholder');
                 var f = $(this).attr('data-format');
